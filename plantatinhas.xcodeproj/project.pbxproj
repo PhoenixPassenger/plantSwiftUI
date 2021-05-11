@@ -8,16 +8,67 @@
 
 /* Begin PBXBuildFile section */
 		5BDBF775264AC24600AC9C24 /* plantatinhas.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBF75F264AC24400AC9C24 /* plantatinhas.xcdatamodeld */; };
-		5BDBF776264AC24600AC9C24 /* plantatinhas.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBF75F264AC24400AC9C24 /* plantatinhas.xcdatamodeld */; };
 		5BDBF777264AC24600AC9C24 /* plantatinhasApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBF761264AC24400AC9C24 /* plantatinhasApp.swift */; };
-		5BDBF778264AC24600AC9C24 /* plantatinhasApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBF761264AC24400AC9C24 /* plantatinhasApp.swift */; };
 		5BDBF779264AC24600AC9C24 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBF762264AC24400AC9C24 /* ContentView.swift */; };
-		5BDBF77A264AC24600AC9C24 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBF762264AC24400AC9C24 /* ContentView.swift */; };
 		5BDBF77B264AC24600AC9C24 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBF763264AC24400AC9C24 /* Persistence.swift */; };
-		5BDBF77C264AC24600AC9C24 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBF763264AC24400AC9C24 /* Persistence.swift */; };
 		5BDBF77D264AC24600AC9C24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BDBF764264AC24600AC9C24 /* Assets.xcassets */; };
-		5BDBF77E264AC24600AC9C24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BDBF764264AC24600AC9C24 /* Assets.xcassets */; };
+		5BDBF78C264AC36700AC9C24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BDBF78B264AC36700AC9C24 /* Assets.xcassets */; };
+		5BDBF793264AC36700AC9C24 /* plantatinhas Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 5BDBF792264AC36700AC9C24 /* plantatinhas Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		5BDBF798264AC36700AC9C24 /* plantatinhasApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBF797264AC36700AC9C24 /* plantatinhasApp.swift */; };
+		5BDBF79A264AC36700AC9C24 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBF799264AC36700AC9C24 /* ContentView.swift */; };
+		5BDBF79C264AC36700AC9C24 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBF79B264AC36700AC9C24 /* NotificationController.swift */; };
+		5BDBF79E264AC36700AC9C24 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBF79D264AC36700AC9C24 /* NotificationView.swift */; };
+		5BDBF7A0264AC36700AC9C24 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBF79F264AC36700AC9C24 /* ComplicationController.swift */; };
+		5BDBF7A2264AC36800AC9C24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BDBF7A1264AC36800AC9C24 /* Assets.xcassets */; };
+		5BDBF7A5264AC36800AC9C24 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BDBF7A4264AC36800AC9C24 /* Preview Assets.xcassets */; };
+		5BDBF7AA264AC36800AC9C24 /* plantatinhas.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 5BDBF789264AC36600AC9C24 /* plantatinhas.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		5BDBF7BB264AC56500AC9C24 /* keep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBF7BA264AC56500AC9C24 /* keep.swift */; };
+		5BDBF7BD264AC57700AC9C24 /* keep1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBF7BC264AC57700AC9C24 /* keep1.swift */; };
+		5BDBF7BF264AC58000AC9C24 /* keep2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBF7BE264AC58000AC9C24 /* keep2.swift */; };
+		5BDBF7C1264AC58900AC9C24 /* keep3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBF7C0264AC58900AC9C24 /* keep3.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5BDBF794264AC36700AC9C24 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5BDBF75A264AC24400AC9C24 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5BDBF791264AC36700AC9C24;
+			remoteInfo = "plantatinhas Extension";
+		};
+		5BDBF7A8264AC36800AC9C24 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5BDBF75A264AC24400AC9C24 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5BDBF788264AC36600AC9C24;
+			remoteInfo = plantatinhas;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		5BDBF7AE264AC36800AC9C24 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				5BDBF793264AC36700AC9C24 /* plantatinhas Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5BDBF7B2264AC36800AC9C24 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				5BDBF7AA264AC36800AC9C24 /* plantatinhas.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		5BDBF760264AC24400AC9C24 /* Shared.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Shared.xcdatamodel; sourceTree = "<group>"; };
@@ -27,9 +78,23 @@
 		5BDBF764264AC24600AC9C24 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5BDBF769264AC24600AC9C24 /* plantatinhas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = plantatinhas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BDBF76C264AC24600AC9C24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5BDBF771264AC24600AC9C24 /* plantatinhas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = plantatinhas.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		5BDBF773264AC24600AC9C24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5BDBF774264AC24600AC9C24 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		5BDBF789264AC36600AC9C24 /* plantatinhas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = plantatinhas.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BDBF78B264AC36700AC9C24 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5BDBF78D264AC36700AC9C24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5BDBF792264AC36700AC9C24 /* plantatinhas Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "plantatinhas Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BDBF797264AC36700AC9C24 /* plantatinhasApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = plantatinhasApp.swift; sourceTree = "<group>"; };
+		5BDBF799264AC36700AC9C24 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		5BDBF79B264AC36700AC9C24 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		5BDBF79D264AC36700AC9C24 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
+		5BDBF79F264AC36700AC9C24 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		5BDBF7A1264AC36800AC9C24 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5BDBF7A4264AC36800AC9C24 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5BDBF7A6264AC36800AC9C24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5BDBF7A7264AC36800AC9C24 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		5BDBF7BA264AC56500AC9C24 /* keep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = keep.swift; sourceTree = "<group>"; };
+		5BDBF7BC264AC57700AC9C24 /* keep1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = keep1.swift; path = Shared/Model/keep1.swift; sourceTree = SOURCE_ROOT; };
+		5BDBF7BE264AC58000AC9C24 /* keep2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = keep2.swift; path = Shared/Scenes/keep2.swift; sourceTree = SOURCE_ROOT; };
+		5BDBF7C0264AC58900AC9C24 /* keep3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = keep3.swift; path = Shared/Services/keep3.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,7 +105,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5BDBF76E264AC24600AC9C24 /* Frameworks */ = {
+		5BDBF78F264AC36700AC9C24 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -55,7 +120,8 @@
 			children = (
 				5BDBF75E264AC24400AC9C24 /* Shared */,
 				5BDBF76B264AC24600AC9C24 /* iOS */,
-				5BDBF772264AC24600AC9C24 /* macOS */,
+				5BDBF78A264AC36600AC9C24 /* plantatinhas */,
+				5BDBF796264AC36700AC9C24 /* plantatinhas Extension */,
 				5BDBF76A264AC24600AC9C24 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -63,6 +129,10 @@
 		5BDBF75E264AC24400AC9C24 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				5BDBF7B9264AC55000AC9C24 /* Worker */,
+				5BDBF7B8264AC54600AC9C24 /* Services */,
+				5BDBF7B7264AC54100AC9C24 /* Scenes */,
+				5BDBF7B6264AC52B00AC9C24 /* Model */,
 				5BDBF761264AC24400AC9C24 /* plantatinhasApp.swift */,
 				5BDBF762264AC24400AC9C24 /* ContentView.swift */,
 				5BDBF763264AC24400AC9C24 /* Persistence.swift */,
@@ -76,7 +146,8 @@
 			isa = PBXGroup;
 			children = (
 				5BDBF769264AC24600AC9C24 /* plantatinhas.app */,
-				5BDBF771264AC24600AC9C24 /* plantatinhas.app */,
+				5BDBF789264AC36600AC9C24 /* plantatinhas.app */,
+				5BDBF792264AC36700AC9C24 /* plantatinhas Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -89,13 +160,69 @@
 			path = iOS;
 			sourceTree = "<group>";
 		};
-		5BDBF772264AC24600AC9C24 /* macOS */ = {
+		5BDBF78A264AC36600AC9C24 /* plantatinhas */ = {
 			isa = PBXGroup;
 			children = (
-				5BDBF773264AC24600AC9C24 /* Info.plist */,
-				5BDBF774264AC24600AC9C24 /* macOS.entitlements */,
+				5BDBF78B264AC36700AC9C24 /* Assets.xcassets */,
+				5BDBF78D264AC36700AC9C24 /* Info.plist */,
 			);
-			path = macOS;
+			path = plantatinhas;
+			sourceTree = "<group>";
+		};
+		5BDBF796264AC36700AC9C24 /* plantatinhas Extension */ = {
+			isa = PBXGroup;
+			children = (
+				5BDBF797264AC36700AC9C24 /* plantatinhasApp.swift */,
+				5BDBF799264AC36700AC9C24 /* ContentView.swift */,
+				5BDBF79B264AC36700AC9C24 /* NotificationController.swift */,
+				5BDBF79D264AC36700AC9C24 /* NotificationView.swift */,
+				5BDBF79F264AC36700AC9C24 /* ComplicationController.swift */,
+				5BDBF7A1264AC36800AC9C24 /* Assets.xcassets */,
+				5BDBF7A6264AC36800AC9C24 /* Info.plist */,
+				5BDBF7A7264AC36800AC9C24 /* PushNotificationPayload.apns */,
+				5BDBF7A3264AC36800AC9C24 /* Preview Content */,
+			);
+			path = "plantatinhas Extension";
+			sourceTree = "<group>";
+		};
+		5BDBF7A3264AC36800AC9C24 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				5BDBF7A4264AC36800AC9C24 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		5BDBF7B6264AC52B00AC9C24 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5BDBF7BA264AC56500AC9C24 /* keep.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5BDBF7B7264AC54100AC9C24 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				5BDBF7BC264AC57700AC9C24 /* keep1.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		5BDBF7B8264AC54600AC9C24 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				5BDBF7BE264AC58000AC9C24 /* keep2.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		5BDBF7B9264AC55000AC9C24 /* Worker */ = {
+			isa = PBXGroup;
+			children = (
+				5BDBF7C0264AC58900AC9C24 /* keep3.swift */,
+			);
+			path = Worker;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -108,32 +235,54 @@
 				5BDBF765264AC24600AC9C24 /* Sources */,
 				5BDBF766264AC24600AC9C24 /* Frameworks */,
 				5BDBF767264AC24600AC9C24 /* Resources */,
+				5BDBF7B2264AC36800AC9C24 /* Embed Watch Content */,
+				5BDBF7B3264AC4E500AC9C24 /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				5BDBF7A9264AC36800AC9C24 /* PBXTargetDependency */,
 			);
 			name = "plantatinhas (iOS)";
 			productName = "plantatinhas (iOS)";
 			productReference = 5BDBF769264AC24600AC9C24 /* plantatinhas.app */;
 			productType = "com.apple.product-type.application";
 		};
-		5BDBF770264AC24600AC9C24 /* plantatinhas (macOS) */ = {
+		5BDBF788264AC36600AC9C24 /* plantatinhas */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5BDBF784264AC24600AC9C24 /* Build configuration list for PBXNativeTarget "plantatinhas (macOS)" */;
+			buildConfigurationList = 5BDBF7AF264AC36800AC9C24 /* Build configuration list for PBXNativeTarget "plantatinhas" */;
 			buildPhases = (
-				5BDBF76D264AC24600AC9C24 /* Sources */,
-				5BDBF76E264AC24600AC9C24 /* Frameworks */,
-				5BDBF76F264AC24600AC9C24 /* Resources */,
+				5BDBF787264AC36600AC9C24 /* Resources */,
+				5BDBF7AE264AC36800AC9C24 /* Embed App Extensions */,
+				5BDBF7B4264AC4F400AC9C24 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5BDBF795264AC36700AC9C24 /* PBXTargetDependency */,
+			);
+			name = plantatinhas;
+			productName = plantatinhas;
+			productReference = 5BDBF789264AC36600AC9C24 /* plantatinhas.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		5BDBF791264AC36700AC9C24 /* plantatinhas Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5BDBF7AB264AC36800AC9C24 /* Build configuration list for PBXNativeTarget "plantatinhas Extension" */;
+			buildPhases = (
+				5BDBF78E264AC36700AC9C24 /* Sources */,
+				5BDBF78F264AC36700AC9C24 /* Frameworks */,
+				5BDBF790264AC36700AC9C24 /* Resources */,
+				5BDBF7B5264AC4FC00AC9C24 /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "plantatinhas (macOS)";
-			productName = "plantatinhas (macOS)";
-			productReference = 5BDBF771264AC24600AC9C24 /* plantatinhas.app */;
-			productType = "com.apple.product-type.application";
+			name = "plantatinhas Extension";
+			productName = "plantatinhas Extension";
+			productReference = 5BDBF792264AC36700AC9C24 /* plantatinhas Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -147,7 +296,10 @@
 					5BDBF768264AC24600AC9C24 = {
 						CreatedOnToolsVersion = 12.5;
 					};
-					5BDBF770264AC24600AC9C24 = {
+					5BDBF788264AC36600AC9C24 = {
+						CreatedOnToolsVersion = 12.5;
+					};
+					5BDBF791264AC36700AC9C24 = {
 						CreatedOnToolsVersion = 12.5;
 					};
 				};
@@ -166,7 +318,8 @@
 			projectRoot = "";
 			targets = (
 				5BDBF768264AC24600AC9C24 /* plantatinhas (iOS) */,
-				5BDBF770264AC24600AC9C24 /* plantatinhas (macOS) */,
+				5BDBF788264AC36600AC9C24 /* plantatinhas */,
+				5BDBF791264AC36700AC9C24 /* plantatinhas Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -180,15 +333,78 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5BDBF76F264AC24600AC9C24 /* Resources */ = {
+		5BDBF787264AC36600AC9C24 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5BDBF77E264AC24600AC9C24 /* Assets.xcassets in Resources */,
+				5BDBF78C264AC36700AC9C24 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5BDBF790264AC36700AC9C24 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BDBF7A5264AC36800AC9C24 /* Preview Assets.xcassets in Resources */,
+				5BDBF7A2264AC36800AC9C24 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5BDBF7B3264AC4E500AC9C24 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		5BDBF7B4264AC4F400AC9C24 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		5BDBF7B5264AC4FC00AC9C24 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5BDBF765264AC24600AC9C24 /* Sources */ = {
@@ -196,24 +412,42 @@
 			buildActionMask = 2147483647;
 			files = (
 				5BDBF777264AC24600AC9C24 /* plantatinhasApp.swift in Sources */,
+				5BDBF7BB264AC56500AC9C24 /* keep.swift in Sources */,
+				5BDBF7BF264AC58000AC9C24 /* keep2.swift in Sources */,
+				5BDBF7BD264AC57700AC9C24 /* keep1.swift in Sources */,
 				5BDBF77B264AC24600AC9C24 /* Persistence.swift in Sources */,
 				5BDBF775264AC24600AC9C24 /* plantatinhas.xcdatamodeld in Sources */,
+				5BDBF7C1264AC58900AC9C24 /* keep3.swift in Sources */,
 				5BDBF779264AC24600AC9C24 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5BDBF76D264AC24600AC9C24 /* Sources */ = {
+		5BDBF78E264AC36700AC9C24 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5BDBF778264AC24600AC9C24 /* plantatinhasApp.swift in Sources */,
-				5BDBF77C264AC24600AC9C24 /* Persistence.swift in Sources */,
-				5BDBF776264AC24600AC9C24 /* plantatinhas.xcdatamodeld in Sources */,
-				5BDBF77A264AC24600AC9C24 /* ContentView.swift in Sources */,
+				5BDBF79C264AC36700AC9C24 /* NotificationController.swift in Sources */,
+				5BDBF79A264AC36700AC9C24 /* ContentView.swift in Sources */,
+				5BDBF7A0264AC36700AC9C24 /* ComplicationController.swift in Sources */,
+				5BDBF798264AC36700AC9C24 /* plantatinhasApp.swift in Sources */,
+				5BDBF79E264AC36700AC9C24 /* NotificationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5BDBF795264AC36700AC9C24 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5BDBF791264AC36700AC9C24 /* plantatinhas Extension */;
+			targetProxy = 5BDBF794264AC36700AC9C24 /* PBXContainerItemProxy */;
+		};
+		5BDBF7A9264AC36800AC9C24 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5BDBF788264AC36600AC9C24 /* plantatinhas */;
+			targetProxy = 5BDBF7A8264AC36800AC9C24 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		5BDBF77F264AC24600AC9C24 /* Debug */ = {
@@ -372,51 +606,93 @@
 			};
 			name = Release;
 		};
-		5BDBF785264AC24600AC9C24 /* Debug */ = {
+		5BDBF7AC264AC36800AC9C24 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"plantatinhas Extension/Preview Content\"";
 				DEVELOPMENT_TEAM = 795A25396T;
-				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = macOS/Info.plist;
+				INFOPLIST_FILE = "plantatinhas Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
-					"@executable_path/../Frameworks",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				PRODUCT_BUNDLE_IDENTIFIER = academy.plantatinhas;
-				PRODUCT_NAME = plantatinhas;
-				SDKROOT = macosx;
+				PRODUCT_BUNDLE_IDENTIFIER = academy.plantatinhas.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
 			};
 			name = Debug;
 		};
-		5BDBF786264AC24600AC9C24 /* Release */ = {
+		5BDBF7AD264AC36800AC9C24 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"plantatinhas Extension/Preview Content\"";
 				DEVELOPMENT_TEAM = 795A25396T;
-				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = macOS/Info.plist;
+				INFOPLIST_FILE = "plantatinhas Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
-					"@executable_path/../Frameworks",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				PRODUCT_BUNDLE_IDENTIFIER = academy.plantatinhas;
-				PRODUCT_NAME = plantatinhas;
-				SDKROOT = macosx;
+				PRODUCT_BUNDLE_IDENTIFIER = academy.plantatinhas.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Release;
+		};
+		5BDBF7B0264AC36800AC9C24 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 795A25396T;
+				IBSC_MODULE = plantatinhas_Extension;
+				INFOPLIST_FILE = plantatinhas/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = academy.plantatinhas.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Debug;
+		};
+		5BDBF7B1264AC36800AC9C24 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 795A25396T;
+				IBSC_MODULE = plantatinhas_Extension;
+				INFOPLIST_FILE = plantatinhas/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = academy.plantatinhas.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
 			};
 			name = Release;
 		};
@@ -441,11 +717,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5BDBF784264AC24600AC9C24 /* Build configuration list for PBXNativeTarget "plantatinhas (macOS)" */ = {
+		5BDBF7AB264AC36800AC9C24 /* Build configuration list for PBXNativeTarget "plantatinhas Extension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5BDBF785264AC24600AC9C24 /* Debug */,
-				5BDBF786264AC24600AC9C24 /* Release */,
+				5BDBF7AC264AC36800AC9C24 /* Debug */,
+				5BDBF7AD264AC36800AC9C24 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5BDBF7AF264AC36800AC9C24 /* Build configuration list for PBXNativeTarget "plantatinhas" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5BDBF7B0264AC36800AC9C24 /* Debug */,
+				5BDBF7B1264AC36800AC9C24 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
