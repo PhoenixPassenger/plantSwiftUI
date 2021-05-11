@@ -1,0 +1,469 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5BDBF775264AC24600AC9C24 /* plantatinhas.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBF75F264AC24400AC9C24 /* plantatinhas.xcdatamodeld */; };
+		5BDBF776264AC24600AC9C24 /* plantatinhas.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBF75F264AC24400AC9C24 /* plantatinhas.xcdatamodeld */; };
+		5BDBF777264AC24600AC9C24 /* plantatinhasApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBF761264AC24400AC9C24 /* plantatinhasApp.swift */; };
+		5BDBF778264AC24600AC9C24 /* plantatinhasApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBF761264AC24400AC9C24 /* plantatinhasApp.swift */; };
+		5BDBF779264AC24600AC9C24 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBF762264AC24400AC9C24 /* ContentView.swift */; };
+		5BDBF77A264AC24600AC9C24 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBF762264AC24400AC9C24 /* ContentView.swift */; };
+		5BDBF77B264AC24600AC9C24 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBF763264AC24400AC9C24 /* Persistence.swift */; };
+		5BDBF77C264AC24600AC9C24 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBF763264AC24400AC9C24 /* Persistence.swift */; };
+		5BDBF77D264AC24600AC9C24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BDBF764264AC24600AC9C24 /* Assets.xcassets */; };
+		5BDBF77E264AC24600AC9C24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BDBF764264AC24600AC9C24 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5BDBF760264AC24400AC9C24 /* Shared.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Shared.xcdatamodel; sourceTree = "<group>"; };
+		5BDBF761264AC24400AC9C24 /* plantatinhasApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = plantatinhasApp.swift; sourceTree = "<group>"; };
+		5BDBF762264AC24400AC9C24 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		5BDBF763264AC24400AC9C24 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		5BDBF764264AC24600AC9C24 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5BDBF769264AC24600AC9C24 /* plantatinhas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = plantatinhas.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BDBF76C264AC24600AC9C24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5BDBF771264AC24600AC9C24 /* plantatinhas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = plantatinhas.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BDBF773264AC24600AC9C24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5BDBF774264AC24600AC9C24 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5BDBF766264AC24600AC9C24 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5BDBF76E264AC24600AC9C24 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5BDBF759264AC24400AC9C24 = {
+			isa = PBXGroup;
+			children = (
+				5BDBF75E264AC24400AC9C24 /* Shared */,
+				5BDBF76B264AC24600AC9C24 /* iOS */,
+				5BDBF772264AC24600AC9C24 /* macOS */,
+				5BDBF76A264AC24600AC9C24 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5BDBF75E264AC24400AC9C24 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				5BDBF761264AC24400AC9C24 /* plantatinhasApp.swift */,
+				5BDBF762264AC24400AC9C24 /* ContentView.swift */,
+				5BDBF763264AC24400AC9C24 /* Persistence.swift */,
+				5BDBF764264AC24600AC9C24 /* Assets.xcassets */,
+				5BDBF75F264AC24400AC9C24 /* plantatinhas.xcdatamodeld */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		5BDBF76A264AC24600AC9C24 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5BDBF769264AC24600AC9C24 /* plantatinhas.app */,
+				5BDBF771264AC24600AC9C24 /* plantatinhas.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5BDBF76B264AC24600AC9C24 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				5BDBF76C264AC24600AC9C24 /* Info.plist */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
+		5BDBF772264AC24600AC9C24 /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+				5BDBF773264AC24600AC9C24 /* Info.plist */,
+				5BDBF774264AC24600AC9C24 /* macOS.entitlements */,
+			);
+			path = macOS;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5BDBF768264AC24600AC9C24 /* plantatinhas (iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5BDBF781264AC24600AC9C24 /* Build configuration list for PBXNativeTarget "plantatinhas (iOS)" */;
+			buildPhases = (
+				5BDBF765264AC24600AC9C24 /* Sources */,
+				5BDBF766264AC24600AC9C24 /* Frameworks */,
+				5BDBF767264AC24600AC9C24 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "plantatinhas (iOS)";
+			productName = "plantatinhas (iOS)";
+			productReference = 5BDBF769264AC24600AC9C24 /* plantatinhas.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5BDBF770264AC24600AC9C24 /* plantatinhas (macOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5BDBF784264AC24600AC9C24 /* Build configuration list for PBXNativeTarget "plantatinhas (macOS)" */;
+			buildPhases = (
+				5BDBF76D264AC24600AC9C24 /* Sources */,
+				5BDBF76E264AC24600AC9C24 /* Frameworks */,
+				5BDBF76F264AC24600AC9C24 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "plantatinhas (macOS)";
+			productName = "plantatinhas (macOS)";
+			productReference = 5BDBF771264AC24600AC9C24 /* plantatinhas.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5BDBF75A264AC24400AC9C24 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					5BDBF768264AC24600AC9C24 = {
+						CreatedOnToolsVersion = 12.5;
+					};
+					5BDBF770264AC24600AC9C24 = {
+						CreatedOnToolsVersion = 12.5;
+					};
+				};
+			};
+			buildConfigurationList = 5BDBF75D264AC24400AC9C24 /* Build configuration list for PBXProject "plantatinhas" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5BDBF759264AC24400AC9C24;
+			productRefGroup = 5BDBF76A264AC24600AC9C24 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5BDBF768264AC24600AC9C24 /* plantatinhas (iOS) */,
+				5BDBF770264AC24600AC9C24 /* plantatinhas (macOS) */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5BDBF767264AC24600AC9C24 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BDBF77D264AC24600AC9C24 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5BDBF76F264AC24600AC9C24 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BDBF77E264AC24600AC9C24 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5BDBF765264AC24600AC9C24 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BDBF777264AC24600AC9C24 /* plantatinhasApp.swift in Sources */,
+				5BDBF77B264AC24600AC9C24 /* Persistence.swift in Sources */,
+				5BDBF775264AC24600AC9C24 /* plantatinhas.xcdatamodeld in Sources */,
+				5BDBF779264AC24600AC9C24 /* ContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5BDBF76D264AC24600AC9C24 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BDBF778264AC24600AC9C24 /* plantatinhasApp.swift in Sources */,
+				5BDBF77C264AC24600AC9C24 /* Persistence.swift in Sources */,
+				5BDBF776264AC24600AC9C24 /* plantatinhas.xcdatamodeld in Sources */,
+				5BDBF77A264AC24600AC9C24 /* ContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		5BDBF77F264AC24600AC9C24 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5BDBF780264AC24600AC9C24 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		5BDBF782264AC24600AC9C24 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 795A25396T;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = iOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = academy.plantatinhas;
+				PRODUCT_NAME = plantatinhas;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5BDBF783264AC24600AC9C24 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 795A25396T;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = iOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = academy.plantatinhas;
+				PRODUCT_NAME = plantatinhas;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5BDBF785264AC24600AC9C24 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 795A25396T;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = macOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = academy.plantatinhas;
+				PRODUCT_NAME = plantatinhas;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		5BDBF786264AC24600AC9C24 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 795A25396T;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = macOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = academy.plantatinhas;
+				PRODUCT_NAME = plantatinhas;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5BDBF75D264AC24400AC9C24 /* Build configuration list for PBXProject "plantatinhas" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5BDBF77F264AC24600AC9C24 /* Debug */,
+				5BDBF780264AC24600AC9C24 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5BDBF781264AC24600AC9C24 /* Build configuration list for PBXNativeTarget "plantatinhas (iOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5BDBF782264AC24600AC9C24 /* Debug */,
+				5BDBF783264AC24600AC9C24 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5BDBF784264AC24600AC9C24 /* Build configuration list for PBXNativeTarget "plantatinhas (macOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5BDBF785264AC24600AC9C24 /* Debug */,
+				5BDBF786264AC24600AC9C24 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		5BDBF75F264AC24400AC9C24 /* plantatinhas.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				5BDBF760264AC24400AC9C24 /* Shared.xcdatamodel */,
+			);
+			currentVersion = 5BDBF760264AC24400AC9C24 /* Shared.xcdatamodel */;
+			path = plantatinhas.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 5BDBF75A264AC24400AC9C24 /* Project object */;
+}
