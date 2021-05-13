@@ -9,6 +9,7 @@ import SwiftUI
 import CoreData
 
 struct ContentView: View {
+    
     @Environment(\.managedObjectContext) private var viewContext
 
     @FetchRequest(
@@ -18,19 +19,13 @@ struct ContentView: View {
 
     var body: some View {
         List {
+            Button(action: addItem) {
+                Label("Add Item", systemImage: "plus")
+            }
             ForEach(items) { item in
                 Text("Item at \(item.timestamp!, formatter: itemFormatter)")
             }
             .onDelete(perform: deleteItems)
-        }
-        .toolbar {
-            #if os(iOS)
-            EditButton()
-            #endif
-
-            Button(action: addItem) {
-                Label("Add Item", systemImage: "plus")
-            }
         }
     }
 

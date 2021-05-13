@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct plantatinhasApp: App {
+struct PlantatinhasApp: App {
     let persistenceController = PersistenceController.shared
 
     var body: some Scene {
