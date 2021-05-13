@@ -15,8 +15,9 @@ class PlantModel {
     var disease: Bool
     var profilePhoto: String?
     var photos: String?
-    
-    init(name: String?, water: Date?, harvest: Date?, fertilize: Date?, disease: Bool, profilePhoto: String?, photos: String? ) {
+
+    init(name: String?, water: Date?, harvest: Date?,
+         fertilize: Date?, disease: Bool, profilePhoto: String?, photos: String? ) {
         self.name = name
         self.water = water
         self.harvest = harvest
