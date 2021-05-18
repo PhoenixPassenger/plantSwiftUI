@@ -12,6 +12,9 @@
 		5B57A45E264C14D200B917F1 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBF763264AC24400AC9C24 /* Persistence.swift */; };
 		5B57A45F264C150100B917F1 /* plantatinhas.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBF75F264AC24400AC9C24 /* plantatinhas.xcdatamodeld */; };
 		5B57A460264C163200B917F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BDBF764264AC24600AC9C24 /* Assets.xcassets */; };
+		5BBC64D22653DF0B00F1251C /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBC64D12653DF0B00F1251C /* Colors.swift */; };
+		5BBC64D32653E53100F1251C /* keep1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBF7BC264AC57700AC9C24 /* keep1.swift */; };
+		5BBC64D42653E53700F1251C /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBC64D12653DF0B00F1251C /* Colors.swift */; };
 		5BDBF775264AC24600AC9C24 /* plantatinhas.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBF75F264AC24400AC9C24 /* plantatinhas.xcdatamodeld */; };
 		5BDBF777264AC24600AC9C24 /* plantatinhasApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBF761264AC24400AC9C24 /* plantatinhasApp.swift */; };
 		5BDBF779264AC24600AC9C24 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBF762264AC24400AC9C24 /* ContentView.swift */; };
@@ -26,7 +29,6 @@
 		5BDBF7A5264AC36800AC9C24 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BDBF7A4264AC36800AC9C24 /* Preview Assets.xcassets */; };
 		5BDBF7AA264AC36800AC9C24 /* plantatinhas.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 5BDBF789264AC36600AC9C24 /* plantatinhas.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		5BDBF7BD264AC57700AC9C24 /* keep1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBF7BC264AC57700AC9C24 /* keep1.swift */; };
-		5BDBF7BF264AC58000AC9C24 /* keep2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBF7BE264AC58000AC9C24 /* keep2.swift */; };
 		D722116C264D5112004478EE /* PlantModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D722116B264D5112004478EE /* PlantModel.swift */; };
 		D722116D264D5395004478EE /* PlantModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D722116B264D5112004478EE /* PlantModel.swift */; };
 		D7673135264D4B0200632905 /* PlantWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7673134264D4B0200632905 /* PlantWorker.swift */; };
@@ -78,6 +80,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5BBC64D12653DF0B00F1251C /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		5BDBF760264AC24400AC9C24 /* Shared.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Shared.xcdatamodel; sourceTree = "<group>"; };
 		5BDBF761264AC24400AC9C24 /* plantatinhasApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = plantatinhasApp.swift; sourceTree = "<group>"; };
 		5BDBF762264AC24400AC9C24 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -97,7 +100,6 @@
 		5BDBF7A6264AC36800AC9C24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5BDBF7A7264AC36800AC9C24 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		5BDBF7BC264AC57700AC9C24 /* keep1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = keep1.swift; path = Shared/Model/keep1.swift; sourceTree = SOURCE_ROOT; };
-		5BDBF7BE264AC58000AC9C24 /* keep2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = keep2.swift; path = Shared/Scenes/keep2.swift; sourceTree = SOURCE_ROOT; };
 		D722116B264D5112004478EE /* PlantModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantModel.swift; sourceTree = "<group>"; };
 		D7673134264D4B0200632905 /* PlantWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantWorker.swift; sourceTree = "<group>"; };
 		D7673137264D4D0F00632905 /* plantatinhas.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = plantatinhas.entitlements; sourceTree = "<group>"; };
@@ -126,6 +128,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5BBC64D02653DEE700F1251C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5BBC64D12653DF0B00F1251C /* Colors.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		5BDBF759264AC24400AC9C24 = {
 			isa = PBXGroup;
 			children = (
@@ -142,8 +152,8 @@
 		5BDBF75E264AC24400AC9C24 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				5BBC64D02653DEE700F1251C /* Extensions */,
 				D7673133264D4AB100632905 /* Worker */,
-				5BDBF7B8264AC54600AC9C24 /* Services */,
 				5BDBF7B7264AC54100AC9C24 /* Scenes */,
 				5BDBF7B6264AC52B00AC9C24 /* Model */,
 				5BDBF761264AC24400AC9C24 /* plantatinhasApp.swift */,
@@ -219,14 +229,6 @@
 				5BDBF7BC264AC57700AC9C24 /* keep1.swift */,
 			);
 			path = Scenes;
-			sourceTree = "<group>";
-		};
-		5BDBF7B8264AC54600AC9C24 /* Services */ = {
-			isa = PBXGroup;
-			children = (
-				5BDBF7BE264AC58000AC9C24 /* keep2.swift */,
-			);
-			path = Services;
 			sourceTree = "<group>";
 		};
 		D7673133264D4AB100632905 /* Worker */ = {
@@ -434,7 +436,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5BDBF777264AC24600AC9C24 /* plantatinhasApp.swift in Sources */,
-				5BDBF7BF264AC58000AC9C24 /* keep2.swift in Sources */,
+				5BBC64D22653DF0B00F1251C /* Colors.swift in Sources */,
 				5BDBF7BD264AC57700AC9C24 /* keep1.swift in Sources */,
 				D722116C264D5112004478EE /* PlantModel.swift in Sources */,
 				5BDBF77B264AC24600AC9C24 /* Persistence.swift in Sources */,
@@ -449,6 +451,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B57A45C264C14CB00B917F1 /* plantatinhasApp.swift in Sources */,
+				5BBC64D42653E53700F1251C /* Colors.swift in Sources */,
 				5B57A45F264C150100B917F1 /* plantatinhas.xcdatamodeld in Sources */,
 				5B57A45E264C14D200B917F1 /* Persistence.swift in Sources */,
 				5BDBF79C264AC36700AC9C24 /* NotificationController.swift in Sources */,
@@ -456,6 +459,7 @@
 				5B57A45D264C14CF00B917F1 /* ContentView.swift in Sources */,
 				D7673136264D4B0200632905 /* PlantWorker.swift in Sources */,
 				5BDBF7A0264AC36700AC9C24 /* ComplicationController.swift in Sources */,
+				5BBC64D32653E53100F1251C /* keep1.swift in Sources */,
 				5BDBF79E264AC36700AC9C24 /* NotificationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
