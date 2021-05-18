@@ -15,9 +15,12 @@ import SwiftUI
      @State var timeleft: Int = 4
  
  Forma de chamar o componente :
-    ProgressBar(progress: self.$progressValue, activity: self.$activity, badge: self.$badge, timeLeft: self.$timeleft)
-     .frame(width: 150.0, height: 150.0)
-     .padding(40.0)
+ ProgressBar(progress: self.$progressValue,
+     activity: self.$typeOfActivity,
+     badge: self.$isBadgeActive,
+     timeLeft: self.$timeleft)
+  .frame(width: 150.0, height: 150.0)
+  .padding(40.0)
  */
 
 struct ProgressBar: View {
@@ -37,8 +40,19 @@ struct ProgressBar: View {
                 .rotationEffect(Angle(degrees: 270.0))
                 .animation(.linear)
             Image(systemName: "pencil")
-            if badge {
-                Text("\(timeLeft)d").padding(10).background(Color.water).clipShape(RoundedRectangle(cornerRadius: 12)).foregroundColor(.black).offset(x: 80, y: -45).font(.title2)
+            GeometryReader { (geometry) in
+                let offsetX = geometry.size.width * 0.75
+                let offsetY = geometry.size.height * -0.15
+
+                if badge {
+                    Text("\(timeLeft)d")
+                        .padding(10)
+                        .background(Color.water)
+                        .clipShape(RoundedRectangle(cornerRadius: 12))
+                        .foregroundColor(.black)
+                        .offset(x: offsetX, y: offsetY)
+                        .font(.title2)
+                }
             }
         }
     }

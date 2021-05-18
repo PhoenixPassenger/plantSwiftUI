@@ -71,7 +71,11 @@ private let itemFormatter: DateFormatter = {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ForEach(ColorScheme.allCases, id: \.self) {
-            ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext).preferredColorScheme($0)
+            ContentView().environment(\.managedObjectContext, PersistenceController
+                                        .preview
+                                        .container
+                                        .viewContext)
+                .preferredColorScheme($0)
                 }
     }
 }

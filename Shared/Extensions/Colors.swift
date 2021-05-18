@@ -5,7 +5,6 @@
 //  Created by Rodrigo Silva Ribeiro on 18/05/21.
 //
 
-import UIKit
 import SwiftUI
 extension Color {
     static let bottonBackground = Color("bottonBackground")
