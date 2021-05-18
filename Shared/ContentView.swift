@@ -18,14 +18,16 @@ struct ContentView: View {
     private var items: FetchedResults<Item>
 
     var body: some View {
-        List {
-            Button(action: addItem) {
-                Label("Add Item", systemImage: "plus")
+        ZStack {
+            List {
+                Button(action: addItem) {
+                    Label("Add Item", systemImage: "plus")
+                }
+                ForEach(items) { item in
+                    Text("Item at \(item.timestamp!, formatter: itemFormatter)").foregroundColor(.fontCreatePlant)
+                }
+                .onDelete(perform: deleteItems)
             }
-            ForEach(items) { item in
-                Text("Item at \(item.timestamp!, formatter: itemFormatter)")
-            }
-            .onDelete(perform: deleteItems)
         }
     }
 
@@ -68,6 +70,8 @@ private let itemFormatter: DateFormatter = {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+        ForEach(ColorScheme.allCases, id: \.self) {
+            ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext).preferredColorScheme($0)
+                }
     }
 }
