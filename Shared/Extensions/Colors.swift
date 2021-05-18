@@ -5,7 +5,7 @@
 //  Created by Rodrigo Silva Ribeiro on 18/05/21.
 //
 
-import Foundation
+import UIKit
 import SwiftUI
 extension Color {
     static let bottonBackground = Color("bottonBackground")
@@ -17,5 +17,5 @@ extension Color {
     static let health = Color("health")
     static let topBackground = Color("topBackground")
     static let water = Color("water")
-
+    static let gray4 = Color("systemGray4")
 }
