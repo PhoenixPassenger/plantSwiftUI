@@ -15,7 +15,6 @@
 		5B57A45F264C150100B917F1 /* plantatinhas.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBF75F264AC24400AC9C24 /* plantatinhas.xcdatamodeld */; };
 		5B57A460264C163200B917F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BDBF764264AC24600AC9C24 /* Assets.xcassets */; };
 		5BBC64D22653DF0B00F1251C /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBC64D12653DF0B00F1251C /* Colors.swift */; };
-		5BBC64D32653E53100F1251C /* keep1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBF7BC264AC57700AC9C24 /* keep1.swift */; };
 		5BBC64D42653E53700F1251C /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBC64D12653DF0B00F1251C /* Colors.swift */; };
 		5BBC64D72653EB7500F1251C /* CircleProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBC64D62653EB7500F1251C /* CircleProgress.swift */; };
 		5BBC64D82653EBB300F1251C /* CircleProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBC64D62653EB7500F1251C /* CircleProgress.swift */; };
@@ -32,7 +31,8 @@
 		5BDBF7A2264AC36800AC9C24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BDBF7A1264AC36800AC9C24 /* Assets.xcassets */; };
 		5BDBF7A5264AC36800AC9C24 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BDBF7A4264AC36800AC9C24 /* Preview Assets.xcassets */; };
 		5BDBF7AA264AC36800AC9C24 /* plantatinhas.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 5BDBF789264AC36600AC9C24 /* plantatinhas.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		5BDBF7BD264AC57700AC9C24 /* keep1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBF7BC264AC57700AC9C24 /* keep1.swift */; };
+		5BF097362655394900DF57FF /* PlantDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF097352655394900DF57FF /* PlantDetails.swift */; };
+		5BF097372655396700DF57FF /* PlantDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF097352655394900DF57FF /* PlantDetails.swift */; };
 		D722116C264D5112004478EE /* PlantModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D722116B264D5112004478EE /* PlantModel.swift */; };
 		D722116D264D5395004478EE /* PlantModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D722116B264D5112004478EE /* PlantModel.swift */; };
 		D7673135264D4B0200632905 /* PlantWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7673134264D4B0200632905 /* PlantWorker.swift */; };
@@ -105,7 +105,7 @@
 		5BDBF7A4264AC36800AC9C24 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5BDBF7A6264AC36800AC9C24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5BDBF7A7264AC36800AC9C24 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
-		5BDBF7BC264AC57700AC9C24 /* keep1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = keep1.swift; path = Shared/Model/keep1.swift; sourceTree = SOURCE_ROOT; };
+		5BF097352655394900DF57FF /* PlantDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlantDetails.swift; sourceTree = "<group>"; };
 		D722116B264D5112004478EE /* PlantModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantModel.swift; sourceTree = "<group>"; };
 		D7673134264D4B0200632905 /* PlantWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantWorker.swift; sourceTree = "<group>"; };
 		D7673137264D4D0F00632905 /* plantatinhas.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = plantatinhas.entitlements; sourceTree = "<group>"; };
@@ -241,9 +241,8 @@
 		5BDBF7B7264AC54100AC9C24 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				5BF097352655394900DF57FF /* PlantDetails.swift */,
 				5BBC64D52653EB6200F1251C /* Components */,
-				5BDBF7BC264AC57700AC9C24 /* keep1.swift */,
-				5B0A0978265406CB00EFAF56 /* PlantDetails.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -454,10 +453,9 @@
 			files = (
 				5BDBF777264AC24600AC9C24 /* plantatinhasApp.swift in Sources */,
 				5BBC64D22653DF0B00F1251C /* Colors.swift in Sources */,
-				5BDBF7BD264AC57700AC9C24 /* keep1.swift in Sources */,
 				5448DE902654011D009CA2E3 /* MyPlantsCell.swift in Sources */,
 				D722116C264D5112004478EE /* PlantModel.swift in Sources */,
-				5B0A0979265406CB00EFAF56 /* PlantDetails.swift in Sources */,
+				5BF097362655394900DF57FF /* PlantDetails.swift in Sources */,
 				5BDBF77B264AC24600AC9C24 /* Persistence.swift in Sources */,
 				5BBC64D72653EB7500F1251C /* CircleProgress.swift in Sources */,
 				5BDBF775264AC24600AC9C24 /* plantatinhas.xcdatamodeld in Sources */,
@@ -472,7 +470,7 @@
 			files = (
 				5B57A45C264C14CB00B917F1 /* plantatinhasApp.swift in Sources */,
 				5BBC64D42653E53700F1251C /* Colors.swift in Sources */,
-				5B0A097A265406CB00EFAF56 /* PlantDetails.swift in Sources */,
+				5BF097372655396700DF57FF /* PlantDetails.swift in Sources */,
 				5BBC64D82653EBB300F1251C /* CircleProgress.swift in Sources */,
 				5B57A45F264C150100B917F1 /* plantatinhas.xcdatamodeld in Sources */,
 				5B57A45E264C14D200B917F1 /* Persistence.swift in Sources */,
@@ -482,7 +480,6 @@
 				D7673136264D4B0200632905 /* PlantWorker.swift in Sources */,
 				5BDBF7A0264AC36700AC9C24 /* ComplicationController.swift in Sources */,
 				5448DE912654011D009CA2E3 /* MyPlantsCell.swift in Sources */,
-				5BBC64D32653E53100F1251C /* keep1.swift in Sources */,
 				5BDBF79E264AC36700AC9C24 /* NotificationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
