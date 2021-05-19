@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5B0A0979265406CB00EFAF56 /* PlantDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0A0978265406CB00EFAF56 /* PlantDetails.swift */; };
-		5B0A097A265406CB00EFAF56 /* PlantDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0A0978265406CB00EFAF56 /* PlantDetails.swift */; };
+		5448DE902654011D009CA2E3 /* MyPlantsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5448DE8F2654011D009CA2E3 /* MyPlantsCell.swift */; };
+		5448DE912654011D009CA2E3 /* MyPlantsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5448DE8F2654011D009CA2E3 /* MyPlantsCell.swift */; };
 		5B57A45C264C14CB00B917F1 /* plantatinhasApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBF761264AC24400AC9C24 /* plantatinhasApp.swift */; };
 		5B57A45D264C14CF00B917F1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBF762264AC24400AC9C24 /* ContentView.swift */; };
 		5B57A45E264C14D200B917F1 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBF763264AC24400AC9C24 /* Persistence.swift */; };
@@ -84,7 +84,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		5B0A0978265406CB00EFAF56 /* PlantDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantDetails.swift; sourceTree = "<group>"; };
+		5448DE8F2654011D009CA2E3 /* MyPlantsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPlantsCell.swift; sourceTree = "<group>"; };
 		5BBC64D12653DF0B00F1251C /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		5BBC64D62653EB7500F1251C /* CircleProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleProgress.swift; sourceTree = "<group>"; };
 		5BDBF760264AC24400AC9C24 /* Shared.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Shared.xcdatamodel; sourceTree = "<group>"; };
@@ -175,6 +175,7 @@
 				5BDBF763264AC24400AC9C24 /* Persistence.swift */,
 				5BDBF764264AC24600AC9C24 /* Assets.xcassets */,
 				5BDBF75F264AC24400AC9C24 /* plantatinhas.xcdatamodeld */,
+				5448DE8F2654011D009CA2E3 /* MyPlantsCell.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -454,6 +455,7 @@
 				5BDBF777264AC24600AC9C24 /* plantatinhasApp.swift in Sources */,
 				5BBC64D22653DF0B00F1251C /* Colors.swift in Sources */,
 				5BDBF7BD264AC57700AC9C24 /* keep1.swift in Sources */,
+				5448DE902654011D009CA2E3 /* MyPlantsCell.swift in Sources */,
 				D722116C264D5112004478EE /* PlantModel.swift in Sources */,
 				5B0A0979265406CB00EFAF56 /* PlantDetails.swift in Sources */,
 				5BDBF77B264AC24600AC9C24 /* Persistence.swift in Sources */,
@@ -479,6 +481,7 @@
 				5B57A45D264C14CF00B917F1 /* ContentView.swift in Sources */,
 				D7673136264D4B0200632905 /* PlantWorker.swift in Sources */,
 				5BDBF7A0264AC36700AC9C24 /* ComplicationController.swift in Sources */,
+				5448DE912654011D009CA2E3 /* MyPlantsCell.swift in Sources */,
 				5BBC64D32653E53100F1251C /* keep1.swift in Sources */,
 				5BDBF79E264AC36700AC9C24 /* NotificationView.swift in Sources */,
 			);
