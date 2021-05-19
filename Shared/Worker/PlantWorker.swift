@@ -46,15 +46,14 @@ class PlantWorker {
             print("Could not delete. \(error), \(error.userInfo)")
         }
     }
-    func update(for plant: Plant, name: String?, water: Date?, harvest: Date?,
-                fertilize: Date?, disease: Bool, profilePhoto: String?, photos: String?) {
-        plant.name = (name != nil) ? name : plant.name
-        plant.water = (water != nil) ? water : plant.water
-        plant.harvest = (harvest != nil) ? harvest : plant.harvest
-        plant.fertilize = (fertilize != nil) ? fertilize : plant.fertilize
-        plant.disease = disease
-        plant.profilePhoto = (profilePhoto != nil) ? profilePhoto : plant.profilePhoto
-        plant.photos = (photos != nil) ? photos : plant.photos
+    func update(for plant: Plant, newPlant: PlantModel) {
+        plant.name = (newPlant.name != nil) ? newPlant.name : plant.name
+        plant.water = (newPlant.water != nil) ? newPlant.water : plant.water
+        plant.harvest = (newPlant.harvest != nil) ? newPlant.harvest : plant.harvest
+        plant.fertilize = (newPlant.fertilize != nil) ? newPlant.fertilize : plant.fertilize
+        plant.disease = newPlant.disease
+        plant.profilePhoto = (newPlant.profilePhoto != nil) ? newPlant.profilePhoto : plant.profilePhoto
+        plant.photos = (newPlant.photos != nil) ? newPlant.photos : plant.photos
         do {
             try viewContext.save()
         } catch let error as NSError {

@@ -17,6 +17,8 @@
 		5BBC64D22653DF0B00F1251C /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBC64D12653DF0B00F1251C /* Colors.swift */; };
 		5BBC64D32653E53100F1251C /* keep1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBF7BC264AC57700AC9C24 /* keep1.swift */; };
 		5BBC64D42653E53700F1251C /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBC64D12653DF0B00F1251C /* Colors.swift */; };
+		5BBC64D72653EB7500F1251C /* CircleProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBC64D62653EB7500F1251C /* CircleProgress.swift */; };
+		5BBC64D82653EBB300F1251C /* CircleProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBC64D62653EB7500F1251C /* CircleProgress.swift */; };
 		5BDBF775264AC24600AC9C24 /* plantatinhas.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBF75F264AC24400AC9C24 /* plantatinhas.xcdatamodeld */; };
 		5BDBF777264AC24600AC9C24 /* plantatinhasApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBF761264AC24400AC9C24 /* plantatinhasApp.swift */; };
 		5BDBF779264AC24600AC9C24 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBF762264AC24400AC9C24 /* ContentView.swift */; };
@@ -84,6 +86,7 @@
 /* Begin PBXFileReference section */
 		5448DE8F2654011D009CA2E3 /* MyPlantsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPlantsCell.swift; sourceTree = "<group>"; };
 		5BBC64D12653DF0B00F1251C /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		5BBC64D62653EB7500F1251C /* CircleProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleProgress.swift; sourceTree = "<group>"; };
 		5BDBF760264AC24400AC9C24 /* Shared.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Shared.xcdatamodel; sourceTree = "<group>"; };
 		5BDBF761264AC24400AC9C24 /* plantatinhasApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = plantatinhasApp.swift; sourceTree = "<group>"; };
 		5BDBF762264AC24400AC9C24 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -137,6 +140,14 @@
 				5BBC64D12653DF0B00F1251C /* Colors.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		5BBC64D52653EB6200F1251C /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				5BBC64D62653EB7500F1251C /* CircleProgress.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		5BDBF759264AC24400AC9C24 = {
@@ -230,7 +241,9 @@
 		5BDBF7B7264AC54100AC9C24 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				5BBC64D52653EB6200F1251C /* Components */,
 				5BDBF7BC264AC57700AC9C24 /* keep1.swift */,
+				5B0A0978265406CB00EFAF56 /* PlantDetails.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -444,7 +457,9 @@
 				5BDBF7BD264AC57700AC9C24 /* keep1.swift in Sources */,
 				5448DE902654011D009CA2E3 /* MyPlantsCell.swift in Sources */,
 				D722116C264D5112004478EE /* PlantModel.swift in Sources */,
+				5B0A0979265406CB00EFAF56 /* PlantDetails.swift in Sources */,
 				5BDBF77B264AC24600AC9C24 /* Persistence.swift in Sources */,
+				5BBC64D72653EB7500F1251C /* CircleProgress.swift in Sources */,
 				5BDBF775264AC24600AC9C24 /* plantatinhas.xcdatamodeld in Sources */,
 				D7673135264D4B0200632905 /* PlantWorker.swift in Sources */,
 				5BDBF779264AC24600AC9C24 /* ContentView.swift in Sources */,
@@ -457,6 +472,8 @@
 			files = (
 				5B57A45C264C14CB00B917F1 /* plantatinhasApp.swift in Sources */,
 				5BBC64D42653E53700F1251C /* Colors.swift in Sources */,
+				5B0A097A265406CB00EFAF56 /* PlantDetails.swift in Sources */,
+				5BBC64D82653EBB300F1251C /* CircleProgress.swift in Sources */,
 				5B57A45F264C150100B917F1 /* plantatinhas.xcdatamodeld in Sources */,
 				5B57A45E264C14D200B917F1 /* Persistence.swift in Sources */,
 				5BDBF79C264AC36700AC9C24 /* NotificationController.swift in Sources */,
