@@ -35,6 +35,8 @@
 		D7673136264D4B0200632905 /* PlantWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7673134264D4B0200632905 /* PlantWorker.swift */; };
 		D767313A264D4D2300632905 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7673139264D4D2300632905 /* CloudKit.framework */; };
 		D767313D264D4D5E00632905 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D767313C264D4D5E00632905 /* CloudKit.framework */; };
+		D7AC7D0B2653F356006AE657 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AC7D0A2653F356006AE657 /* DashboardViewController.swift */; };
+		D7AC7D102655323B006AE657 /* ViewBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AC7D0F2655323B006AE657 /* ViewBase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +108,8 @@
 		D7673139264D4D2300632905 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.5.sdk/System/Library/Frameworks/CloudKit.framework; sourceTree = DEVELOPER_DIR; };
 		D767313B264D4D5A00632905 /* plantatinhas Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "plantatinhas Extension.entitlements"; sourceTree = "<group>"; };
 		D767313C264D4D5E00632905 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS7.4.sdk/System/Library/Frameworks/CloudKit.framework; sourceTree = DEVELOPER_DIR; };
+		D7AC7D0A2653F356006AE657 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		D7AC7D0F2655323B006AE657 /* ViewBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewBase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,7 +182,9 @@
 		5BDBF76B264AC24600AC9C24 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
+				D7AC7D082653F331006AE657 /* scenes */,
 				5BDBF76C264AC24600AC9C24 /* Info.plist */,
+				D7AC7D0F2655323B006AE657 /* ViewBase.swift */,
 			);
 			path = iOS;
 			sourceTree = "<group>";
@@ -246,6 +252,22 @@
 				D7673139264D4D2300632905 /* CloudKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D7AC7D082653F331006AE657 /* scenes */ = {
+			isa = PBXGroup;
+			children = (
+				D7AC7D092653F33D006AE657 /* Dashboard */,
+			);
+			path = scenes;
+			sourceTree = "<group>";
+		};
+		D7AC7D092653F33D006AE657 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				D7AC7D0A2653F356006AE657 /* DashboardViewController.swift */,
+			);
+			path = Dashboard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -436,6 +458,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5BDBF777264AC24600AC9C24 /* plantatinhasApp.swift in Sources */,
+				D7AC7D0B2653F356006AE657 /* DashboardViewController.swift in Sources */,
+				D7AC7D102655323B006AE657 /* ViewBase.swift in Sources */,
 				5BBC64D22653DF0B00F1251C /* Colors.swift in Sources */,
 				5BDBF7BD264AC57700AC9C24 /* keep1.swift in Sources */,
 				D722116C264D5112004478EE /* PlantModel.swift in Sources */,
