@@ -16,55 +16,59 @@ struct PlantDetails: View {
     @State var isBadgeActive: Bool = true
     @State var timeleft: Int = 4
     var body: some View {
-        VStack {
-            HStack {
-                Spacer()
-                    .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/)
-                VStack {
-                    Image(systemName: "person.fill")
+        ZStack {
+            VStack {
+                HStack {
+                    Spacer()
                         .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/)
-                        .background(Color.fontGreen)
-                        .cornerRadius(50)
-                    Text("Nome")
-                        .font(.title2)
-                        .padding(5)
+                    VStack {
+                        Image(systemName: "person.fill")
+                            .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/)
+                            .background(Color.fontGreen)
+                            .cornerRadius(50)
+                        Text("Nome")
+                            .font(.title2)
+                            .padding(5)
+                    }
+                    Image("health")
+                        .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/)
+                        .offset(x: 0, y: 25)
                 }
-                Image("health")
-                    .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/)
+                HStack {
+                    Text("Atividades: ").font(.title2).padding(10)
+                    Spacer()
+                }
+                HStack {
+                    ProgressBar(progress: self.$progressValue,
+                                activity: self.$typeOfActivity1,
+                                badge: self.$isBadgeActive,
+                                timeLeft: self.$timeleft)
+                     .frame(width: 100.0, height: 100.0)
+                     .padding(EdgeInsets(top: 20, leading: 20, bottom: 5, trailing: 20))
+                    ProgressBar(progress: self.$progressValue,
+                                activity: self.$typeOfActivity2,
+                                badge: self.$isBadgeActive,
+                                timeLeft: self.$timeleft)
+                     .frame(width: 100.0, height: 100.0)
+                    .padding(EdgeInsets(top: 20, leading: 20, bottom: 5, trailing: 20))
+                }
+                HStack {
+                    ProgressBar(progress: self.$progressValue,
+                                activity: self.$typeOfActivity3,
+                                badge: self.$isBadgeActive,
+                                timeLeft: self.$timeleft)
+                     .frame(width: 100.0, height: 100.0)
+                    .padding(EdgeInsets(top: 20, leading: 20, bottom: 5, trailing: 20))
+                    ProgressBar(progress: self.$progressValue,
+                                activity: self.$typeOfActivity4,
+                                badge: self.$isBadgeActive,
+                                timeLeft: self.$timeleft)
+                     .frame(width: 100.0, height: 100.0)
+                    .padding(EdgeInsets(top: 20, leading: 20, bottom: 5, trailing: 20))
+                }
+                
+                Spacer().frame(width: 100, height: 180)
             }
-            HStack {
-                Text("Atividades: ").font(.title2).padding(10)
-                Spacer()
-            }
-            HStack {
-                ProgressBar(progress: self.$progressValue,
-                            activity: self.$typeOfActivity1,
-                            badge: self.$isBadgeActive,
-                            timeLeft: self.$timeleft)
-                 .frame(width: 100.0, height: 100.0)
-                 .padding(EdgeInsets(top: 20, leading: 20, bottom: 5, trailing: 20))
-                ProgressBar(progress: self.$progressValue,
-                            activity: self.$typeOfActivity2,
-                            badge: self.$isBadgeActive,
-                            timeLeft: self.$timeleft)
-                 .frame(width: 100.0, height: 100.0)
-                .padding(EdgeInsets(top: 20, leading: 20, bottom: 5, trailing: 20))
-            }
-            HStack {
-                ProgressBar(progress: self.$progressValue,
-                            activity: self.$typeOfActivity3,
-                            badge: self.$isBadgeActive,
-                            timeLeft: self.$timeleft)
-                 .frame(width: 100.0, height: 100.0)
-                .padding(EdgeInsets(top: 20, leading: 20, bottom: 5, trailing: 20))
-                ProgressBar(progress: self.$progressValue,
-                            activity: self.$typeOfActivity4,
-                            badge: self.$isBadgeActive,
-                            timeLeft: self.$timeleft)
-                 .frame(width: 100.0, height: 100.0)
-                .padding(EdgeInsets(top: 20, leading: 20, bottom: 5, trailing: 20))
-            }
-            Spacer().frame(width: 100, height: 180)
         }
     }
 }
