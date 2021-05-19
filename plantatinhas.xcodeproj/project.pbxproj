@@ -33,6 +33,7 @@
 		5BDBF7AA264AC36800AC9C24 /* plantatinhas.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 5BDBF789264AC36600AC9C24 /* plantatinhas.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		5BF097362655394900DF57FF /* PlantDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF097352655394900DF57FF /* PlantDetails.swift */; };
 		5BF097372655396700DF57FF /* PlantDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF097352655394900DF57FF /* PlantDetails.swift */; };
+		5BF0973926554C3F00DF57FF /* DayPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF0973826554C3F00DF57FF /* DayPicker.swift */; };
 		D722116C264D5112004478EE /* PlantModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D722116B264D5112004478EE /* PlantModel.swift */; };
 		D722116D264D5395004478EE /* PlantModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D722116B264D5112004478EE /* PlantModel.swift */; };
 		D7673135264D4B0200632905 /* PlantWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7673134264D4B0200632905 /* PlantWorker.swift */; };
@@ -106,6 +107,7 @@
 		5BDBF7A6264AC36800AC9C24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5BDBF7A7264AC36800AC9C24 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		5BF097352655394900DF57FF /* PlantDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlantDetails.swift; sourceTree = "<group>"; };
+		5BF0973826554C3F00DF57FF /* DayPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayPicker.swift; sourceTree = "<group>"; };
 		D722116B264D5112004478EE /* PlantModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantModel.swift; sourceTree = "<group>"; };
 		D7673134264D4B0200632905 /* PlantWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantWorker.swift; sourceTree = "<group>"; };
 		D7673137264D4D0F00632905 /* plantatinhas.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = plantatinhas.entitlements; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				5BBC64D62653EB7500F1251C /* CircleProgress.swift */,
+				5BF0973826554C3F00DF57FF /* DayPicker.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -457,6 +460,7 @@
 				D722116C264D5112004478EE /* PlantModel.swift in Sources */,
 				5BF097362655394900DF57FF /* PlantDetails.swift in Sources */,
 				5BDBF77B264AC24600AC9C24 /* Persistence.swift in Sources */,
+				5BF0973926554C3F00DF57FF /* DayPicker.swift in Sources */,
 				5BBC64D72653EB7500F1251C /* CircleProgress.swift in Sources */,
 				5BDBF775264AC24600AC9C24 /* plantatinhas.xcdatamodeld in Sources */,
 				D7673135264D4B0200632905 /* PlantWorker.swift in Sources */,
@@ -618,7 +622,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = plantatinhas.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6RLK97DFHC;
+				DEVELOPMENT_TEAM = 795A25396T;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = iOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -626,7 +630,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = academy.plantatinhas;
+				PRODUCT_BUNDLE_IDENTIFIER = academy.plantinhas;
 				PRODUCT_NAME = plantatinhas;
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
@@ -641,7 +645,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = plantatinhas.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6RLK97DFHC;
+				DEVELOPMENT_TEAM = 795A25396T;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = iOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -649,7 +653,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = academy.plantatinhas;
+				PRODUCT_BUNDLE_IDENTIFIER = academy.plantinhas;
 				PRODUCT_NAME = plantatinhas;
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
@@ -665,7 +669,7 @@
 				CODE_SIGN_ENTITLEMENTS = "plantatinhas Extension/plantatinhas Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"plantatinhas Extension/Preview Content\"";
-				DEVELOPMENT_TEAM = 6RLK97DFHC;
+				DEVELOPMENT_TEAM = 795A25396T;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "plantatinhas Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -673,7 +677,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = academy.plantatinhas.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = academy.plantinhas.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -690,7 +694,7 @@
 				CODE_SIGN_ENTITLEMENTS = "plantatinhas Extension/plantatinhas Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"plantatinhas Extension/Preview Content\"";
-				DEVELOPMENT_TEAM = 6RLK97DFHC;
+				DEVELOPMENT_TEAM = 795A25396T;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "plantatinhas Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -698,7 +702,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = academy.plantatinhas.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = academy.plantinhas.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -716,10 +720,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6RLK97DFHC;
+				DEVELOPMENT_TEAM = 795A25396T;
 				IBSC_MODULE = plantatinhas_Extension;
 				INFOPLIST_FILE = plantatinhas/Info.plist;
-				PRODUCT_BUNDLE_IDENTIFIER = academy.plantatinhas.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = academy.plantinhas.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -736,10 +740,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6RLK97DFHC;
+				DEVELOPMENT_TEAM = 795A25396T;
 				IBSC_MODULE = plantatinhas_Extension;
 				INFOPLIST_FILE = plantatinhas/Info.plist;
-				PRODUCT_BUNDLE_IDENTIFIER = academy.plantatinhas.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = academy.plantinhas.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
