@@ -12,26 +12,28 @@ struct PlantDetails: View {
     @State var typeOfActivity1 = Activity.water
     @State var typeOfActivity2 = Activity.compost
     @State var typeOfActivity3 = Activity.harvest
-    @State var typeOfActivity4 = Activity.disease
+    @State var typeOfActivity4 = Activity.health
     @State var isBadgeActive: Bool = true
     @State var timeleft: Int = 4
+    @State private var showConnectionAlert = false
+    @State var diseaseIndicator = Activity.disease
     var body: some View {
         ZStack {
             VStack {
                 HStack {
                     Spacer()
-                        .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/)
+                        .frame(width: 100, height: 100)
                     VStack {
                         Image(systemName: "person.fill")
-                            .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/)
+                            .frame(width: 100, height: 100)
                             .background(Color.fontGreen)
                             .cornerRadius(50)
                         Text("Nome")
                             .font(.title2)
                             .padding(5)
                     }
-                    Image("health")
-                        .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/)
+                    Image("\(self.diseaseIndicator)")
+                        .frame(width: 100, height: 100)
                         .offset(x: 0, y: 25)
                 }
                 HStack {
@@ -39,36 +41,102 @@ struct PlantDetails: View {
                     Spacer()
                 }
                 HStack {
-                    ProgressBar(progress: self.$progressValue,
-                                activity: self.$typeOfActivity1,
-                                badge: self.$isBadgeActive,
-                                timeLeft: self.$timeleft)
-                     .frame(width: 100.0, height: 100.0)
-                     .padding(EdgeInsets(top: 20, leading: 20, bottom: 5, trailing: 20))
-                    ProgressBar(progress: self.$progressValue,
-                                activity: self.$typeOfActivity2,
-                                badge: self.$isBadgeActive,
-                                timeLeft: self.$timeleft)
-                     .frame(width: 100.0, height: 100.0)
-                    .padding(EdgeInsets(top: 20, leading: 20, bottom: 5, trailing: 20))
+                    Button(action: {
+                            self.showConnectionAlert = true
+                            addItem()
+                    }) {
+                        ProgressBar(progress: self.$progressValue,
+                                    activity: self.$typeOfActivity1,
+                                    badge: self.$isBadgeActive,
+                                    timeLeft: self.$timeleft)
+                            .frame(width: 100.0, height: 100.0)
+                            .padding(EdgeInsets(top: 20, leading: 20, bottom: 5, trailing: 20))
+                            .foregroundColor(.black)
+                    }
+                    .alert(isPresented: $showConnectionAlert) {
+                        Alert(title: Text("Nice"),
+                              message: Text("The alert is showing!"),
+                              dismissButton: Alert.Button.default(Text("OK"),
+                            action: {
+                                self.showConnectionAlert = false
+                            }))
+                    }
+                    Button(action: {
+                            self.showConnectionAlert = true
+                            addItem()
+                    }) {
+                        ProgressBar(progress: self.$progressValue,
+                                    activity: self.$typeOfActivity2,
+                                    badge: self.$isBadgeActive,
+                                    timeLeft: self.$timeleft)
+                            .frame(width: 100.0, height: 100.0)
+                            .padding(EdgeInsets(top: 20, leading: 20, bottom: 5, trailing: 20))
+                            .foregroundColor(.black)
+                    }
+                    .alert(isPresented: $showConnectionAlert) {
+                        Alert(title: Text("Nice"),
+                              message: Text("The alert is showing!"),
+                              dismissButton: Alert.Button.default(Text("OK"),
+                            action: {
+                                self.showConnectionAlert = false
+                            }))
+                    }
                 }
                 HStack {
-                    ProgressBar(progress: self.$progressValue,
-                                activity: self.$typeOfActivity3,
-                                badge: self.$isBadgeActive,
-                                timeLeft: self.$timeleft)
-                     .frame(width: 100.0, height: 100.0)
-                    .padding(EdgeInsets(top: 20, leading: 20, bottom: 5, trailing: 20))
-                    ProgressBar(progress: self.$progressValue,
-                                activity: self.$typeOfActivity4,
-                                badge: self.$isBadgeActive,
-                                timeLeft: self.$timeleft)
-                     .frame(width: 100.0, height: 100.0)
-                    .padding(EdgeInsets(top: 20, leading: 20, bottom: 5, trailing: 20))
+                    Button(action: {
+                            self.showConnectionAlert = true
+                            addItem()
+                    }) {
+                        ProgressBar(progress: self.$progressValue,
+                                    activity: self.$typeOfActivity3,
+                                    badge: self.$isBadgeActive,
+                                    timeLeft: self.$timeleft)
+                            .frame(width: 100.0, height: 100.0)
+                            .padding(EdgeInsets(top: 20, leading: 20, bottom: 5, trailing: 20))
+                            .foregroundColor(.black)
+                    }
+                    .alert(isPresented: $showConnectionAlert) {
+                        Alert(title: Text("Nice"),
+                              message: Text("The alert is showing!"),
+                              dismissButton: Alert.Button.default(Text("OK"),
+                            action: {
+                                self.showConnectionAlert = false
+                            }))
+                    }
+                    Button(action: {
+                            self.showConnectionAlert = true
+                            toggleDisease()
+                    }) {
+                        ProgressBar(progress: self.$progressValue,
+                                    activity: self.$typeOfActivity4,
+                                    badge: self.$isBadgeActive,
+                                    timeLeft: self.$timeleft)
+                            .frame(width: 100.0, height: 100.0)
+                            .padding(EdgeInsets(top: 20, leading: 20, bottom: 5, trailing: 20))
+                            .foregroundColor(.black)
+                    }
+                    .alert(isPresented: $showConnectionAlert) {
+                        Alert(title: Text("Nice"),
+                              message: Text("The alert is showing!"),
+                              dismissButton: Alert.Button.default(Text("OK"),
+                            action: {
+                                self.showConnectionAlert = false
+                            }))
+                    }
                 }
-                
                 Spacer().frame(width: 100, height: 180)
             }
+        }
+    }
+    private func addItem() {
+        withAnimation {
+            self.isBadgeActive = !self.isBadgeActive
+        }
+    }
+    private func toggleDisease() {
+        withAnimation {
+            self.typeOfActivity4 = self.typeOfActivity4 == .disease ? .health : .disease
+            self.diseaseIndicator = self.typeOfActivity4 == .disease ? .health : .disease
         }
     }
 }
