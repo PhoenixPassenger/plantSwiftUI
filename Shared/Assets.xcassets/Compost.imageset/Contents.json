@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "Path.png",
+      "filename" : "Adubar.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "Path@2x.png",
+      "filename" : "Adubar@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "Path@3x.png",
+      "filename" : "Adubar@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

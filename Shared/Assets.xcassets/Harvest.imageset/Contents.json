@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "Path.png",
+      "filename" : "noun_harvest_1046415.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "Path@2x.png",
+      "filename" : "noun_harvest_1046415@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "Path@3x.png",
+      "filename" : "noun_harvest_1046415@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
