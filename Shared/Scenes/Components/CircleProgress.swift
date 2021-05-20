@@ -78,18 +78,20 @@ struct ProgressBar: View {
     @Binding var activity: Activity
     @Binding var badge: Bool
     @Binding var timeLeft: Int
+    var labelEnabled: Bool = false
+    var lineWidth: Float = 8.0
     var body: some View {
         let color = Color("\(activity)")
         VStack {
             ZStack {
                 Circle()
-                    .stroke(lineWidth: 8.0)
+                    .stroke(lineWidth: CGFloat(lineWidth))
                     .foregroundColor(Color.gray4)
                 Circle()
                     .trim(from: 0.0, to: CGFloat(min(
                                                     (activity != .disease && activity != .health ?
                                                         self.progress : 1.0), 1.0)))
-                    .stroke(style: StrokeStyle(lineWidth: 8.0, lineCap: .round, lineJoin: .round))
+                    .stroke(style: StrokeStyle(lineWidth: CGFloat(lineWidth), lineCap: .round, lineJoin: .round))
                     .foregroundColor(color)
                     .rotationEffect(Angle(degrees: 270.0))
                     .animation(.linear)
@@ -109,13 +111,15 @@ struct ProgressBar: View {
                     }
                 }
             }
-            HStack {
-                Spacer()
-                let title = activity.title
-                Text("\(title)")
-                    .font(.title3)
-                Spacer()
-            }.padding(EdgeInsets(top: 8, leading: 0, bottom: 0, trailing: 0))
+            if labelEnabled{
+                HStack {
+                    Spacer()
+                    let title = activity.title
+                    Text("\(title)")
+                        .font(.title3)
+                    Spacer()
+                }.padding(EdgeInsets(top: 8, leading: 0, bottom: 0, trailing: 0))
+            }
         }
     }
 }
