@@ -30,7 +30,8 @@ struct PlantDetails: View {
                         ProgressBar(progress: self.$progressValue,
                                     activity: self.$typeOfActivity[0],
                                     badge: self.$isBadgeActive[0],
-                                    timeLeft: self.$timeleft)
+                                    timeLeft: self.$timeleft,
+                                    labelEnabled: true)
                             .frame(width: 120.0, height: 120.0)
                             .padding(EdgeInsets(top: 20, leading: 20, bottom: 5, trailing: 20))
                             .foregroundColor(.black)
@@ -50,7 +51,8 @@ struct PlantDetails: View {
                         ProgressBar(progress: self.$progressValue,
                                     activity: self.$typeOfActivity[1],
                                     badge: self.$isBadgeActive[1],
-                                    timeLeft: self.$timeleft)
+                                    timeLeft: self.$timeleft,
+                                    labelEnabled: true)
                             .frame(width: 120.0, height: 120.0)
                             .padding(EdgeInsets(top: 20, leading: 20, bottom: 5, trailing: 20))
                             .foregroundColor(.black)
@@ -72,7 +74,8 @@ struct PlantDetails: View {
                         ProgressBar(progress: self.$progressValue,
                                     activity: self.$typeOfActivity[2],
                                     badge: self.$isBadgeActive[2],
-                                    timeLeft: self.$timeleft)
+                                    timeLeft: self.$timeleft,
+                                    labelEnabled: true)
                             .frame(width: 120.0, height: 120.0)
                             .padding(EdgeInsets(top: 20, leading: 20, bottom: 5, trailing: 20))
                             .foregroundColor(.black)
@@ -92,7 +95,8 @@ struct PlantDetails: View {
                         ProgressBar(progress: self.$progressValue,
                                     activity: self.$typeOfActivity[3],
                                     badge: self.$isBadgeActive[3],
-                                    timeLeft: self.$timeleft)
+                                    timeLeft: self.$timeleft,
+                                    labelEnabled: true)
                             .frame(width: 120.0, height: 120.0)
                             .padding(EdgeInsets(top: 20, leading: 20, bottom: 5, trailing: 20))
                             .foregroundColor(.black)
