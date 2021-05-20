@@ -29,6 +29,48 @@ enum Activity: String {
     case compost
     case harvest
     case health
+    var imageName: String {
+        switch self {
+        case .water:
+            return "Water"
+        case .disease:
+            return "disease"
+        case .compost:
+            return "Compost"
+        case .harvest:
+            return "Harvest"
+        case .health:
+            return "health"
+        }
+    }
+    var coloredImageName: String {
+        switch self {
+        case .water:
+            return "WaterColored"
+        case .disease:
+            return "disease"
+        case .compost:
+            return "CompostColored"
+        case .harvest:
+            return "HarvestColored"
+        case .health:
+            return "health"
+        }
+    }
+    var title: String {
+        switch self {
+        case .water:
+            return "Regar"
+        case .disease:
+            return "Doente"
+        case .compost:
+            return "Adubar"
+        case .harvest:
+            return "Colher"
+        case .health:
+            return "Saudável"
+        }
+    }
 }
 
 struct ProgressBar: View {
@@ -41,17 +83,17 @@ struct ProgressBar: View {
         VStack {
             ZStack {
                 Circle()
-                    .stroke(lineWidth: 10.0)
+                    .stroke(lineWidth: 8.0)
                     .foregroundColor(Color.gray4)
                 Circle()
                     .trim(from: 0.0, to: CGFloat(min(
                                                     (activity != .disease && activity != .health ?
                                                         self.progress : 1.0), 1.0)))
-                    .stroke(style: StrokeStyle(lineWidth: 10.0, lineCap: .round, lineJoin: .round))
+                    .stroke(style: StrokeStyle(lineWidth: 8.0, lineCap: .round, lineJoin: .round))
                     .foregroundColor(color)
                     .rotationEffect(Angle(degrees: 270.0))
                     .animation(.linear)
-                Image(systemName: "pencil")
+                Image( badge ? activity.imageName : activity.coloredImageName )
                 GeometryReader { (geometry) in
                     let offsetX = geometry.size.width * 0.70
                     let offsetY = geometry.size.height * -0.12
@@ -69,7 +111,7 @@ struct ProgressBar: View {
             }
             HStack {
                 Spacer()
-                let title = activity.rawValue
+                let title = activity.title
                 Text("\(title)")
                     .font(.title3)
                 Spacer()
