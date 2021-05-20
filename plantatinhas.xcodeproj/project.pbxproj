@@ -41,6 +41,7 @@
 		D767313D264D4D5E00632905 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D767313C264D4D5E00632905 /* CloudKit.framework */; };
 		D7AC7D0B2653F356006AE657 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AC7D0A2653F356006AE657 /* DashboardViewController.swift */; };
 		D7AC7D102655323B006AE657 /* ViewBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AC7D0F2655323B006AE657 /* ViewBase.swift */; };
+		D7AC7D1226567FAC006AE657 /* ViewBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AC7D0F2655323B006AE657 /* ViewBase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -497,6 +498,7 @@
 				5BF097372655396700DF57FF /* PlantDetails.swift in Sources */,
 				5BBC64D82653EBB300F1251C /* CircleProgress.swift in Sources */,
 				5B57A45F264C150100B917F1 /* plantatinhas.xcdatamodeld in Sources */,
+				D7AC7D1226567FAC006AE657 /* ViewBase.swift in Sources */,
 				5B57A45E264C14D200B917F1 /* Persistence.swift in Sources */,
 				5BDBF79C264AC36700AC9C24 /* NotificationController.swift in Sources */,
 				D722116D264D5395004478EE /* PlantModel.swift in Sources */,
