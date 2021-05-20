@@ -8,12 +8,9 @@
 import SwiftUI
 
 struct PlantDetails: View {
-    @State var progressValue: Float = 0.48
-    @State var typeOfActivity1 = Activity.water
-    @State var typeOfActivity2 = Activity.compost
-    @State var typeOfActivity3 = Activity.harvest
-    @State var typeOfActivity4 = Activity.health
-    @State var isBadgeActive: Bool = true
+    @State var progressValue: Float = 0.6
+    @State var typeOfActivity: [Activity] = [Activity.water, Activity.compost, Activity.harvest, Activity.health]
+    @State var isBadgeActive: [Bool] = [false, false, false, false]
     @State var timeleft: Int = 4
     @State private var showConnectionAlert = false
     @State var diseaseIndicator = Activity.disease
@@ -28,13 +25,13 @@ struct PlantDetails: View {
                 HStack {
                     Button(action: {
                             self.showConnectionAlert = true
-                            addItem()
+                            toggleBadge(identifier: 0)
                     }) {
                         ProgressBar(progress: self.$progressValue,
-                                    activity: self.$typeOfActivity1,
-                                    badge: self.$isBadgeActive,
+                                    activity: self.$typeOfActivity[0],
+                                    badge: self.$isBadgeActive[0],
                                     timeLeft: self.$timeleft)
-                            .frame(width: 100.0, height: 100.0)
+                            .frame(width: 120.0, height: 120.0)
                             .padding(EdgeInsets(top: 20, leading: 20, bottom: 5, trailing: 20))
                             .foregroundColor(.black)
                     }
@@ -48,13 +45,13 @@ struct PlantDetails: View {
                     }
                     Button(action: {
                             self.showConnectionAlert = true
-                            addItem()
+                            toggleBadge(identifier: 1)
                     }) {
                         ProgressBar(progress: self.$progressValue,
-                                    activity: self.$typeOfActivity2,
-                                    badge: self.$isBadgeActive,
+                                    activity: self.$typeOfActivity[1],
+                                    badge: self.$isBadgeActive[1],
                                     timeLeft: self.$timeleft)
-                            .frame(width: 100.0, height: 100.0)
+                            .frame(width: 120.0, height: 120.0)
                             .padding(EdgeInsets(top: 20, leading: 20, bottom: 5, trailing: 20))
                             .foregroundColor(.black)
                     }
@@ -70,13 +67,13 @@ struct PlantDetails: View {
                 HStack {
                     Button(action: {
                             self.showConnectionAlert = true
-                            addItem()
+                            toggleBadge(identifier: 2)
                     }) {
                         ProgressBar(progress: self.$progressValue,
-                                    activity: self.$typeOfActivity3,
-                                    badge: self.$isBadgeActive,
+                                    activity: self.$typeOfActivity[2],
+                                    badge: self.$isBadgeActive[2],
                                     timeLeft: self.$timeleft)
-                            .frame(width: 100.0, height: 100.0)
+                            .frame(width: 120.0, height: 120.0)
                             .padding(EdgeInsets(top: 20, leading: 20, bottom: 5, trailing: 20))
                             .foregroundColor(.black)
                     }
@@ -93,10 +90,10 @@ struct PlantDetails: View {
                             toggleDisease()
                     }) {
                         ProgressBar(progress: self.$progressValue,
-                                    activity: self.$typeOfActivity4,
-                                    badge: self.$isBadgeActive,
+                                    activity: self.$typeOfActivity[3],
+                                    badge: self.$isBadgeActive[3],
                                     timeLeft: self.$timeleft)
-                            .frame(width: 100.0, height: 100.0)
+                            .frame(width: 120.0, height: 120.0)
                             .padding(EdgeInsets(top: 20, leading: 20, bottom: 5, trailing: 20))
                             .foregroundColor(.black)
                     }
@@ -113,15 +110,15 @@ struct PlantDetails: View {
             }
         }
     }
-    private func addItem() {
+    private func toggleBadge(identifier: Int) {
         withAnimation {
-            self.isBadgeActive = !self.isBadgeActive
+            self.isBadgeActive[identifier] = !self.isBadgeActive[identifier]
         }
     }
     private func toggleDisease() {
         withAnimation {
-            self.typeOfActivity4 = self.typeOfActivity4 == .disease ? .health : .disease
-            self.diseaseIndicator = self.typeOfActivity4 == .disease ? .health : .disease
+            self.typeOfActivity[3] = self.typeOfActivity[3] == .disease ? .health : .disease
+            self.diseaseIndicator = self.typeOfActivity[3] == .disease ? .health : .disease
         }
     }
 }
