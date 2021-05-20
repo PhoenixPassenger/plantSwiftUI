@@ -64,7 +64,7 @@ struct TextDay: View {
             .padding(EdgeInsets(top: 5, leading: 12, bottom: 5, trailing: 12))
             .background(!selected ? Color.gray4 : Color.health)
             .clipShape(RoundedRectangle(cornerRadius: 25))
-            .foregroundColor(!selected ? Color.black : Color.white)
+            .foregroundColor(!selected ? Color.black : Color.fontGreen)
             .font(.body)
     }
 }

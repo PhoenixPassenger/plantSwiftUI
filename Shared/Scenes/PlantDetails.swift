@@ -20,22 +20,7 @@ struct PlantDetails: View {
     var body: some View {
         ZStack {
             VStack {
-                HStack {
-                    Spacer()
-                        .frame(width: 100, height: 100)
-                    VStack {
-                        Image(systemName: "person.fill")
-                            .frame(width: 100, height: 100)
-                            .background(Color.fontGreen)
-                            .cornerRadius(50)
-                        Text("Nome")
-                            .font(.title2)
-                            .padding(5)
-                    }
-                    Image("\(self.diseaseIndicator)")
-                        .frame(width: 100, height: 100)
-                        .offset(x: 0, y: 25)
-                }
+                DetailsHeader(image: self.$diseaseIndicator)
                 HStack {
                     Text("Atividades: ").font(.title2).padding(10)
                     Spacer()

@@ -77,10 +77,3 @@ struct ProgressBar: View {
         }
     }
 }
-struct CircleProgressPreviews: PreviewProvider {
-    static var previews: some View {
-        ForEach(ColorScheme.allCases, id: \.self) {
-            PlantDetails().preferredColorScheme($0)
-        }
-    }
-}
