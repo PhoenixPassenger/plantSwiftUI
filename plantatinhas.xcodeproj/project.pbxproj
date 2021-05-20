@@ -33,6 +33,9 @@
 		5BDBF7AA264AC36800AC9C24 /* plantatinhas.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 5BDBF789264AC36600AC9C24 /* plantatinhas.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		5BEB143B26558C39006FA88A /* SegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEB143A26558C39006FA88A /* SegmentedControl.swift */; };
 		5BF097362655394900DF57FF /* PlantDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF097352655394900DF57FF /* PlantDetails.swift */; };
+		5BF097372655396700DF57FF /* PlantDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF097352655394900DF57FF /* PlantDetails.swift */; };
+		A42A70482655454100169FE8 /* TodayCare.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42A70472655454100169FE8 /* TodayCare.swift */; };
+		A42A70492655454100169FE8 /* TodayCare.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42A70472655454100169FE8 /* TodayCare.swift */; };
 		5BF0973926554C3F00DF57FF /* DayPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF0973826554C3F00DF57FF /* DayPicker.swift */; };
 		5BF0973C2655854100DF57FF /* DetailsHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF0973B2655854100DF57FF /* DetailsHeader.swift */; };
 		5BF0973D2655854100DF57FF /* DetailsHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF0973B2655854100DF57FF /* DetailsHeader.swift */; };
@@ -113,6 +116,7 @@
 		5BDBF7A7264AC36800AC9C24 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		5BEB143A26558C39006FA88A /* SegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControl.swift; sourceTree = "<group>"; };
 		5BF097352655394900DF57FF /* PlantDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlantDetails.swift; sourceTree = "<group>"; };
+		A42A70472655454100169FE8 /* TodayCare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayCare.swift; sourceTree = "<group>"; };
 		5BF0973826554C3F00DF57FF /* DayPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayPicker.swift; sourceTree = "<group>"; };
 		5BF0973B2655854100DF57FF /* DetailsHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsHeader.swift; sourceTree = "<group>"; };
 		D722116B264D5112004478EE /* PlantModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantModel.swift; sourceTree = "<group>"; };
@@ -156,6 +160,8 @@
 		5BBC64D52653EB6200F1251C /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				5448DE8F2654011D009CA2E3 /* MyPlantsCell.swift */,
+				A42A70472655454100169FE8 /* TodayCare.swift */,
 				5BEB143A26558C39006FA88A /* SegmentedControl.swift */,
 				5BBC64D62653EB7500F1251C /* CircleProgress.swift */,
 				5BF0973826554C3F00DF57FF /* DayPicker.swift */,
@@ -189,7 +195,6 @@
 				5BDBF763264AC24400AC9C24 /* Persistence.swift */,
 				5BDBF764264AC24600AC9C24 /* Assets.xcassets */,
 				5BDBF75F264AC24400AC9C24 /* plantatinhas.xcdatamodeld */,
-				5448DE8F2654011D009CA2E3 /* MyPlantsCell.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -483,6 +488,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A42A70482655454100169FE8 /* TodayCare.swift in Sources */,
 				5BDBF777264AC24600AC9C24 /* plantatinhasApp.swift in Sources */,
 				D7AC7D0B2653F356006AE657 /* DashboardViewController.swift in Sources */,
 				D7AC7D102655323B006AE657 /* ViewBase.swift in Sources */,
@@ -509,6 +515,7 @@
 				5BBC64D42653E53700F1251C /* Colors.swift in Sources */,
 				5BF0973D2655854100DF57FF /* DetailsHeader.swift in Sources */,
 				5BBC64D82653EBB300F1251C /* CircleProgress.swift in Sources */,
+				A42A70492655454100169FE8 /* TodayCare.swift in Sources */,
 				5B57A45F264C150100B917F1 /* plantatinhas.xcdatamodeld in Sources */,
 				D7AC7D1226567FAC006AE657 /* ViewBase.swift in Sources */,
 				5B57A45E264C14D200B917F1 /* Persistence.swift in Sources */,

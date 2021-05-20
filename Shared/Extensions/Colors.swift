@@ -17,4 +17,6 @@ extension Color {
     static let topBackground = Color("topBackground")
     static let water = Color("water")
     static let gray4 = Color("systemGray4")
+    static let plantListCell = Color("plantListCell")
+    static let borderPlantListCell = Color("borderPlantListCell")
 }
