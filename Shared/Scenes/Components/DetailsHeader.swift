@@ -23,7 +23,8 @@ struct DetailsHeader: View {
                     .padding(EdgeInsets(top: 5, leading: 0, bottom: 0, trailing: 0))
             }
             Image("\(image)")
-                .frame(width: 100, height: 100)
+                .resizable()
+                .frame(width: 74, height: 100)
                 .offset(x: 0, y: 25)
         }
     }
