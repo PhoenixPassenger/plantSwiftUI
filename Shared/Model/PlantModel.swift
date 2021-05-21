@@ -7,7 +7,7 @@
 
 import Foundation
 
-class PlantModel {
+class PlantModel: Identifiable {
     var name: String?
     var water: Date?
     var harvest: Date?

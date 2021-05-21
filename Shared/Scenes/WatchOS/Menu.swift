@@ -13,14 +13,13 @@ struct Menu: View {
     @State var typeOfActivity1 = Activity.water
     @State var typeOfActivity2 = Activity.compost
     @State var typeOfActivity3 = Activity.harvest
-    @State var typeOfActivity4 = Activity.health
     @State var isBadgeActive: Bool = false
     @State var timeleft: Int = 0
 
     var body: some View {
         VStack(alignment: .center) {
             HStack(alignment: .center, spacing: 10) {
-                NavigationLink(destination: self) {
+                NavigationLink(destination: ListActivities(activity: $typeOfActivity1)) {
                     VStack {
                         ProgressBar(progress: self.$progressValue,
                                     activity: self.$typeOfActivity1,
@@ -35,7 +34,7 @@ struct Menu: View {
                     }
                 }.buttonStyle(BorderedButtonStyle(tint: .blue.opacity(0)))
                 .frame(minWidth: 78, idealWidth: 78, maxWidth: 78, minHeight: 78, idealHeight: 72, maxHeight: 72)
-                NavigationLink(destination: self) {
+                NavigationLink(destination: ListActivities(activity: $typeOfActivity2)) {
                     VStack {
                         ProgressBar(progress: self.$progressValue,
                                     activity: self.$typeOfActivity2,
@@ -53,7 +52,7 @@ struct Menu: View {
             }.padding(.top, 20)
 
             HStack(alignment: .center) {
-                NavigationLink(destination: self) {
+                NavigationLink(destination: ListActivities(activity: $typeOfActivity3)) {
                     VStack {
                         ProgressBar(progress: self.$progressValue,
                                     activity: self.$typeOfActivity3,
