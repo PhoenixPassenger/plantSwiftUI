@@ -11,6 +11,7 @@
 		5448DE912654011D009CA2E3 /* MyPlantsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5448DE8F2654011D009CA2E3 /* MyPlantsCell.swift */; };
 		5B45665A265698E900BB13C9 /* CustomDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B456659265698E900BB13C9 /* CustomDatePicker.swift */; };
 		5B45665C2656A6CD00BB13C9 /* ModalActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B45665B2656A6CD00BB13C9 /* ModalActivity.swift */; };
+		5B45C0B52657D4B300A5B32C /* NewPlantForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B45C0B42657D4B300A5B32C /* NewPlantForm.swift */; };
 		5B57A45C264C14CB00B917F1 /* plantatinhasApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBF761264AC24400AC9C24 /* plantatinhasApp.swift */; };
 		5B57A45D264C14CF00B917F1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBF762264AC24400AC9C24 /* ContentView.swift */; };
 		5B57A45E264C14D200B917F1 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBF763264AC24400AC9C24 /* Persistence.swift */; };
@@ -95,6 +96,7 @@
 		5448DE8F2654011D009CA2E3 /* MyPlantsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPlantsCell.swift; sourceTree = "<group>"; };
 		5B456659265698E900BB13C9 /* CustomDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDatePicker.swift; sourceTree = "<group>"; };
 		5B45665B2656A6CD00BB13C9 /* ModalActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalActivity.swift; sourceTree = "<group>"; };
+		5B45C0B42657D4B300A5B32C /* NewPlantForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlantForm.swift; sourceTree = "<group>"; };
 		5BBC64D12653DF0B00F1251C /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		5BBC64D62653EB7500F1251C /* CircleProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleProgress.swift; sourceTree = "<group>"; };
 		5BDBF760264AC24400AC9C24 /* Shared.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Shared.xcdatamodel; sourceTree = "<group>"; };
@@ -263,6 +265,7 @@
 			children = (
 				5BF097352655394900DF57FF /* PlantDetails.swift */,
 				5BBC64D52653EB6200F1251C /* Components */,
+				5B45C0B42657D4B300A5B32C /* NewPlantForm.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -482,6 +485,7 @@
 				5B45665C2656A6CD00BB13C9 /* ModalActivity.swift in Sources */,
 				5BF0973926554C3F00DF57FF /* DayPicker.swift in Sources */,
 				5BBC64D72653EB7500F1251C /* CircleProgress.swift in Sources */,
+				5B45C0B52657D4B300A5B32C /* NewPlantForm.swift in Sources */,
 				5BDBF775264AC24600AC9C24 /* plantatinhas.xcdatamodeld in Sources */,
 				5BEB143B26558C39006FA88A /* SegmentedControl.swift in Sources */,
 				5BF0973C2655854100DF57FF /* DetailsHeader.swift in Sources */,
