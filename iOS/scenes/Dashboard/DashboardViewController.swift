@@ -6,27 +6,36 @@
 //
 
 import SwiftUI
+
 struct DashboardViewController: View {
+    @State var isLinkActive = false
     var body: some View {
-        ZStack {
+        ZStack(alignment: .top) {
             Color.topBackground
+                .frame(height: 500)
                 .ignoresSafeArea()
             VStack {
                 ScrollView {
+                    HStack {
                     Text("Cuidados de Hoje")
                         .foregroundColor(.fontCreatePlant)
                         .font(.title)
                         .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                         .padding(20)
                         .frame(maxWidth: .greatestFiniteMagnitude, alignment: .leading)
-                    Circle()
-                        .fill(Color.white)
-                        .frame(width: 100, height: 50)
+
+                        Button(action: {}, label: {
+                            Image("addIcon")
+                                .padding(20)
+                        })
+                        }
+                    HStack {
+                    TodayCare()
+                    TodayCare()
+                    }
                     ZStack {
                         ViewBase()
                             .ignoresSafeArea()
-                        //.frame(height: 600, alignment: .bottom)
-
                         MyPlantView()
 
                     }}

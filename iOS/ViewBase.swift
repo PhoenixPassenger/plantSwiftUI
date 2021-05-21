@@ -13,7 +13,7 @@ struct ViewBase: View {
             ZStack(alignment: .leading) {
                 Rectangle()
                     .frame(minWidth: 0, maxWidth: geometry.size.width,
-                           minHeight: 0, maxHeight: geometry.size.height + 44,
+                           minHeight: geometry.size.height, maxHeight: .infinity,
                            alignment: .bottom)
                     .colorInvert()
                     .cornerRadius(40, antialiased: true)

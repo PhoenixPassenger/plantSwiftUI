@@ -493,12 +493,9 @@
 			files = (
 				A42A70482655454100169FE8 /* TodayCare.swift in Sources */,
 				5BDBF777264AC24600AC9C24 /* plantatinhasApp.swift in Sources */,
-<<<<<<< HEAD
 				D7AC7D0B2653F356006AE657 /* DashboardViewController.swift in Sources */,
 				D7AC7D102655323B006AE657 /* ViewBase.swift in Sources */,
-=======
 				5B45665A265698E900BB13C9 /* CustomDatePicker.swift in Sources */,
->>>>>>> develop
 				5BBC64D22653DF0B00F1251C /* Colors.swift in Sources */,
 				5448DE902654011D009CA2E3 /* MyPlantsCell.swift in Sources */,
 				D722116C264D5112004478EE /* PlantModel.swift in Sources */,
