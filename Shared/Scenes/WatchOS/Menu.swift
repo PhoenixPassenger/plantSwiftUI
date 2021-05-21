@@ -8,45 +8,67 @@
 import SwiftUI
 
 struct Menu: View {
-    
+
     @State var progressValue: Float = 100
     @State var typeOfActivity1 = Activity.water
     @State var typeOfActivity2 = Activity.compost
     @State var typeOfActivity3 = Activity.harvest
     @State var typeOfActivity4 = Activity.health
     @State var isBadgeActive: Bool = false
-    @State var timeleft: Int = 4
+    @State var timeleft: Int = 0
 
-    
     var body: some View {
-        VStack{
-            HStack(alignment: .center, spacing: 20){
+        VStack(alignment: .center) {
+            HStack(alignment: .center, spacing: 10) {
                 NavigationLink(destination: self) {
-                    ProgressBar(progress: self.$progressValue,
-                                activity: self.$typeOfActivity1,
-                                badge: self.$isBadgeActive,
-                                timeLeft: self.$timeleft)
-                        .frame(width: 48.0, height: 48.0)
-                        .foregroundColor(.black)
-                        
+                    VStack {
+                        ProgressBar(progress: self.$progressValue,
+                                    activity: self.$typeOfActivity1,
+                                    badge: self.$isBadgeActive,
+                                    timeLeft: self.$timeleft,
+                                    lineWidth: 5)
+                            .frame(minWidth: 48, idealWidth: 52, maxWidth: 58, minHeight: 48, idealHeight: 52, maxHeight: 58)
+                            .foregroundColor(.black)
+                        Text("Regar")
+                            .foregroundColor(.white)
+                            .font(.system(size: 16))
+                    }
                 }.buttonStyle(BorderedButtonStyle(tint: .blue.opacity(0)))
+                .frame(minWidth: 78, idealWidth: 78, maxWidth: 78, minHeight: 78, idealHeight: 72, maxHeight: 72)
                 NavigationLink(destination: self) {
-                    ProgressBar(progress: self.$progressValue,
-                                activity: self.$typeOfActivity1,
-                                badge: self.$isBadgeActive,
-                                timeLeft: self.$timeleft)
-                        .frame(width: 48.0, height: 48.0)
-                        .foregroundColor(.black)
+                    VStack {
+                        ProgressBar(progress: self.$progressValue,
+                                    activity: self.$typeOfActivity2,
+                                    badge: self.$isBadgeActive,
+                                    timeLeft: self.$timeleft,
+                                    lineWidth: 5)
+                            .frame(minWidth: 48, idealWidth: 52, maxWidth: 58, minHeight: 48, idealHeight: 52, maxHeight: 58)
+                            .foregroundColor(.black)
+                        Text("Adubar")
+                            .foregroundColor(.white)
+                            .font(.system(size: 16))
+                    }
                 }.buttonStyle(BorderedButtonStyle(tint: .blue.opacity(0)))
+                .frame(minWidth: 78, idealWidth: 78, maxWidth: 78, minHeight: 78, idealHeight: 72, maxHeight: 72)
+            }.padding(.top, 20)
+
+            HStack(alignment: .center) {
+                NavigationLink(destination: self) {
+                    VStack {
+                        ProgressBar(progress: self.$progressValue,
+                                    activity: self.$typeOfActivity3,
+                                    badge: self.$isBadgeActive,
+                                    timeLeft: self.$timeleft,
+                                    lineWidth: 5)
+                            .frame(minWidth: 48, idealWidth: 52, maxWidth: 58, minHeight: 48, idealHeight: 52, maxHeight: 58)
+                            .foregroundColor(.black)
+                        Text("Colher")
+                            .foregroundColor(.white)
+                            .font(.system(size: 16))
+                    }
+                }.buttonStyle(BorderedButtonStyle(tint: .blue.opacity(0)))
+                .frame(minWidth: 78, idealWidth: 78, maxWidth: 78, minHeight: 78, idealHeight: 72, maxHeight: 72)
             }
-            NavigationLink(destination: self) {
-                ProgressBar(progress: self.$progressValue,
-                            activity: self.$typeOfActivity1,
-                            badge: self.$isBadgeActive,
-                            timeLeft: self.$timeleft)
-                    .frame(width: 48.0, height: 48.0)
-                    .foregroundColor(.black)
-            }.buttonStyle(BorderedButtonStyle(tint: .blue.opacity(0)))
         }
     }
 }

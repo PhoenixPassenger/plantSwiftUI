@@ -42,15 +42,19 @@ struct MyPlantsCell: View {
             }
         }
         .frame(height: 92, alignment: .leading)
-        .background(Color(UIColor.init(red: 253/255, green: 253/255, blue: 253/255, alpha: 1)))
+        .background(Color.plantListCell)
         .cornerRadius(10)
         .shadow(color: Color.black.opacity(0.05), radius: 4, x: 0, y: 2)
-        .border(Color(UIColor.init(red: 235/255, green: 235/255, blue: 235/255, alpha: 0.2)), width: 1)
+        .border(Color.borderPlantListCell)
     }
 }
 
 struct MyPlantsCell_Previews: PreviewProvider {
     static var previews: some View {
-        MyPlantsCell()
+        Group {
+            MyPlantsCell()
+            MyPlantsCell()
+                .preferredColorScheme(.dark)
+        }
     }
 }
