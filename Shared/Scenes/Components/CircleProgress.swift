@@ -111,7 +111,7 @@ struct ProgressBar: View {
                     }
                 }
             }
-            if labelEnabled{
+            if labelEnabled {
                 HStack {
                     Spacer()
                     let title = activity.title
