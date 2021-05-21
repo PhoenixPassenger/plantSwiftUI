@@ -7,14 +7,50 @@
 
 import SwiftUI
 
-struct NewPlantForm: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
+class PlantViewModel: ObservableObject {
+    @Published var name = ""
+    @Published var image = ""
 }
 
-struct NewPlantForm_Previews: PreviewProvider {
-    static var previews: some View {
-        NewPlantForm()
+struct NewPlantForm: View {
+    @Environment(\.presentationMode) var presentationMode
+    @StateObject var viewModel = PlantViewModel()
+        var body: some View {
+            NavigationView {
+                FirstPage()
+            }.environmentObject(viewModel)
+        }
+}
+
+struct FirstPage: View {
+    @EnvironmentObject private var viewModel: PlantViewModel
+    var body: some View {
+        VStack {
+            HStack {
+                Text("Nome ")
+                    .padding(10)
+                Spacer()
+            }
+            TextField("", text: $viewModel.name)
+                .padding(5)
+                .background(Color.red)
+                NavigationLink("dvfddsffdfd", destination: SecondPage())
+        }
+        
+    }
+}
+struct SecondPage: View {
+    @EnvironmentObject private var viewModel: PlantViewModel
+    var body: some View {
+        VStack {
+            HStack {
+                Text("image ")
+                    .padding(10)
+                Spacer()
+            }
+            TextField("", text: $viewModel.image)
+                .padding(5)
+                .background(Color.red)
+        }
     }
 }
