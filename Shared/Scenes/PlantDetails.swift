@@ -32,7 +32,7 @@ struct PlantDetails: View {
                                     badge: self.$isBadgeActive[0],
                                     timeLeft: self.$timeleft,
                                     labelEnabled: true)
-                            .frame(width: 120.0, height: 120.0)
+                            .frame(width: 120, height: 120)
                             .padding(EdgeInsets(top: 20, leading: 20, bottom: 5, trailing: 20))
                             .foregroundColor(.black)
                     }
