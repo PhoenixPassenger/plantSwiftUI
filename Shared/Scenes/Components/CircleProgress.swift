@@ -113,7 +113,6 @@ struct ProgressBar: View {
                     }
                 }
             }
-            .border(Color.green)
             if labelEnabled {
                 HStack {
                     Spacer()
