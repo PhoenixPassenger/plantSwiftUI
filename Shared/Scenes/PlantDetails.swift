@@ -6,20 +6,36 @@
 //
 
 import SwiftUI
-
 struct PlantDetails: View {
+    @State var diseaseIndicator = Activity.disease
+    var body: some View {
+        ZStack {
+            Color.topBackground
+                .ignoresSafeArea()
+            VStack {
+                    DetailsHeader(image: self.$diseaseIndicator)
+                    ZStack {
+                        ViewBase()
+                            .ignoresSafeArea()
+                        Details(diseaseIndicator: self.$diseaseIndicator)
+
+                    }
+            }
+        }
+    }
+}
+struct Details: View {
+    @Binding var diseaseIndicator: Activity
     @State var progressValue: Float = 0.6
     @State var typeOfActivity: [Activity] = [Activity.water, Activity.compost, Activity.harvest, Activity.health]
     @State var isBadgeActive: [Bool] = [false, false, false, false]
     @State var timeleft: Int = 4
     @State private var showConnectionAlert = false
-    @State var diseaseIndicator = Activity.disease
     var body: some View {
         ZStack {
             VStack {
-                DetailsHeader(image: self.$diseaseIndicator)
                 HStack {
-                    Text("Atividades: ").font(.title2).padding(10)
+                    Text("Atividades: ").font(.title2).padding(20)
                     Spacer()
                 }
                 HStack {
@@ -32,7 +48,7 @@ struct PlantDetails: View {
                                     badge: self.$isBadgeActive[0],
                                     timeLeft: self.$timeleft,
                                     labelEnabled: true)
-                            .frame(width: 120.0, height: 120.0)
+                            .frame(width: 120, height: 120)
                             .padding(EdgeInsets(top: 20, leading: 20, bottom: 5, trailing: 20))
                             .foregroundColor(.black)
                     }

@@ -10,6 +10,8 @@
 		5448DE902654011D009CA2E3 /* MyPlantsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5448DE8F2654011D009CA2E3 /* MyPlantsCell.swift */; };
 		5448DE912654011D009CA2E3 /* MyPlantsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5448DE8F2654011D009CA2E3 /* MyPlantsCell.swift */; };
 		5B45665A265698E900BB13C9 /* CustomDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B456659265698E900BB13C9 /* CustomDatePicker.swift */; };
+		5B45665C2656A6CD00BB13C9 /* ModalActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B45665B2656A6CD00BB13C9 /* ModalActivity.swift */; };
+		5B45C0B52657D4B300A5B32C /* NewPlantForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B45C0B42657D4B300A5B32C /* NewPlantForm.swift */; };
 		5B57A45C264C14CB00B917F1 /* plantatinhasApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBF761264AC24400AC9C24 /* plantatinhasApp.swift */; };
 		5B57A45D264C14CF00B917F1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBF762264AC24400AC9C24 /* ContentView.swift */; };
 		5B57A45E264C14D200B917F1 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBF763264AC24400AC9C24 /* Persistence.swift */; };
@@ -50,6 +52,9 @@
 		D7673136264D4B0200632905 /* PlantWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7673134264D4B0200632905 /* PlantWorker.swift */; };
 		D767313A264D4D2300632905 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7673139264D4D2300632905 /* CloudKit.framework */; };
 		D767313D264D4D5E00632905 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D767313C264D4D5E00632905 /* CloudKit.framework */; };
+		D7AC7D0B2653F356006AE657 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AC7D0A2653F356006AE657 /* DashboardViewController.swift */; };
+		D7AC7D102655323B006AE657 /* ViewBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AC7D0F2655323B006AE657 /* ViewBase.swift */; };
+		D7AC7D1226567FAC006AE657 /* ViewBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AC7D0F2655323B006AE657 /* ViewBase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +102,8 @@
 /* Begin PBXFileReference section */
 		5448DE8F2654011D009CA2E3 /* MyPlantsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPlantsCell.swift; sourceTree = "<group>"; };
 		5B456659265698E900BB13C9 /* CustomDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDatePicker.swift; sourceTree = "<group>"; };
+		5B45665B2656A6CD00BB13C9 /* ModalActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalActivity.swift; sourceTree = "<group>"; };
+		5B45C0B42657D4B300A5B32C /* NewPlantForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlantForm.swift; sourceTree = "<group>"; };
 		5BBC64D12653DF0B00F1251C /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		5BBC64D62653EB7500F1251C /* CircleProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleProgress.swift; sourceTree = "<group>"; };
 		5BDBF760264AC24400AC9C24 /* Shared.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Shared.xcdatamodel; sourceTree = "<group>"; };
@@ -132,6 +139,8 @@
 		D7673139264D4D2300632905 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.5.sdk/System/Library/Frameworks/CloudKit.framework; sourceTree = DEVELOPER_DIR; };
 		D767313B264D4D5A00632905 /* plantatinhas Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "plantatinhas Extension.entitlements"; sourceTree = "<group>"; };
 		D767313C264D4D5E00632905 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS7.4.sdk/System/Library/Frameworks/CloudKit.framework; sourceTree = DEVELOPER_DIR; };
+		D7AC7D0A2653F356006AE657 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		D7AC7D0F2655323B006AE657 /* ViewBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewBase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +181,7 @@
 				5BF0973826554C3F00DF57FF /* DayPicker.swift */,
 				5BF0973B2655854100DF57FF /* DetailsHeader.swift */,
 				5B456659265698E900BB13C9 /* CustomDatePicker.swift */,
+				5B45665B2656A6CD00BB13C9 /* ModalActivity.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -220,7 +230,9 @@
 		5BDBF76B264AC24600AC9C24 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
+				D7AC7D082653F331006AE657 /* scenes */,
 				5BDBF76C264AC24600AC9C24 /* Info.plist */,
+				D7AC7D0F2655323B006AE657 /* ViewBase.swift */,
 			);
 			path = iOS;
 			sourceTree = "<group>";
@@ -271,6 +283,7 @@
 				A4522D1C265696F200A48044 /* WatchOS */,
 				5BF097352655394900DF57FF /* PlantDetails.swift */,
 				5BBC64D52653EB6200F1251C /* Components */,
+				5B45C0B42657D4B300A5B32C /* NewPlantForm.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -299,6 +312,22 @@
 				D7673139264D4D2300632905 /* CloudKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D7AC7D082653F331006AE657 /* scenes */ = {
+			isa = PBXGroup;
+			children = (
+				D7AC7D092653F33D006AE657 /* Dashboard */,
+			);
+			path = scenes;
+			sourceTree = "<group>";
+		};
+		D7AC7D092653F33D006AE657 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				D7AC7D0A2653F356006AE657 /* DashboardViewController.swift */,
+			);
+			path = Dashboard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -490,15 +519,22 @@
 			files = (
 				A42A70482655454100169FE8 /* TodayCare.swift in Sources */,
 				5BDBF777264AC24600AC9C24 /* plantatinhasApp.swift in Sources */,
+				D7AC7D0B2653F356006AE657 /* DashboardViewController.swift in Sources */,
+				D7AC7D102655323B006AE657 /* ViewBase.swift in Sources */,
 				5B45665A265698E900BB13C9 /* CustomDatePicker.swift in Sources */,
 				5BBC64D22653DF0B00F1251C /* Colors.swift in Sources */,
 				5448DE902654011D009CA2E3 /* MyPlantsCell.swift in Sources */,
 				D722116C264D5112004478EE /* PlantModel.swift in Sources */,
 				5BF097362655394900DF57FF /* PlantDetails.swift in Sources */,
 				5BDBF77B264AC24600AC9C24 /* Persistence.swift in Sources */,
+
+				5B45665C2656A6CD00BB13C9 /* ModalActivity.swift in Sources */,
+
 				A4522D282658A08A00A48044 /* IPhoneAppScene.swift in Sources */,
+
 				5BF0973926554C3F00DF57FF /* DayPicker.swift in Sources */,
 				5BBC64D72653EB7500F1251C /* CircleProgress.swift in Sources */,
+				5B45C0B52657D4B300A5B32C /* NewPlantForm.swift in Sources */,
 				5BDBF775264AC24600AC9C24 /* plantatinhas.xcdatamodeld in Sources */,
 				5BEB143B26558C39006FA88A /* SegmentedControl.swift in Sources */,
 				5BF0973C2655854100DF57FF /* DetailsHeader.swift in Sources */,
@@ -518,7 +554,11 @@
 				5BBC64D82653EBB300F1251C /* CircleProgress.swift in Sources */,
 				A42A70492655454100169FE8 /* TodayCare.swift in Sources */,
 				5B57A45F264C150100B917F1 /* plantatinhas.xcdatamodeld in Sources */,
+
+				D7AC7D1226567FAC006AE657 /* ViewBase.swift in Sources */,
+
 				A4522D2626589FE700A48044 /* WatchAppScene.swift in Sources */,
+
 				5B57A45E264C14D200B917F1 /* Persistence.swift in Sources */,
 				5BDBF79C264AC36700AC9C24 /* NotificationController.swift in Sources */,
 				A4522D232656A17C00A48044 /* ListActivities.swift in Sources */,

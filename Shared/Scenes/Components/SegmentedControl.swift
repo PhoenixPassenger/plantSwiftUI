@@ -30,6 +30,7 @@ struct SegmentedControl: View {
                 }, onDecrement: {
                     timeCount -= 1
                 })
+                .padding(EdgeInsets(top: 20, leading: 0, bottom: 0, trailing: 20))
             }
         }
     }

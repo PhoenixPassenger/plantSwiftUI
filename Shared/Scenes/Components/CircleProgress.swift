@@ -83,7 +83,7 @@ struct ProgressBar: View {
     var body: some View {
         let color = Color("\(activity)")
         VStack {
-            ZStack {
+            ZStack(alignment: .center) {
                 Circle()
                     .stroke(lineWidth: CGFloat(lineWidth))
                     .foregroundColor(Color.gray4)
@@ -96,10 +96,12 @@ struct ProgressBar: View {
                     .rotationEffect(Angle(degrees: 270.0))
                     .animation(.linear)
                 Image( badge ? activity.imageName : activity.coloredImageName )
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .scaleEffect(0.6)
                 GeometryReader { (geometry) in
                     let offsetX = geometry.size.width * 0.70
                     let offsetY = geometry.size.height * -0.12
-
                     if badge && activity != .disease && activity != .health {
                         Text("\(timeLeft)d")
                             .padding(EdgeInsets(top: 5, leading: 12, bottom: 5, trailing: 12))
@@ -111,7 +113,7 @@ struct ProgressBar: View {
                     }
                 }
             }
-            if labelEnabled{
+            if labelEnabled {
                 HStack {
                     Spacer()
                     let title = activity.title
