@@ -30,7 +30,14 @@ struct MyPlantsCell: View {
                         .font(.system(size: 22))
                     if isSick {
                         HStack(spacing: 3) {
-                            Image(systemName: "pencil.circle.fill")
+                            Circle().overlay(
+                                                Image("disease-cell")
+                                                    .resizable()
+                                                    .frame(width: 12, height: 17, alignment: .center)
+                                                    .accentColor(.health)
+                            )
+                                .frame(width: 22, height: 22, alignment: .center)
+                            .foregroundColor(.topBackground)
                             Text("Doente")
                                 .fontWeight(.regular)
                                 .font(.system(size: 15))
