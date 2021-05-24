@@ -14,7 +14,7 @@ struct IPhoneAppScene: Scene {
         let persistenceController = PersistenceController.shared
         
         WindowGroup {
-            ContentView()
+            DashboardViewController()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }

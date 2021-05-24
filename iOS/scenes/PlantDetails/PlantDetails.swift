@@ -31,6 +31,7 @@ struct Details: View {
     @State var isBadgeActive: [Bool] = [false, false, false, false]
     @State var timeleft: Int = 4
     @State private var showConnectionAlert = false
+
     var body: some View {
         ZStack {
             VStack {

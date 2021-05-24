@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		5448DE902654011D009CA2E3 /* MyPlantsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5448DE8F2654011D009CA2E3 /* MyPlantsCell.swift */; };
-		5448DE912654011D009CA2E3 /* MyPlantsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5448DE8F2654011D009CA2E3 /* MyPlantsCell.swift */; };
 		5B45665A265698E900BB13C9 /* CustomDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B456659265698E900BB13C9 /* CustomDatePicker.swift */; };
 		5B45665C2656A6CD00BB13C9 /* ModalActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B45665B2656A6CD00BB13C9 /* ModalActivity.swift */; };
 		5B45C0B52657D4B300A5B32C /* NewPlantForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B45C0B42657D4B300A5B32C /* NewPlantForm.swift */; };
@@ -38,14 +37,11 @@
 		5BF097362655394900DF57FF /* PlantDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF097352655394900DF57FF /* PlantDetails.swift */; };
 		5BF0973926554C3F00DF57FF /* DayPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF0973826554C3F00DF57FF /* DayPicker.swift */; };
 		5BF0973C2655854100DF57FF /* DetailsHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF0973B2655854100DF57FF /* DetailsHeader.swift */; };
-		5BF0973D2655854100DF57FF /* DetailsHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF0973B2655854100DF57FF /* DetailsHeader.swift */; };
 		A42A70482655454100169FE8 /* TodayCare.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42A70472655454100169FE8 /* TodayCare.swift */; };
-		A42A70492655454100169FE8 /* TodayCare.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42A70472655454100169FE8 /* TodayCare.swift */; };
 		A4522D1F2656975C00A48044 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4522D1D2656970A00A48044 /* MenuView.swift */; };
 		A4522D232656A17C00A48044 /* ListActivities.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4522D222656A17C00A48044 /* ListActivities.swift */; };
 		A4522D2626589FE700A48044 /* WatchAppScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4522D2426589FE700A48044 /* WatchAppScene.swift */; };
 		A4522D282658A08A00A48044 /* IPhoneAppScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4522D272658A08A00A48044 /* IPhoneAppScene.swift */; };
-		A4522D292658A08A00A48044 /* IPhoneAppScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4522D272658A08A00A48044 /* IPhoneAppScene.swift */; };
 		D722116C264D5112004478EE /* PlantModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D722116B264D5112004478EE /* PlantModel.swift */; };
 		D722116D264D5395004478EE /* PlantModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D722116B264D5112004478EE /* PlantModel.swift */; };
 		D7673135264D4B0200632905 /* PlantWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7673134264D4B0200632905 /* PlantWorker.swift */; };
@@ -163,6 +159,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5B0FAB32265BD4E5007B4916 /* NewPlantForm */ = {
+			isa = PBXGroup;
+			children = (
+				5B45C0B42657D4B300A5B32C /* NewPlantForm.swift */,
+			);
+			path = NewPlantForm;
+			sourceTree = "<group>";
+		};
+		5B0FAB33265BD4FB007B4916 /* PlantDetails */ = {
+			isa = PBXGroup;
+			children = (
+				5BF097352655394900DF57FF /* PlantDetails.swift */,
+			);
+			path = PlantDetails;
+			sourceTree = "<group>";
+		};
+		5B0FAB34265BD518007B4916 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				5448DE8F2654011D009CA2E3 /* MyPlantsCell.swift */,
+				A42A70472655454100169FE8 /* TodayCare.swift */,
+				5BEB143A26558C39006FA88A /* SegmentedControl.swift */,
+				5BF0973826554C3F00DF57FF /* DayPicker.swift */,
+				5BF0973B2655854100DF57FF /* DetailsHeader.swift */,
+				5B456659265698E900BB13C9 /* CustomDatePicker.swift */,
+				5B45665B2656A6CD00BB13C9 /* ModalActivity.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		5BBC64D02653DEE700F1251C /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -174,14 +200,7 @@
 		5BBC64D52653EB6200F1251C /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				5448DE8F2654011D009CA2E3 /* MyPlantsCell.swift */,
-				A42A70472655454100169FE8 /* TodayCare.swift */,
-				5BEB143A26558C39006FA88A /* SegmentedControl.swift */,
 				5BBC64D62653EB7500F1251C /* CircleProgress.swift */,
-				5BF0973826554C3F00DF57FF /* DayPicker.swift */,
-				5BF0973B2655854100DF57FF /* DetailsHeader.swift */,
-				5B456659265698E900BB13C9 /* CustomDatePicker.swift */,
-				5B45665B2656A6CD00BB13C9 /* ModalActivity.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -230,6 +249,7 @@
 		5BDBF76B264AC24600AC9C24 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
+				5B0FAB34265BD518007B4916 /* Components */,
 				D7AC7D082653F331006AE657 /* scenes */,
 				5BDBF76C264AC24600AC9C24 /* Info.plist */,
 				D7AC7D0F2655323B006AE657 /* ViewBase.swift */,
@@ -249,6 +269,7 @@
 		5BDBF796264AC36700AC9C24 /* plantatinhas Extension */ = {
 			isa = PBXGroup;
 			children = (
+				A4522D1C265696F200A48044 /* WatchOS */,
 				D767313B264D4D5A00632905 /* plantatinhas Extension.entitlements */,
 				5BDBF79B264AC36700AC9C24 /* NotificationController.swift */,
 				5BDBF79D264AC36700AC9C24 /* NotificationView.swift */,
@@ -280,10 +301,7 @@
 		5BDBF7B7264AC54100AC9C24 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				A4522D1C265696F200A48044 /* WatchOS */,
-				5BF097352655394900DF57FF /* PlantDetails.swift */,
 				5BBC64D52653EB6200F1251C /* Components */,
-				5B45C0B42657D4B300A5B32C /* NewPlantForm.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -317,6 +335,8 @@
 		D7AC7D082653F331006AE657 /* scenes */ = {
 			isa = PBXGroup;
 			children = (
+				5B0FAB33265BD4FB007B4916 /* PlantDetails */,
+				5B0FAB32265BD4E5007B4916 /* NewPlantForm */,
 				D7AC7D092653F33D006AE657 /* Dashboard */,
 			);
 			path = scenes;
@@ -527,11 +547,8 @@
 				D722116C264D5112004478EE /* PlantModel.swift in Sources */,
 				5BF097362655394900DF57FF /* PlantDetails.swift in Sources */,
 				5BDBF77B264AC24600AC9C24 /* Persistence.swift in Sources */,
-
 				5B45665C2656A6CD00BB13C9 /* ModalActivity.swift in Sources */,
-
 				A4522D282658A08A00A48044 /* IPhoneAppScene.swift in Sources */,
-
 				5BF0973926554C3F00DF57FF /* DayPicker.swift in Sources */,
 				5BBC64D72653EB7500F1251C /* CircleProgress.swift in Sources */,
 				5B45C0B52657D4B300A5B32C /* NewPlantForm.swift in Sources */,
@@ -550,24 +567,17 @@
 				5B57A45C264C14CB00B917F1 /* plantatinhasApp.swift in Sources */,
 				5BBC64D42653E53700F1251C /* Colors.swift in Sources */,
 				A4522D1F2656975C00A48044 /* MenuView.swift in Sources */,
-				5BF0973D2655854100DF57FF /* DetailsHeader.swift in Sources */,
 				5BBC64D82653EBB300F1251C /* CircleProgress.swift in Sources */,
-				A42A70492655454100169FE8 /* TodayCare.swift in Sources */,
 				5B57A45F264C150100B917F1 /* plantatinhas.xcdatamodeld in Sources */,
-
 				D7AC7D1226567FAC006AE657 /* ViewBase.swift in Sources */,
-
 				A4522D2626589FE700A48044 /* WatchAppScene.swift in Sources */,
-
 				5B57A45E264C14D200B917F1 /* Persistence.swift in Sources */,
 				5BDBF79C264AC36700AC9C24 /* NotificationController.swift in Sources */,
 				A4522D232656A17C00A48044 /* ListActivities.swift in Sources */,
-				A4522D292658A08A00A48044 /* IPhoneAppScene.swift in Sources */,
 				D722116D264D5395004478EE /* PlantModel.swift in Sources */,
 				5B57A45D264C14CF00B917F1 /* ContentView.swift in Sources */,
 				D7673136264D4B0200632905 /* PlantWorker.swift in Sources */,
 				5BDBF7A0264AC36700AC9C24 /* ComplicationController.swift in Sources */,
-				5448DE912654011D009CA2E3 /* MyPlantsCell.swift in Sources */,
 				5BDBF79E264AC36700AC9C24 /* NotificationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

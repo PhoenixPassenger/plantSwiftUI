@@ -22,7 +22,7 @@ struct ModalActivity: View {
                         activity: self.$typeOfActivity,
                         badge: self.$isBadgeActive,
                         timeLeft: self.$timeleft)
-                .frame(width: 80, height: 80)
+                .frame(width: 50, height: 50)
                 .foregroundColor(.black)
                 .padding()
             Text(label)

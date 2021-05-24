@@ -9,6 +9,8 @@ import SwiftUI
 
 struct DashboardViewController: View {
     @State var isLinkActive = false
+    @State var showModal = false
+    
     var body: some View {
         ZStack(alignment: .top) {
             Color.topBackground
@@ -17,27 +19,32 @@ struct DashboardViewController: View {
             VStack {
                 ScrollView {
                     HStack {
-                    Text("Cuidados de Hoje")
-                        .foregroundColor(.fontCreatePlant)
-                        .font(.title)
-                        .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
-                        .padding(20)
-                        .frame(maxWidth: .greatestFiniteMagnitude, alignment: .leading)
-
-                        Button(action: {}, label: {
+                        Text("Cuidados de Hoje")
+                            .foregroundColor(.fontCreatePlant)
+                            .font(.title)
+                            .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                            .padding(20)
+                            .frame(maxWidth: .greatestFiniteMagnitude, alignment: .leading)
+                        
+                        Button(action: {
+                            showModal = true
+                        }) {
                             Image("addIcon")
                                 .padding(20)
-                        })
+                                .sheet(isPresented: $showModal, content: {
+                                    NewPlantForm(showModal: $showModal)
+                                })
                         }
+                    }
                     HStack {
-                    TodayCare()
-                    TodayCare()
+                        TodayCare()
+                        TodayCare()
                     }
                     ZStack {
                         ViewBase()
                             .ignoresSafeArea()
                         MyPlantView()
-
+                        
                     }}
             }
         }
@@ -46,7 +53,7 @@ struct DashboardViewController: View {
 struct SearchBar: View {
     @Binding var text: String
     @State private var isEditing = false
-
+    
     var body: some View {
         HStack {
             TextField("Search ...", text: $text)
@@ -63,7 +70,7 @@ struct SearchBar: View {
                 Button(action: {
                     self.isEditing = false
                     self.text = ""
-                 }
+                }
                 ) {
                     Text("Cancel")
                 }
@@ -76,30 +83,30 @@ struct SearchBar: View {
 }
 struct MyPlantView: View {
     var body: some View {
-
+        
         VStack {
-
+            
             Text("Minhas Plantas")
                 //.bold()
                 .font(.title)
                 .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                 .padding(20)
                 .frame(maxWidth: .greatestFiniteMagnitude, alignment: .leading)
-
+            
             SearchBar(text: .constant("Pesquisar"))
             Group{
-
-            MyPlantsCell()
-            MyPlantsCell()
-            MyPlantsCell()
-            MyPlantsCell()
-            MyPlantsCell()
-            MyPlantsCell()
-            MyPlantsCell()
-            MyPlantsCell()
+                
+                MyPlantsCell()
+                MyPlantsCell()
+                MyPlantsCell()
+                MyPlantsCell()
+                MyPlantsCell()
+                MyPlantsCell()
+                MyPlantsCell()
+                MyPlantsCell()
             }.padding()
             
-
+            
         }
     }
 }
