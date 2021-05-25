@@ -19,7 +19,7 @@ struct ListActivities: View {
                                                disease: false,
                                                profilePhoto: nil,
                                                photos: nil)]
-    //Trocar pela variável Plant vinda do banco
+// Trocar pela variável Plant vinda do banco
 
     var body: some View {
         let color = Color("\(activity)")
@@ -29,7 +29,7 @@ struct ListActivities: View {
                     .font(.system(size: 18))
                     .fontWeight(.medium)
                 Spacer()
-                //Notification
+// Notification
 //                Button(action: { if notification == true {
 //                    notification = false
 //                } else {
@@ -86,8 +86,8 @@ struct ListActivities: View {
     }
 }
 
-//struct List_Previews: PreviewProvider {
+// struct List_Previews: PreviewProvider {
 //    static var previews: some View {
 //        ListActivities()
 //    }
-//}
+// }

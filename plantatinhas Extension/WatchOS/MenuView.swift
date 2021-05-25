@@ -27,7 +27,12 @@ struct MenuView: View {
                                         badge: self.$isBadgeActive,
                                         timeLeft: self.$timeleft,
                                         lineWidth: 5)
-                                .frame(minWidth: 48, idealWidth: 52, maxWidth: 58, minHeight: 48, idealHeight: 52, maxHeight: 58)
+                                .frame(minWidth: 48,
+                                       idealWidth: 52,
+                                       maxWidth: 58,
+                                       minHeight: 48,
+                                       idealHeight: 52,
+                                       maxHeight: 58)
                                 .foregroundColor(.black)
                             Text("Regar")
                                 .foregroundColor(.white)
@@ -42,7 +47,12 @@ struct MenuView: View {
                                         badge: self.$isBadgeActive,
                                         timeLeft: self.$timeleft,
                                         lineWidth: 5)
-                                .frame(minWidth: 48, idealWidth: 52, maxWidth: 58, minHeight: 48, idealHeight: 52, maxHeight: 58)
+                                .frame(minWidth: 48,
+                                       idealWidth: 52,
+                                       maxWidth: 58,
+                                       minHeight: 48,
+                                       idealHeight: 52,
+                                       maxHeight: 58)
                                 .foregroundColor(.black)
                             Text("Adubar")
                                 .foregroundColor(.white)
@@ -60,7 +70,12 @@ struct MenuView: View {
                                         badge: self.$isBadgeActive,
                                         timeLeft: self.$timeleft,
                                         lineWidth: 5)
-                                .frame(minWidth: 48, idealWidth: 52, maxWidth: 58, minHeight: 48, idealHeight: 52, maxHeight: 58)
+                                .frame(minWidth: 48,
+                                       idealWidth: 52,
+                                       maxWidth: 58,
+                                       minHeight: 48,
+                                       idealHeight: 52,
+                                       maxHeight: 58)
                                 .foregroundColor(.black)
                             Text("Colher")
                                 .foregroundColor(.white)
@@ -71,7 +86,6 @@ struct MenuView: View {
                 }
             }
         }
-        
     }
 }
 

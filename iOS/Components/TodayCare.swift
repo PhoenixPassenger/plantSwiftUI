@@ -18,7 +18,13 @@ struct TodayCare: View {
                             Image(plantsImages)
                                 .resizable()
                                 .cornerRadius(100)
-                                .frame(minWidth: 72, idealWidth: 92, maxWidth: 92, minHeight: 72, idealHeight: 92, maxHeight: 92, alignment: .center)
+                                .frame(minWidth: 72,
+                                       idealWidth: 92,
+                                       maxWidth: 92,
+                                       minHeight: 72,
+                                       idealHeight: 92,
+                                       maxHeight: 92,
+                                       alignment: .center)
                                 .aspectRatio(contentMode: .fill)
     //                    }
 

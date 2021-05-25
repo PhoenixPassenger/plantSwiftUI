@@ -8,15 +8,12 @@
 import SwiftUI
 
 struct IPhoneAppScene: Scene {
-    
+
     var body: some Scene {
-        
         let persistenceController = PersistenceController.shared
-        
         WindowGroup {
             DashboardViewController()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
-    
 }

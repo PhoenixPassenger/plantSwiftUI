@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct WatchAppScene: Scene {
-    
     var body: some Scene {
         WindowGroup {
             MenuView()
