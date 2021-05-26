@@ -8,7 +8,7 @@
 import Foundation
 
 class PlantModel: Identifiable {
-    var name: String?
+    var name: String
     var water: Date?
     var harvest: Date?
     var fertilize: Date?
@@ -16,7 +16,7 @@ class PlantModel: Identifiable {
     var profilePhoto: String?
     var photos: String?
 
-    init(name: String?, water: Date?, harvest: Date?,
+    init(name: String, water: Date?, harvest: Date?,
          fertilize: Date?, disease: Bool, profilePhoto: String?, photos: String? ) {
         self.name = name
         self.water = water

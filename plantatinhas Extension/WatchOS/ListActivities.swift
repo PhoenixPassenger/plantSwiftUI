@@ -69,7 +69,7 @@ struct ListActivities: View {
 
                    
                         
-                    Text(teste.name!)
+                    Text(teste.name)
                         .padding(.leading, 6)
                 }
             }.listStyle(CarouselListStyle())
