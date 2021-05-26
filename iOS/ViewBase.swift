@@ -12,15 +12,26 @@ struct ViewBase: View {
         GeometryReader { geometry in
             ZStack(alignment: .leading) {
                 Rectangle()
-                    .frame(minWidth: 0, maxWidth: geometry.size.width,
-                           minHeight: geometry.size.height, maxHeight: .infinity,
-                           alignment: .bottom)
                     .colorInvert()
-                    .cornerRadius(40, antialiased: true)
+                    .clipShape(RoundedCorner(radius: 20, corners: [.topLeft, .topRight]))
                     .padding(.leading, 1)
-            }.cornerRadius(45.0)
-
+                    
+            }
         }
+    }
+}
+
+struct RoundedCorner: Shape {
+
+    var radius: CGFloat = .infinity
+    var corners: UIRectCorner = .allCorners
+
+    func path(in rect: CGRect) -> Path {
+        let path = UIBezierPath(roundedRect: rect,
+                                byRoundingCorners: corners,
+                                cornerRadii: CGSize(width: radius,
+                                                    height: radius))
+        return Path(path.cgPath)
     }
 }
 

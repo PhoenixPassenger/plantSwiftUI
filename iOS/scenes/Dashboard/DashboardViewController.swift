@@ -11,107 +11,95 @@ import CoreData
 struct DashboardViewController: View {
     @State var isLinkActive = false
     @State var showModal = false
+    @State var searchText: String = ""
+    @State var allPlants: [PlantModel] = []
+    
     var body: some View {
-        loadplants()
-        return ZStack(alignment: .top) {
+        ZStack(alignment: .top) {
             Color.topBackground
                 .frame(height: 500)
                 .ignoresSafeArea()
             VStack {
-                ScrollView {
                     HStack {
                         Text("Cuidados de Hoje")
                             .foregroundColor(.fontCreatePlant)
                             .font(.title)
                             .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
-                            .padding(20)
+                            .padding(.leading, 20)
+                            .padding(.top, 30)
                             .frame(maxWidth: .greatestFiniteMagnitude, alignment: .leading)
+
                         Button(action: {
                             showModal = true
                         }) {
                             Image("addIcon")
-                                .padding(20)
+                                .padding(.trailing, 20)
+                                .padding(.top, 30)
                                 .sheet(isPresented: $showModal, content: {
                                     NewPlantForm(showModal: $showModal)
                                 })
                         }
                     }
                     HStack {
-                        TodayCare(plantsImages: ["robertinho", "Water", "Compost", "Harvest"])
+                        TodayCare()
                     }
                     ZStack {
                         ViewBase()
                             .ignoresSafeArea()
-                        MyPlantView()
+       
+                        MyPlantView(searchText: $searchText, allPlants: $allPlants)
 
-                    }}
-            }
-        }
-    }
+                    }.padding(.top, 10)
 
-    func loadplants() {
-        let worker = PlantWorker()
-        let plants = worker.fetchPlants()
-        print(plants)
-    }
-    
-}
-struct SearchBar: View {
-    @Binding var text: String
-    @State private var isEditing = false
 
-    var body: some View {
-        HStack {
-            TextField("Search ...", text: $text)
-                .foregroundColor(.fontCreatePlant)
-                .padding(7)
-                .padding(.horizontal, 25)
-                .background(Color.topBackground)
-                .cornerRadius(8)
-                .padding(.horizontal, 10)
-                .onTapGesture {
-                    self.isEditing = true
-                }
-            if isEditing {
-                Button(action: {
-                    self.isEditing = false
-                    self.text = ""
-                }
-                ) {
-                    Text("Cancel")
-                }
-                .padding(.trailing, 10)
-                .transition(.move(edge: .trailing))
-                .animation(.default)
             }
         }
     }
 }
+
 struct MyPlantView: View {
+    @Binding var searchText: String
+    @Binding var allPlants: [PlantModel]
     var body: some View {
 
         VStack {
-
             Text("Minhas Plantas")
                 // .bold()
                 .font(.title)
                 .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
-                .padding(20)
+                .padding(.leading, 20)
+                .padding(.top, 20)
+                .padding(.bottom, 10)
                 .frame(maxWidth: .greatestFiniteMagnitude, alignment: .leading)
-
-            SearchBar(text: .constant("Pesquisar"))
-            Group {
-
-                MyPlantsCell()
-                MyPlantsCell()
-                MyPlantsCell()
-                MyPlantsCell()
-                MyPlantsCell()
-                MyPlantsCell()
-                MyPlantsCell()
-                MyPlantsCell()
-            }.padding()
-
+  
+            SearchBar(text: $searchText)
+                if !allPlants.isEmpty {
+                    ScrollView {
+                        ForEach(allPlants.filter({searchText.isEmpty ? true : $0.name.contains(searchText) })) { item in
+    //                        NavigationLink(destination: ) {
+                            
+    //                        MyPlantsCell()
+                                
+    //                        }
+                            }
+                    }
+                } else {
+//                    Spacer()
+//                    ZStack(alignment: .top) {
+                        VStack(alignment: .center) {
+                            Spacer()
+                            Text("Adicione uma planta clicando em ")
+                            .fontWeight(.regular)
+                            .font(.system(size: 15))
+                        
+                            .foregroundColor(.health.opacity(1))
+                            Image("addIconNoPlants")
+//                            .padding(.bottom, UIScreen.main.bounds.height/3)
+                        }.padding(.bottom, UIScreen.main.bounds.height/4)
+                        .padding(.top, UIScreen.main.bounds.height/4)
+                        .clipped()
+//                    }
+                }
         }
     }
 }

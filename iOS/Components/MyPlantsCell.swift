@@ -10,14 +10,12 @@ import UIKit
 
 struct MyPlantsCell: View {
 
-    @State var isSick: Bool = true
-    @State var plantName: String = "Planta"
-    @State var plantImage: String = "robertinho"
+    @State var plant: PlantModel
 
     var body: some View {
         ZStack {
             HStack {
-                Image(plantImage)
+                Image(plant.name)
                     .resizable()
                     .frame(width: 70, height: 70, alignment: .center)
                     .cornerRadius(35)
@@ -25,10 +23,10 @@ struct MyPlantsCell: View {
                     .padding(.leading, 16)
 
                 VStack(alignment: .leading) {
-                    Text(plantName)
+                    Text(plant.name)
                         .fontWeight(.medium)
                         .font(.system(size: 22))
-                    if isSick {
+                    if plant.disease {
                         HStack(spacing: 3) {
                             Circle().overlay(
                                                 Image("disease-cell")
@@ -56,12 +54,12 @@ struct MyPlantsCell: View {
     }
 }
 
-struct MyPlantsCell_Previews: PreviewProvider {
-    static var previews: some View {
-        Group {
-            MyPlantsCell()
-            MyPlantsCell()
-                .preferredColorScheme(.dark)
-        }
-    }
-}
+//struct MyPlantsCell_Previews: PreviewProvider {
+//    static var previews: some View {
+//        Group {
+//            MyPlantsCell()
+//            MyPlantsCell()
+//                .preferredColorScheme(.dark)
+//        }
+//    }
+//}
