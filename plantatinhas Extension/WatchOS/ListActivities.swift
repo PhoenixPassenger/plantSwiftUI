@@ -13,8 +13,7 @@ struct ListActivities: View {
     @State var notification: Bool = true
     @State var done: Bool = false
     @Binding var activity: Activity
-    var testeFetch: [PlantModel] = [PlantModel(name: "robertinho", water: nil, harvest: nil, fertilize: nil, disease: false, profilePhoto: nil, photos: nil)]
-    
+    var testeFetch: [PlantModel] = [PlantModel(name: "robertinho", disease: false, profilePhoto: nil)]
     
     var body: some View {
         let color = Color("\(activity)")
@@ -69,7 +68,7 @@ struct ListActivities: View {
 
                    
                         
-                    Text(teste.name!)
+                    Text(teste.name)
                         .padding(.leading, 6)
                 }
             }.listStyle(CarouselListStyle())

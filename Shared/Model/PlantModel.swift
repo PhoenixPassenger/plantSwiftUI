@@ -8,22 +8,16 @@
 import Foundation
 
 class PlantModel: Identifiable {
-    var name: String?
-    var water: Date?
-    var harvest: Date?
-    var fertilize: Date?
+    var name: String
     var disease: Bool
     var profilePhoto: String?
-    var photos: String?
-
-    init(name: String?, water: Date?, harvest: Date?,
-         fertilize: Date?, disease: Bool, profilePhoto: String?, photos: String? ) {
+    
+    init(name: String, disease: Bool, profilePhoto: String? ) {
         self.name = name
-        self.water = water
-        self.harvest = harvest
-        self.fertilize = fertilize
         self.disease = disease
         self.profilePhoto = profilePhoto
-        self.photos = photos
     }
+}
+class TestCoreData {
+    
 }
