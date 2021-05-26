@@ -8,13 +8,11 @@
 import SwiftUI
 
 struct ListActivities: View {
-    
-    
-    @State var notification: Bool = true
-    @State var done: Bool = false
+
+//    @State var notification: Bool = true
+    @State var done: Bool = false // Trocar pela variável plant.water.done
     @Binding var activity: Activity
-    var testeFetch: [PlantModel] = [PlantModel(name: "robertinho", water: nil, harvest: nil, fertilize: nil, disease: false, profilePhoto: nil, photos: nil)]
-    
+    var testeFetch: [PlantModel] = [PlantModel(name: "robertinho", disease: false, profilePhoto: nil)]
     
     var body: some View {
         let color = Color("\(activity)")
@@ -24,25 +22,25 @@ struct ListActivities: View {
                     .font(.system(size: 18))
                     .fontWeight(.medium)
                 Spacer()
-                Button(action: { if notification == true {
-                    notification = false
-                } else {
-                    notification = true
-                }
-                    }, label: {
-                    
-                    if notification == true {
-                        Image(systemName: "bell.fill")
-                            .font(.system(size: 20))
-                            .foregroundColor(.topBackground)
-                    } else {
-                        Image(systemName: "bell")
-                            .font(.system(size: 20))
-                            .foregroundColor(.topBackground)
-                    }
-                   
-                    }).buttonStyle(BorderedButtonStyle(tint: .blue.opacity(0)))
-                .frame(minWidth: 25, idealWidth: 25, maxWidth: 25, minHeight: 15, idealHeight: 15, maxHeight: 15)
+                //Notification
+//                Button(action: { if notification == true {
+//                    notification = false
+//                } else {
+//                    notification = true
+//                }
+//                    }, label: {
+//
+//                    if notification == true {
+//                        Image(systemName: "bell.fill")
+//                            .font(.system(size: 20))
+//                            .foregroundColor(.topBackground)
+//                    } else {
+//                        Image(systemName: "bell")
+//                            .font(.system(size: 20))
+//                            .foregroundColor(.topBackground)
+//                    }
+//                    }).buttonStyle(BorderedButtonStyle(tint: .blue.opacity(0)))
+//                .frame(minWidth: 25, idealWidth: 25, maxWidth: 25, minHeight: 15, idealHeight: 15, maxHeight: 15)
             }
             List(testeFetch) { teste in
                 HStack {
@@ -55,7 +53,7 @@ struct ListActivities: View {
                     }, label: {
                         if done == false {
                             Rectangle()
-                                .stroke(color,style: StrokeStyle(lineWidth: 3.5))
+                                .stroke(color, style: StrokeStyle(lineWidth: 3.5))
                                 .frame(width: 18, height: 18, alignment: .center)
                                 .cornerRadius(2)
                         } else {

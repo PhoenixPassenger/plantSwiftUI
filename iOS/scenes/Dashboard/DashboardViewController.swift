@@ -6,12 +6,14 @@
 //
 
 import SwiftUI
+import CoreData
 
 struct DashboardViewController: View {
     @State var isLinkActive = false
     @State var showModal = false
     @State var searchText: String = ""
     @State var allPlants: [PlantModel] = []
+    
     
     var body: some View {
         ZStack(alignment: .top) {
@@ -49,6 +51,7 @@ struct DashboardViewController: View {
                         MyPlantView(searchText: $searchText, allPlants: $allPlants)
 
                     }.padding(.top, 10)
+
             }
         }
     }
