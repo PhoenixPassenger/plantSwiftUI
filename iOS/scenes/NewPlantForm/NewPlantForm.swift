@@ -29,7 +29,7 @@ class PlantViewModel: ObservableObject {
     @Published var harvestNotification = false
     @Published var harvestDay: Date = Date()
     @Published var harvestInterval = 0
-    @Published var harvest0IsMonthly = false
+    @Published var harvestIsMonthly = false
 }
 
 struct NewPlantForm: View {
@@ -163,6 +163,7 @@ struct ThirdPage: View {
 
 struct FourthPage: View {
     @EnvironmentObject private var viewModel: PlantViewModel
+    @Environment(\.managedObjectContext) private var viewContext
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @State var isOn = false
     @Binding var showModal: Bool
@@ -194,6 +195,7 @@ struct FourthPage: View {
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button("Salvar") {
+                        saveInCoreData()
                         self.showModal.toggle()
                     }.environmentObject(viewModel)
                 }
@@ -202,5 +204,31 @@ struct FourthPage: View {
         .navigationBarTitle("Nova Planta", displayMode: .inline)
         .navigationBarBackButtonHidden(true)
         .navigationBarItems(leading: backButton)
+    }
+    func saveInCoreData() {
+        let plantWorker = PlantWorker()
+        let plant = plantWorker.create(plant: PlantModel(name: viewModel.name,
+                                                         disease: false,
+                                                         profilePhoto: viewModel.name))
+        var waterWorker = WaterWorker(plant)
+        var harvestWorker = HarvestWorker(plant)
+        var fertilizeWorker = FertilizeWorker(plant)
+
+        waterWorker.create(water: WaterModel(exist: viewModel.waterExist,
+                                             notification: viewModel.waterNotification,
+                                             done: viewModel.waterDone,
+                                             date: Date()))
+        harvestWorker.create(harvest: HarvestModel(exist: viewModel.harvestExist,
+                                                   notification: viewModel.harvestNotification,
+                                                   done: viewModel.harvestDone,
+                                                   date: viewModel.harvestDay,
+                                                   interval: viewModel.harvestInterval,
+                                                   isMonthly: viewModel.harvestIsMonthly))
+        fertilizeWorker.create(fertilize: FertilizeModel(exist: viewModel.compostExist,
+                                                         notification: viewModel.compostNotification,
+                                                         done: viewModel.compostDone,
+                                                         date: viewModel.compostDay,
+                                                         interval: viewModel.compostInterval,
+                                                         isMonthly: viewModel.compostIsMonthly))
     }
 }

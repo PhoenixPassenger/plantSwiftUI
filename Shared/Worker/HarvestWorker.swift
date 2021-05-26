@@ -10,7 +10,7 @@ import SwiftUI
 import CoreData
 
 class HarvestWorker {
-    @Environment(\.managedObjectContext) private var viewContext
+    let viewContext = PersistenceController.shared.container.viewContext
     private var harvest: Harvest?
     let plant: Plant
     init(_ plant: Plant) {

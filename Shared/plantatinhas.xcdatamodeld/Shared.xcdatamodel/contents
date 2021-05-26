@@ -8,7 +8,7 @@
         <attribute name="interval" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="isMonthly" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="notification" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
-        <relationship name="plant" optional="YES" maxCount="1" deletionRule="No Action" destinationEntity="Plant" inverseName="fertilize" inverseEntity="Plant"/>
+        <relationship name="plant" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Plant" inverseName="fertilize" inverseEntity="Plant"/>
     </entity>
     <entity name="Harvest" representedClassName="Harvest" syncable="YES" codeGenerationType="class">
         <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
@@ -18,18 +18,15 @@
         <attribute name="interval" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="isMonthly" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="notification" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
-        <relationship name="plant" optional="YES" maxCount="1" deletionRule="No Action" destinationEntity="Plant" inverseName="harvest" inverseEntity="Plant"/>
-    </entity>
-    <entity name="Item" representedClassName="Item" syncable="YES" codeGenerationType="class">
-        <attribute name="timestamp" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="plant" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Plant" inverseName="harvest" inverseEntity="Plant"/>
     </entity>
     <entity name="Plant" representedClassName="Plant" syncable="YES" codeGenerationType="class">
         <attribute name="disease" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="profilePhoto" optional="YES" attributeType="String"/>
-        <relationship name="fertilize" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Fertilize" inverseName="plant" inverseEntity="Fertilize"/>
-        <relationship name="harvest" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Harvest" inverseName="plant" inverseEntity="Harvest"/>
-        <relationship name="water" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Water" inverseName="plant" inverseEntity="Water"/>
+        <relationship name="fertilize" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Fertilize" inverseName="plant" inverseEntity="Fertilize"/>
+        <relationship name="harvest" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Harvest" inverseName="plant" inverseEntity="Harvest"/>
+        <relationship name="water" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Water" inverseName="plant" inverseEntity="Water"/>
     </entity>
     <entity name="Water" representedClassName="Water" syncable="YES" codeGenerationType="class">
         <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
@@ -37,20 +34,18 @@
         <attribute name="exist" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="notification" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
-        <relationship name="plant" optional="YES" maxCount="1" deletionRule="No Action" destinationEntity="Plant" inverseName="water" inverseEntity="Plant"/>
+        <relationship name="plant" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Plant" inverseName="water" inverseEntity="Plant"/>
     </entity>
     <configuration name="CloudKit" usedWithCloudKit="YES">
         <memberEntity name="Plant"/>
-        <memberEntity name="Item"/>
         <memberEntity name="Fertilize"/>
         <memberEntity name="Water"/>
         <memberEntity name="Harvest"/>
     </configuration>
     <elements>
-        <element name="Fertilize" positionX="-36" positionY="99" width="128" height="149"/>
-        <element name="Harvest" positionX="-45" positionY="108" width="128" height="149"/>
-        <element name="Item" positionX="-63" positionY="-18" width="128" height="44"/>
-        <element name="Plant" positionX="-63" positionY="-9" width="128" height="119"/>
-        <element name="Water" positionX="-45" positionY="99" width="128" height="119"/>
+        <element name="Fertilize" positionX="4.3551025390625" positionY="232.8930053710938" width="128" height="149"/>
+        <element name="Harvest" positionX="134.3868408203125" positionY="-116.6678924560547" width="128" height="149"/>
+        <element name="Plant" positionX="-414.6124267578125" positionY="-91.23367309570312" width="128" height="119"/>
+        <element name="Water" positionX="232.65087890625" positionY="101.4931640625" width="128" height="119"/>
     </elements>
 </model>

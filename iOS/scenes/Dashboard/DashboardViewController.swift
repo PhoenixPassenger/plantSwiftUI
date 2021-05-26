@@ -12,7 +12,8 @@ struct DashboardViewController: View {
     @State var isLinkActive = false
     @State var showModal = false
     var body: some View {
-        ZStack(alignment: .top) {
+        loadplants()
+        return ZStack(alignment: .top) {
             Color.topBackground
                 .frame(height: 500)
                 .ignoresSafeArea()
@@ -48,6 +49,11 @@ struct DashboardViewController: View {
         }
     }
 
+    func loadplants() {
+        let worker = PlantWorker()
+        let plants = worker.fetchPlants()
+        print(plants)
+    }
     
 }
 struct SearchBar: View {

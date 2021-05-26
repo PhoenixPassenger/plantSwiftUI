@@ -10,7 +10,7 @@ import SwiftUI
 import CoreData
 
 class WaterWorker {
-    @Environment(\.managedObjectContext) private var viewContext
+    let viewContext = PersistenceController.shared.container.viewContext
     private var water: Water?
     let plant: Plant
         init(_ plant: Plant) {
