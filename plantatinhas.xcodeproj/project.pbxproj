@@ -40,6 +40,8 @@
 		A4522D232656A17C00A48044 /* ListActivities.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4522D222656A17C00A48044 /* ListActivities.swift */; };
 		A4522D2626589FE700A48044 /* WatchAppScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4522D2426589FE700A48044 /* WatchAppScene.swift */; };
 		A4522D282658A08A00A48044 /* IPhoneAppScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4522D272658A08A00A48044 /* IPhoneAppScene.swift */; };
+		A4990F90265D39D000C5B2A1 /* HideKeyBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4990F8F265D39D000C5B2A1 /* HideKeyBoard.swift */; };
+		A4B0A6A0265BE8D4005F3A25 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B0A69F265BE8D4005F3A25 /* SearchBar.swift */; };
 		D722116C264D5112004478EE /* PlantModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D722116B264D5112004478EE /* PlantModel.swift */; };
 		D722116D264D5395004478EE /* PlantModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D722116B264D5112004478EE /* PlantModel.swift */; };
 		D7673135264D4B0200632905 /* PlantWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7673134264D4B0200632905 /* PlantWorker.swift */; };
@@ -140,6 +142,8 @@
 		A4522D222656A17C00A48044 /* ListActivities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListActivities.swift; sourceTree = "<group>"; };
 		A4522D2426589FE700A48044 /* WatchAppScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchAppScene.swift; sourceTree = "<group>"; };
 		A4522D272658A08A00A48044 /* IPhoneAppScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPhoneAppScene.swift; sourceTree = "<group>"; };
+		A4990F8F265D39D000C5B2A1 /* HideKeyBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HideKeyBoard.swift; sourceTree = "<group>"; };
+		A4B0A69F265BE8D4005F3A25 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		D722116B264D5112004478EE /* PlantModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantModel.swift; sourceTree = "<group>"; };
 		D7673134264D4B0200632905 /* PlantWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantWorker.swift; sourceTree = "<group>"; };
 		D7673137264D4D0F00632905 /* plantatinhas.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = plantatinhas.entitlements; sourceTree = "<group>"; };
@@ -203,6 +207,7 @@
 				5BF0973B2655854100DF57FF /* DetailsHeader.swift */,
 				5B456659265698E900BB13C9 /* CustomDatePicker.swift */,
 				5B45665B2656A6CD00BB13C9 /* ModalActivity.swift */,
+				A4B0A69F265BE8D4005F3A25 /* SearchBar.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -211,6 +216,7 @@
 			isa = PBXGroup;
 			children = (
 				5BBC64D12653DF0B00F1251C /* Colors.swift */,
+				A4990F8F265D39D000C5B2A1 /* HideKeyBoard.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -567,6 +573,7 @@
 				D7AC7D0B2653F356006AE657 /* DashboardViewController.swift in Sources */,
 				D7AC7D102655323B006AE657 /* ViewBase.swift in Sources */,
 				5B45665A265698E900BB13C9 /* CustomDatePicker.swift in Sources */,
+				A4990F90265D39D000C5B2A1 /* HideKeyBoard.swift in Sources */,
 				5BBC64D22653DF0B00F1251C /* Colors.swift in Sources */,
 				5448DE902654011D009CA2E3 /* MyPlantsCell.swift in Sources */,
 				D7D12A11265BEE050012CFA7 /* HarvestWorker.swift in Sources */,
@@ -577,6 +584,7 @@
 				A4522D282658A08A00A48044 /* IPhoneAppScene.swift in Sources */,
 				5BF0973926554C3F00DF57FF /* DayPicker.swift in Sources */,
 				5BBC64D72653EB7500F1251C /* CircleProgress.swift in Sources */,
+				A4B0A6A0265BE8D4005F3A25 /* SearchBar.swift in Sources */,
 				5B45C0B52657D4B300A5B32C /* NewPlantForm.swift in Sources */,
 				D7D12A0B265BECC40012CFA7 /* FertilizeModel.swift in Sources */,
 				D7D12A05265BE8BA0012CFA7 /* WaterModel.swift in Sources */,
