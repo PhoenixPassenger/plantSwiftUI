@@ -49,7 +49,7 @@ struct DayPicker: View {
             }
         }
     }
-    private func toggle(id: Int) -> () -> () {
+    private func toggle(id: Int) -> () -> Void {
         return {
             self.selected[id] = !self.selected[id]
         }

@@ -10,9 +10,9 @@ import SwiftUI
 import CoreData
 
 class PlantWorker {
-    @Environment(\.managedObjectContext) private var viewContext
+    let viewContext = PersistenceController.shared.container.viewContext
     private var plant: Plant?
-    func create(plant: PlantModel) {
+    func create(plant: PlantModel) -> Plant{
         let newPlant = Plant(context: viewContext)
         newPlant.name = plant.name
         newPlant.disease = plant.disease
@@ -22,13 +22,15 @@ class PlantWorker {
         } catch let error as NSError {
             print("could not save \(error) \(error.userInfo)")
         }
+        return newPlant
     }
     func fetchPlants() -> [Plant] {
-        let fetch = Plant.fetchRequest() as NSFetchRequest <Plant>
+        let fetchRequest = NSFetchRequest<Plant>(entityName: "Plant")
+//        let fetch = Plant.fetchRequest() as NSFetchRequest <Plant>
         var plants: [Plant] = []
 
         do {
-            plants = try viewContext.fetch(fetch)
+            plants = try viewContext.fetch(fetchRequest)
         } catch let error as NSError {
             print("Could not fetch. \(error), \(error.userInfo)")
         }
