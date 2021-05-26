@@ -6,10 +6,12 @@
 //
 
 import SwiftUI
+import CoreData
 
 struct DashboardViewController: View {
     @State var isLinkActive = false
     @State var showModal = false
+    
     
     var body: some View {
         ZStack(alignment: .top) {
@@ -25,7 +27,6 @@ struct DashboardViewController: View {
                             .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                             .padding(20)
                             .frame(maxWidth: .greatestFiniteMagnitude, alignment: .leading)
-                        
                         Button(action: {
                             showModal = true
                         }) {
@@ -49,6 +50,8 @@ struct DashboardViewController: View {
             }
         }
     }
+
+    
 }
 struct SearchBar: View {
     @Binding var text: String

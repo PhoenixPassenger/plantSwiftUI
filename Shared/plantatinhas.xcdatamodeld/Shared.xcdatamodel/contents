@@ -1,23 +1,56 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="18154" systemVersion="20D91" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="YES" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="18154" systemVersion="20E241" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="YES" userDefinedModelVersionIdentifier="">
+    <entity name="Fertilize" representedClassName="Fertilize" syncable="YES" codeGenerationType="class">
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="done" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="exist" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="interval" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="isMonthly" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="notification" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <relationship name="plant" optional="YES" maxCount="1" deletionRule="No Action" destinationEntity="Plant" inverseName="fertilize" inverseEntity="Plant"/>
+    </entity>
+    <entity name="Harvest" representedClassName="Harvest" syncable="YES" codeGenerationType="class">
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="done" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="exist" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="interval" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="isMonthly" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="notification" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <relationship name="plant" optional="YES" maxCount="1" deletionRule="No Action" destinationEntity="Plant" inverseName="harvest" inverseEntity="Plant"/>
+    </entity>
     <entity name="Item" representedClassName="Item" syncable="YES" codeGenerationType="class">
         <attribute name="timestamp" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
     </entity>
     <entity name="Plant" representedClassName="Plant" syncable="YES" codeGenerationType="class">
         <attribute name="disease" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
-        <attribute name="fertilize" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
-        <attribute name="harvest" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="name" optional="YES" attributeType="String"/>
-        <attribute name="photos" optional="YES" attributeType="String"/>
         <attribute name="profilePhoto" optional="YES" attributeType="String"/>
-        <attribute name="water" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="fertilize" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Fertilize" inverseName="plant" inverseEntity="Fertilize"/>
+        <relationship name="harvest" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Harvest" inverseName="plant" inverseEntity="Harvest"/>
+        <relationship name="water" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Water" inverseName="plant" inverseEntity="Water"/>
+    </entity>
+    <entity name="Water" representedClassName="Water" syncable="YES" codeGenerationType="class">
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="done" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="exist" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="notification" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <relationship name="plant" optional="YES" maxCount="1" deletionRule="No Action" destinationEntity="Plant" inverseName="water" inverseEntity="Plant"/>
     </entity>
     <configuration name="CloudKit" usedWithCloudKit="YES">
         <memberEntity name="Plant"/>
         <memberEntity name="Item"/>
+        <memberEntity name="Fertilize"/>
+        <memberEntity name="Water"/>
+        <memberEntity name="Harvest"/>
     </configuration>
     <elements>
+        <element name="Fertilize" positionX="-36" positionY="99" width="128" height="149"/>
+        <element name="Harvest" positionX="-45" positionY="108" width="128" height="149"/>
         <element name="Item" positionX="-63" positionY="-18" width="128" height="44"/>
-        <element name="Plant" positionX="-63" positionY="-9" width="128" height="134"/>
+        <element name="Plant" positionX="-63" positionY="-9" width="128" height="119"/>
+        <element name="Water" positionX="-45" positionY="99" width="128" height="119"/>
     </elements>
 </model>

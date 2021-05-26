@@ -12,15 +12,8 @@ struct ListActivities: View {
 //    @State var notification: Bool = true
     @State var done: Bool = false // Trocar pela variável plant.water.done
     @Binding var activity: Activity
-    var testeFetch: [PlantModel] = [PlantModel(name: "robertinho",
-                                               water: nil,
-                                               harvest: nil,
-                                               fertilize: nil,
-                                               disease: false,
-                                               profilePhoto: nil,
-                                               photos: nil)]
-    //Trocar pela variável Plant vinda do banco
-
+    var testeFetch: [PlantModel] = [PlantModel(name: "robertinho", disease: false, profilePhoto: nil)]
+    
     var body: some View {
         let color = Color("\(activity)")
         VStack {
@@ -72,7 +65,9 @@ struct ListActivities: View {
                     .frame(minWidth: 25, idealWidth: 25, maxWidth: 25, minHeight: 15, idealHeight: 15, maxHeight: 15)
                     .padding(.leading, 5)
 
-                    Text(teste.name!)
+                   
+                        
+                    Text(teste.name)
                         .padding(.leading, 6)
                 }
             }.listStyle(CarouselListStyle())

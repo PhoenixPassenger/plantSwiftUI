@@ -14,13 +14,11 @@
 		5B57A45C264C14CB00B917F1 /* plantatinhasApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBF761264AC24400AC9C24 /* plantatinhasApp.swift */; };
 		5B57A45D264C14CF00B917F1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBF762264AC24400AC9C24 /* ContentView.swift */; };
 		5B57A45E264C14D200B917F1 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBF763264AC24400AC9C24 /* Persistence.swift */; };
-		5B57A45F264C150100B917F1 /* plantatinhas.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBF75F264AC24400AC9C24 /* plantatinhas.xcdatamodeld */; };
 		5B57A460264C163200B917F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BDBF764264AC24600AC9C24 /* Assets.xcassets */; };
 		5BBC64D22653DF0B00F1251C /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBC64D12653DF0B00F1251C /* Colors.swift */; };
 		5BBC64D42653E53700F1251C /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBC64D12653DF0B00F1251C /* Colors.swift */; };
 		5BBC64D72653EB7500F1251C /* CircleProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBC64D62653EB7500F1251C /* CircleProgress.swift */; };
 		5BBC64D82653EBB300F1251C /* CircleProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBC64D62653EB7500F1251C /* CircleProgress.swift */; };
-		5BDBF775264AC24600AC9C24 /* plantatinhas.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBF75F264AC24400AC9C24 /* plantatinhas.xcdatamodeld */; };
 		5BDBF777264AC24600AC9C24 /* plantatinhasApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBF761264AC24400AC9C24 /* plantatinhasApp.swift */; };
 		5BDBF779264AC24600AC9C24 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBF762264AC24400AC9C24 /* ContentView.swift */; };
 		5BDBF77B264AC24600AC9C24 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBF763264AC24400AC9C24 /* Persistence.swift */; };
@@ -48,9 +46,23 @@
 		D7673136264D4B0200632905 /* PlantWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7673134264D4B0200632905 /* PlantWorker.swift */; };
 		D767313A264D4D2300632905 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7673139264D4D2300632905 /* CloudKit.framework */; };
 		D767313D264D4D5E00632905 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D767313C264D4D5E00632905 /* CloudKit.framework */; };
+		D7677BEE265D2C46003F4C83 /* plantatinhas.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D7677BEC265D2C46003F4C83 /* plantatinhas.xcdatamodeld */; };
+		D7677BEF265D2C46003F4C83 /* plantatinhas.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D7677BEC265D2C46003F4C83 /* plantatinhas.xcdatamodeld */; };
 		D7AC7D0B2653F356006AE657 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AC7D0A2653F356006AE657 /* DashboardViewController.swift */; };
 		D7AC7D102655323B006AE657 /* ViewBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AC7D0F2655323B006AE657 /* ViewBase.swift */; };
 		D7AC7D1226567FAC006AE657 /* ViewBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7AC7D0F2655323B006AE657 /* ViewBase.swift */; };
+		D7D12A05265BE8BA0012CFA7 /* WaterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D12A04265BE8BA0012CFA7 /* WaterModel.swift */; };
+		D7D12A06265BE8BA0012CFA7 /* WaterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D12A04265BE8BA0012CFA7 /* WaterModel.swift */; };
+		D7D12A08265BECB60012CFA7 /* HarvestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D12A07265BECB60012CFA7 /* HarvestModel.swift */; };
+		D7D12A09265BECB60012CFA7 /* HarvestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D12A07265BECB60012CFA7 /* HarvestModel.swift */; };
+		D7D12A0B265BECC40012CFA7 /* FertilizeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D12A0A265BECC40012CFA7 /* FertilizeModel.swift */; };
+		D7D12A0C265BECC40012CFA7 /* FertilizeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D12A0A265BECC40012CFA7 /* FertilizeModel.swift */; };
+		D7D12A0E265BEDE10012CFA7 /* WaterWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D12A0D265BEDE10012CFA7 /* WaterWorker.swift */; };
+		D7D12A0F265BEDE10012CFA7 /* WaterWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D12A0D265BEDE10012CFA7 /* WaterWorker.swift */; };
+		D7D12A11265BEE050012CFA7 /* HarvestWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D12A10265BEE050012CFA7 /* HarvestWorker.swift */; };
+		D7D12A12265BEE050012CFA7 /* HarvestWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D12A10265BEE050012CFA7 /* HarvestWorker.swift */; };
+		D7D12A14265BEE190012CFA7 /* FertilizeWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D12A13265BEE190012CFA7 /* FertilizeWorker.swift */; };
+		D7D12A15265BEE190012CFA7 /* FertilizeWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D12A13265BEE190012CFA7 /* FertilizeWorker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,7 +114,6 @@
 		5B45C0B42657D4B300A5B32C /* NewPlantForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlantForm.swift; sourceTree = "<group>"; };
 		5BBC64D12653DF0B00F1251C /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		5BBC64D62653EB7500F1251C /* CircleProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleProgress.swift; sourceTree = "<group>"; };
-		5BDBF760264AC24400AC9C24 /* Shared.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Shared.xcdatamodel; sourceTree = "<group>"; };
 		5BDBF761264AC24400AC9C24 /* plantatinhasApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = plantatinhasApp.swift; sourceTree = "<group>"; };
 		5BDBF762264AC24400AC9C24 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		5BDBF763264AC24400AC9C24 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -135,8 +146,15 @@
 		D7673139264D4D2300632905 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.5.sdk/System/Library/Frameworks/CloudKit.framework; sourceTree = DEVELOPER_DIR; };
 		D767313B264D4D5A00632905 /* plantatinhas Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "plantatinhas Extension.entitlements"; sourceTree = "<group>"; };
 		D767313C264D4D5E00632905 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS7.4.sdk/System/Library/Frameworks/CloudKit.framework; sourceTree = DEVELOPER_DIR; };
+		D7677BED265D2C46003F4C83 /* Shared.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Shared.xcdatamodel; sourceTree = "<group>"; };
 		D7AC7D0A2653F356006AE657 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		D7AC7D0F2655323B006AE657 /* ViewBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewBase.swift; sourceTree = "<group>"; };
+		D7D12A04265BE8BA0012CFA7 /* WaterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterModel.swift; sourceTree = "<group>"; };
+		D7D12A07265BECB60012CFA7 /* HarvestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HarvestModel.swift; sourceTree = "<group>"; };
+		D7D12A0A265BECC40012CFA7 /* FertilizeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FertilizeModel.swift; sourceTree = "<group>"; };
+		D7D12A0D265BEDE10012CFA7 /* WaterWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterWorker.swift; sourceTree = "<group>"; };
+		D7D12A10265BEE050012CFA7 /* HarvestWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HarvestWorker.swift; sourceTree = "<group>"; };
+		D7D12A13265BEE190012CFA7 /* FertilizeWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FertilizeWorker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -231,7 +249,7 @@
 				A4522D2426589FE700A48044 /* WatchAppScene.swift */,
 				5BDBF763264AC24400AC9C24 /* Persistence.swift */,
 				5BDBF764264AC24600AC9C24 /* Assets.xcassets */,
-				5BDBF75F264AC24400AC9C24 /* plantatinhas.xcdatamodeld */,
+				D7677BEC265D2C46003F4C83 /* plantatinhas.xcdatamodeld */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -294,6 +312,9 @@
 			isa = PBXGroup;
 			children = (
 				D722116B264D5112004478EE /* PlantModel.swift */,
+				D7D12A04265BE8BA0012CFA7 /* WaterModel.swift */,
+				D7D12A07265BECB60012CFA7 /* HarvestModel.swift */,
+				D7D12A0A265BECC40012CFA7 /* FertilizeModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -319,6 +340,9 @@
 			isa = PBXGroup;
 			children = (
 				D7673134264D4B0200632905 /* PlantWorker.swift */,
+				D7D12A0D265BEDE10012CFA7 /* WaterWorker.swift */,
+				D7D12A10265BEE050012CFA7 /* HarvestWorker.swift */,
+				D7D12A13265BEE190012CFA7 /* FertilizeWorker.swift */,
 			);
 			path = Worker;
 			sourceTree = "<group>";
@@ -538,12 +562,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				A42A70482655454100169FE8 /* TodayCare.swift in Sources */,
+				D7D12A0E265BEDE10012CFA7 /* WaterWorker.swift in Sources */,
 				5BDBF777264AC24600AC9C24 /* plantatinhasApp.swift in Sources */,
 				D7AC7D0B2653F356006AE657 /* DashboardViewController.swift in Sources */,
 				D7AC7D102655323B006AE657 /* ViewBase.swift in Sources */,
 				5B45665A265698E900BB13C9 /* CustomDatePicker.swift in Sources */,
 				5BBC64D22653DF0B00F1251C /* Colors.swift in Sources */,
 				5448DE902654011D009CA2E3 /* MyPlantsCell.swift in Sources */,
+				D7D12A11265BEE050012CFA7 /* HarvestWorker.swift in Sources */,
 				D722116C264D5112004478EE /* PlantModel.swift in Sources */,
 				5BF097362655394900DF57FF /* PlantDetails.swift in Sources */,
 				5BDBF77B264AC24600AC9C24 /* Persistence.swift in Sources */,
@@ -552,11 +578,15 @@
 				5BF0973926554C3F00DF57FF /* DayPicker.swift in Sources */,
 				5BBC64D72653EB7500F1251C /* CircleProgress.swift in Sources */,
 				5B45C0B52657D4B300A5B32C /* NewPlantForm.swift in Sources */,
-				5BDBF775264AC24600AC9C24 /* plantatinhas.xcdatamodeld in Sources */,
+				D7D12A0B265BECC40012CFA7 /* FertilizeModel.swift in Sources */,
+				D7D12A05265BE8BA0012CFA7 /* WaterModel.swift in Sources */,
 				5BEB143B26558C39006FA88A /* SegmentedControl.swift in Sources */,
+				D7677BEE265D2C46003F4C83 /* plantatinhas.xcdatamodeld in Sources */,
 				5BF0973C2655854100DF57FF /* DetailsHeader.swift in Sources */,
+				D7D12A14265BEE190012CFA7 /* FertilizeWorker.swift in Sources */,
 				D7673135264D4B0200632905 /* PlantWorker.swift in Sources */,
 				5BDBF779264AC24600AC9C24 /* ContentView.swift in Sources */,
+				D7D12A08265BECB60012CFA7 /* HarvestModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -568,17 +598,23 @@
 				5BBC64D42653E53700F1251C /* Colors.swift in Sources */,
 				A4522D1F2656975C00A48044 /* MenuView.swift in Sources */,
 				5BBC64D82653EBB300F1251C /* CircleProgress.swift in Sources */,
-				5B57A45F264C150100B917F1 /* plantatinhas.xcdatamodeld in Sources */,
 				D7AC7D1226567FAC006AE657 /* ViewBase.swift in Sources */,
+				D7D12A0F265BEDE10012CFA7 /* WaterWorker.swift in Sources */,
 				A4522D2626589FE700A48044 /* WatchAppScene.swift in Sources */,
 				5B57A45E264C14D200B917F1 /* Persistence.swift in Sources */,
 				5BDBF79C264AC36700AC9C24 /* NotificationController.swift in Sources */,
 				A4522D232656A17C00A48044 /* ListActivities.swift in Sources */,
+				D7D12A09265BECB60012CFA7 /* HarvestModel.swift in Sources */,
 				D722116D264D5395004478EE /* PlantModel.swift in Sources */,
+				D7D12A12265BEE050012CFA7 /* HarvestWorker.swift in Sources */,
 				5B57A45D264C14CF00B917F1 /* ContentView.swift in Sources */,
 				D7673136264D4B0200632905 /* PlantWorker.swift in Sources */,
+				D7677BEF265D2C46003F4C83 /* plantatinhas.xcdatamodeld in Sources */,
+				D7D12A0C265BECC40012CFA7 /* FertilizeModel.swift in Sources */,
+				D7D12A15265BEE190012CFA7 /* FertilizeWorker.swift in Sources */,
 				5BDBF7A0264AC36700AC9C24 /* ComplicationController.swift in Sources */,
 				5BDBF79E264AC36700AC9C24 /* NotificationView.swift in Sources */,
+				D7D12A06265BE8BA0012CFA7 /* WaterModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -716,7 +752,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = plantatinhas.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 795A25396T;
+				DEVELOPMENT_TEAM = 6RLK97DFHC;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = iOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -739,7 +775,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = plantatinhas.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 795A25396T;
+				DEVELOPMENT_TEAM = 6RLK97DFHC;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = iOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -890,12 +926,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		5BDBF75F264AC24400AC9C24 /* plantatinhas.xcdatamodeld */ = {
+		D7677BEC265D2C46003F4C83 /* plantatinhas.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				5BDBF760264AC24400AC9C24 /* Shared.xcdatamodel */,
+				D7677BED265D2C46003F4C83 /* Shared.xcdatamodel */,
 			);
-			currentVersion = 5BDBF760264AC24400AC9C24 /* Shared.xcdatamodel */;
+			currentVersion = D7677BED265D2C46003F4C83 /* Shared.xcdatamodel */;
 			path = plantatinhas.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

@@ -16,11 +16,7 @@ class PlantWorker {
         let newPlant = Plant(context: viewContext)
         newPlant.name = plant.name
         newPlant.disease = plant.disease
-        newPlant.fertilize = plant.fertilize
-        newPlant.harvest = plant.harvest
-        newPlant.water = plant.water
         newPlant.profilePhoto = plant.profilePhoto
-        newPlant.photos = plant.photos
         do {
             try viewContext.save()
         } catch let error as NSError {
@@ -47,13 +43,9 @@ class PlantWorker {
         }
     }
     func update(for plant: Plant, newPlant: PlantModel) {
-        plant.name = (newPlant.name != nil) ? newPlant.name : plant.name
-        plant.water = (newPlant.water != nil) ? newPlant.water : plant.water
-        plant.harvest = (newPlant.harvest != nil) ? newPlant.harvest : plant.harvest
-        plant.fertilize = (newPlant.fertilize != nil) ? newPlant.fertilize : plant.fertilize
+        plant.name = newPlant.name
         plant.disease = newPlant.disease
         plant.profilePhoto = (newPlant.profilePhoto != nil) ? newPlant.profilePhoto : plant.profilePhoto
-        plant.photos = (newPlant.photos != nil) ? newPlant.photos : plant.photos
         do {
             try viewContext.save()
         } catch let error as NSError {
