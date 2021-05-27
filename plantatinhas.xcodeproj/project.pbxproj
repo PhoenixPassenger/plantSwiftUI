@@ -17,6 +17,7 @@
 		5B57A45C264C14CB00B917F1 /* plantatinhasApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBF761264AC24400AC9C24 /* plantatinhasApp.swift */; };
 		5B57A45E264C14D200B917F1 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDBF763264AC24400AC9C24 /* Persistence.swift */; };
 		5B57A460264C163200B917F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BDBF764264AC24600AC9C24 /* Assets.xcassets */; };
+		5B6ABC932660296F00D310CF /* dataToImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6ABC922660296F00D310CF /* dataToImage.swift */; };
 		5BBC64D22653DF0B00F1251C /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBC64D12653DF0B00F1251C /* Colors.swift */; };
 		5BBC64D42653E53700F1251C /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBC64D12653DF0B00F1251C /* Colors.swift */; };
 		5BBC64D72653EB7500F1251C /* CircleProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BBC64D62653EB7500F1251C /* CircleProgress.swift */; };
@@ -114,6 +115,7 @@
 		5B456659265698E900BB13C9 /* CustomDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDatePicker.swift; sourceTree = "<group>"; };
 		5B45665B2656A6CD00BB13C9 /* ModalActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalActivity.swift; sourceTree = "<group>"; };
 		5B45C0B42657D4B300A5B32C /* NewPlantForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlantForm.swift; sourceTree = "<group>"; };
+		5B6ABC922660296F00D310CF /* dataToImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dataToImage.swift; sourceTree = "<group>"; };
 		5BBC64D12653DF0B00F1251C /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		5BBC64D62653EB7500F1251C /* CircleProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleProgress.swift; sourceTree = "<group>"; };
 		5BDBF761264AC24400AC9C24 /* plantatinhasApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = plantatinhasApp.swift; sourceTree = "<group>"; };
@@ -206,11 +208,8 @@
 				5BF0973B2655854100DF57FF /* DetailsHeader.swift */,
 				5B456659265698E900BB13C9 /* CustomDatePicker.swift */,
 				5B45665B2656A6CD00BB13C9 /* ModalActivity.swift */,
-
 				5B0FAB35265BE43D007B4916 /* ImagePicker.swift */,
-
 				A4B0A69F265BE8D4005F3A25 /* SearchBar.swift */,
-
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -220,6 +219,7 @@
 			children = (
 				5BBC64D12653DF0B00F1251C /* Colors.swift */,
 				A4990F8F265D39D000C5B2A1 /* HideKeyBoard.swift */,
+				5B6ABC922660296F00D310CF /* dataToImage.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -569,6 +569,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B6ABC932660296F00D310CF /* dataToImage.swift in Sources */,
 				A42A70482655454100169FE8 /* TodayCare.swift in Sources */,
 				D7D12A0E265BEDE10012CFA7 /* WaterWorker.swift in Sources */,
 				5BDBF777264AC24600AC9C24 /* plantatinhasApp.swift in Sources */,

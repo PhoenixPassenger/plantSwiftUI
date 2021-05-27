@@ -10,9 +10,9 @@ import Foundation
 class PlantModel: Identifiable {
     var name: String
     var disease: Bool
-    var profilePhoto: String?
+    var profilePhoto: Data?
     
-    init(name: String, disease: Bool, profilePhoto: String? ) {
+    init(name: String, disease: Bool, profilePhoto: Data? ) {
         self.name = name
         self.disease = disease
         self.profilePhoto = profilePhoto

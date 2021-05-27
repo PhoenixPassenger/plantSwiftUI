@@ -11,11 +11,11 @@ struct ImagePickerView: View {
     @State private var showingImagePicker = false
     @State private var inputImage: UIImage?
     @State private var image: Image = Image(systemName: "camera")
-    @Binding var imageToShare: Image
+    @Binding var imageToShare: Data?
     func loadImage() {
         guard let inputImage = inputImage else { return }
         image = Image(uiImage: inputImage)
-        imageToShare = image
+        imageToShare = inputImage.pngData()
     }
     var body: some View {
         VStack {
