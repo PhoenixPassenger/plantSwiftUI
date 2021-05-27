@@ -16,7 +16,7 @@ struct DetailsHeader: View {
             VStack {
                 Image(systemName: "person.fill")
                     .frame(width: 100, height: 100)
-                    .background(Color.fontCreatePlant)
+                    .background(Color.photoDetails)
                     .cornerRadius(50)
                 Text("Nome")
                     .fontWeight(.semibold)

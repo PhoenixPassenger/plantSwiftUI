@@ -19,4 +19,7 @@ extension Color {
     static let gray4 = Color("systemGray4")
     static let plantListCell = Color("plantListCell")
     static let borderPlantListCell = Color("borderPlantListCell")
+    static let labelDetails = Color("labelDetails")
+    static let photoDetails = Color("photoDetails")
+
 }
