@@ -14,12 +14,7 @@ struct ModalActivity: View {
     @State var timeleft: Int = 0
     @State private var showConnectionAlert = false
     @State var diseaseIndicator = Activity.disease
-    @Binding var notificationBool: Bool
-    @State var isOn: Bool = false {
-        didSet {
-            self.notificationBool = self.isOn
-        }
-    }
+    @Binding var isOn: Bool
 
     var label = "Water"
     var body: some View {

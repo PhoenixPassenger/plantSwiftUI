@@ -15,7 +15,7 @@ class PlantViewModel: ObservableObject {
     @Published var image = Image("")
     // Water
     @Published var waterDone = false
-    @Published var waterExist = false
+    @Published var waterExist = true
     @Published var waterNotification = false
     @Published var waterDays: [Date] = []
     // Compost
@@ -140,9 +140,11 @@ struct SecondPage: View {
                               isBadgeActive: false,
                               timeleft: 0,
                               diseaseIndicator: .compost,
-                              notificationBool: $viewModel.waterExist,
+                              isOn: $viewModel.waterExist,
                               label: "Rega")
-                DayPicker()
+                if viewModel.waterExist {
+                    DayPicker()
+                }
                 Spacer()
             }.foregroundColor(.black)
             .toolbar {
@@ -182,10 +184,12 @@ struct ThirdPage: View {
                               isBadgeActive: false,
                               timeleft: 0,
                               diseaseIndicator: .compost,
-                              notificationBool: $viewModel.compostExist,
+                              isOn: $viewModel.compostExist,
                               label: "Adubação")
-                SegmentedControl(isMonthly: $viewModel.compostIsMonthly, timeCount: $viewModel.compostInterval)
-                CustomDatePicker(date: $viewModel.compostDay)
+                if viewModel.compostExist {
+                    SegmentedControl(isMonthly: $viewModel.compostIsMonthly, timeCount: $viewModel.compostInterval)
+                    CustomDatePicker(date: $viewModel.compostDay)
+                }
                 Spacer()
             }.foregroundColor(.black)
             .toolbar {
@@ -226,10 +230,12 @@ struct FourthPage: View {
                               isBadgeActive: false,
                               timeleft: 0,
                               diseaseIndicator: .compost,
-                              notificationBool: $viewModel.harvestExist,
+                              isOn: $viewModel.harvestExist,
                               label: "Colheita")
-                SegmentedControl(isMonthly: $viewModel.harvestIsMonthly, timeCount: $viewModel.harvestInterval)
-                CustomDatePicker(date: $viewModel.compostDay)
+                if viewModel.harvestExist {
+                    SegmentedControl(isMonthly: $viewModel.harvestIsMonthly, timeCount: $viewModel.harvestInterval)
+                    CustomDatePicker(date: $viewModel.compostDay)
+                }
                 Spacer()
             }.foregroundColor(.black)
             .toolbar {
@@ -243,31 +249,5 @@ struct FourthPage: View {
         .navigationBarTitle("Nova Planta", displayMode: .inline)
         .navigationBarBackButtonHidden(true)
         .navigationBarItems(leading: backButton)
-    }
-    func saveInCoreData() {
-        let plantWorker = PlantWorker()
-        let plant = plantWorker.create(plant: PlantModel(name: viewModel.name,
-                                                         disease: false,
-                                                         profilePhoto: viewModel.name))
-        var waterWorker = WaterWorker(plant)
-        var harvestWorker = HarvestWorker(plant)
-        var fertilizeWorker = FertilizeWorker(plant)
-
-        waterWorker.create(water: WaterModel(exist: viewModel.waterExist,
-                                             notification: viewModel.waterNotification,
-                                             done: viewModel.waterDone,
-                                             date: Date()))
-        harvestWorker.create(harvest: HarvestModel(exist: viewModel.harvestExist,
-                                                   notification: viewModel.harvestNotification,
-                                                   done: viewModel.harvestDone,
-                                                   date: viewModel.harvestDay,
-                                                   interval: viewModel.harvestInterval,
-                                                   isMonthly: viewModel.harvestIsMonthly))
-        fertilizeWorker.create(fertilize: FertilizeModel(exist: viewModel.compostExist,
-                                                         notification: viewModel.compostNotification,
-                                                         done: viewModel.compostDone,
-                                                         date: viewModel.compostDay,
-                                                         interval: viewModel.compostInterval,
-                                                         isMonthly: viewModel.compostIsMonthly))
     }
 }
