@@ -24,13 +24,17 @@ struct PlantDetails: View {
         }
     }
 }
+
 struct Details: View {
     @Binding var diseaseIndicator: Activity
     @State var progressValue: Float = 0.6
     @State var typeOfActivity: [Activity] = [Activity.water, Activity.compost, Activity.harvest, Activity.health]
     @State var isBadgeActive: [Bool] = [false, false, false, false]
     @State var timeleft: Int = 4
-    @State private var showConnectionAlert = false
+    @State private var showWaterAlert = false
+    @State private var showHarvestAlert = false
+    @State private var showFertilizeAlert = false
+    @State private var showDiseaseAlert = false
 
     var body: some View {
         ZStack {
@@ -41,7 +45,7 @@ struct Details: View {
                 }
                 HStack {
                     Button(action: {
-                            self.showConnectionAlert = true
+                            self.showWaterAlert = true
                             toggleBadge(identifier: 0)
                     }) {
                         ProgressBar(progress: self.$progressValue,
@@ -53,18 +57,32 @@ struct Details: View {
                             .padding(EdgeInsets(top: 20, leading: 20, bottom: 5, trailing: 20))
                             .foregroundColor(.black)
                     }
-                    .alert(isPresented: $showConnectionAlert) {
-                        Alert(title: Text("Nice"),
-                              message: Text("The alert is showing!"),
-                              dismissButton: Alert.Button.default(Text("OK"),
-                            action: {
-                                self.showConnectionAlert = false
-                            }))
-                    }
+                    .actionSheet(isPresented: $showWaterAlert) {
+                                ActionSheet(
+                                    title: Text("Atividade"),
+                                    message: Text("Você deseja realizar essa ação?"),
+                                    buttons: [
+                                        .default(Text("Regar"), action: {
+                                            self.progressValue = 0
+                                            self.showWaterAlert = false
+                                        }),
+                                        .cancel()]
+                                )
+                            }
+                  
+//                    .alert(isPresented: $showConnectionAlert) {
+//                        Alert(title: Text("Atividade"),
+//                              message: Text("Você deseja realizar essa ação"),
+//                              dismissButton: Alert.Button.default(Text("Cancelar"),
+//                            action: {
+//
+//                                self.showConnectionAlert = false
+//                            }))
+//                    }
                     Button(action: {
-                            self.showConnectionAlert = true
+                            self.showFertilizeAlert = true
                             toggleBadge(identifier: 1)
-                    }) {
+                    }){
                         ProgressBar(progress: self.$progressValue,
                                     activity: self.$typeOfActivity[1],
                                     badge: self.$isBadgeActive[1],
@@ -74,18 +92,21 @@ struct Details: View {
                             .padding(EdgeInsets(top: 20, leading: 20, bottom: 5, trailing: 20))
                             .foregroundColor(.black)
                     }
-                    .alert(isPresented: $showConnectionAlert) {
-                        Alert(title: Text("Nice"),
-                              message: Text("The alert is showing!"),
-                              dismissButton: Alert.Button.default(Text("OK"),
-                            action: {
-                                self.showConnectionAlert = false
-                            }))
-                    }
+                    .actionSheet(isPresented: $showFertilizeAlert) {
+                                ActionSheet(
+                                    title: Text("Atividade"),
+                                    message: Text("Você deseja realizar essa ação?"),
+                                    buttons: [
+                                        .default(Text("Adubar"), action: {
+                                            self.showFertilizeAlert = false
+                                        }),
+                                        .cancel()]
+                                )
+                            }
                 }
                 HStack {
                     Button(action: {
-                            self.showConnectionAlert = true
+                            self.showHarvestAlert = true
                             toggleBadge(identifier: 2)
                     }) {
                         ProgressBar(progress: self.$progressValue,
@@ -97,17 +118,19 @@ struct Details: View {
                             .padding(EdgeInsets(top: 20, leading: 20, bottom: 5, trailing: 20))
                             .foregroundColor(.black)
                     }
-                    .alert(isPresented: $showConnectionAlert) {
-                        Alert(title: Text("Nice"),
-                              message: Text("The alert is showing!"),
-                              dismissButton: Alert.Button.default(Text("OK"),
-                            action: {
-                                self.showConnectionAlert = false
-                            }))
-                    }
+                    .actionSheet(isPresented: $showHarvestAlert) {
+                                ActionSheet(
+                                    title: Text("Atividade"),
+                                    message: Text("Você deseja realizar essa ação?"),
+                                    buttons: [
+                                        .default(Text("Colher"), action: {
+                                            self.showHarvestAlert = false
+                                        }),
+                                        .cancel()]
+                                )
+                            }
                     Button(action: {
-                            self.showConnectionAlert = true
-                            toggleDisease()
+                            self.showDiseaseAlert = true
                     }) {
                         ProgressBar(progress: self.$progressValue,
                                     activity: self.$typeOfActivity[3],
@@ -118,18 +141,38 @@ struct Details: View {
                             .padding(EdgeInsets(top: 20, leading: 20, bottom: 5, trailing: 20))
                             .foregroundColor(.black)
                     }
-                    .alert(isPresented: $showConnectionAlert) {
-                        Alert(title: Text("Nice"),
-                              message: Text("The alert is showing!"),
-                              dismissButton: Alert.Button.default(Text("OK"),
-                            action: {
-                                self.showConnectionAlert = false
-                            }))
-                    }
+                    .actionSheet(isPresented: $showDiseaseAlert) {
+                    ActionSheet(
+                        title: Text("Atividade"),
+                        message: Text("Você deseja realizar essa ação?"),
+                        buttons: [
+                            .default(Text("Mudar saúde da planta"), action: {
+                                toggleDisease()
+                                self.showDiseaseAlert = false
+                            }),
+                            .cancel()]
+                            
+                    )
+                }
                 }
                 Spacer().frame(width: 100, height: 180)
             }
         }
+    }
+    private func progress(activity: Int) -> Float{
+        let progress: Float
+        switch activity {
+        case 0:
+            progress = 0.5
+        case 1:
+            progress = 0.2
+        case 2:
+            progress = 0.4
+        default:
+            progress = 0
+        }
+        return progress
+        
     }
     private func toggleBadge(identifier: Int) {
         withAnimation {
