@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct DetailsHeader: View {
-    @Binding var image: Activity
+     var image: String
     var body: some View {
         HStack {
             Spacer()

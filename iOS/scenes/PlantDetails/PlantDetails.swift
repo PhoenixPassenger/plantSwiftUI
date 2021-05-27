@@ -7,17 +7,17 @@
 
 import SwiftUI
 struct PlantDetails: View {
-    @State var diseaseIndicator = Activity.disease
+     var plant: Plant
     var body: some View {
         ZStack {
             Color.topBackground
                 .ignoresSafeArea()
             VStack {
-                    DetailsHeader(image: self.$diseaseIndicator)
+                DetailsHeader(image: self.plant.profilePhoto ?? "person.fill")
                     ZStack {
                         ViewBase()
                             .ignoresSafeArea()
-                        Details(diseaseIndicator: self.$diseaseIndicator)
+                        Details(diseaseIndicator: self.plant.disease)
 
                     }
             }
@@ -26,7 +26,7 @@ struct PlantDetails: View {
 }
 
 struct Details: View {
-    @Binding var diseaseIndicator: Activity
+    var diseaseIndicator: Bool
     @State var progressValue: Float = 0.6
     @State var typeOfActivity: [Activity] = [Activity.water, Activity.compost, Activity.harvest, Activity.health]
     @State var isBadgeActive: [Bool] = [false, false, false, false]
@@ -181,16 +181,16 @@ struct Details: View {
     }
     private func toggleDisease() {
         withAnimation {
-            self.typeOfActivity[3] = self.typeOfActivity[3] == .disease ? .health : .disease
-            self.diseaseIndicator = self.typeOfActivity[3] == .disease ? .health : .disease
+//            self.typeOfActivity[3] = self.typeOfActivity[3] == .disease ? .health : .disease
+//            self.diseaseIndicator = self.typeOfActivity[3] == .disease ? .health : .disease
         }
     }
 }
 
-struct PlantDetails_Previews: PreviewProvider {
-    static var previews: some View {
-        ForEach(ColorScheme.allCases, id: \.self) {
-            PlantDetails().preferredColorScheme($0)
-        }
-    }
-}
+//struct PlantDetails_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ForEach(ColorScheme.allCases, id: \.self) {
+//           PlantDetails().preferredColorScheme($0)
+//        }
+//    }
+//}
