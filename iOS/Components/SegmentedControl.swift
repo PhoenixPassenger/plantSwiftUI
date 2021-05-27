@@ -8,8 +8,13 @@
 import SwiftUI
 
 struct SegmentedControl: View {
-    @State private var typeOfCount = "Semanal"
-    @State private var timeCount = 18
+    @Binding var isMonthly: Bool
+    @State private var typeOfCount = "Semanal" {
+        didSet {
+            self.isMonthly = self.typeOfCount == "Semanal" ? false : true
+        }
+    }
+    @Binding var timeCount: Int
     var types = ["Semanal", "Mensal"]
     var body: some View {
         HStack {
@@ -33,11 +38,5 @@ struct SegmentedControl: View {
                 .padding(EdgeInsets(top: 20, leading: 0, bottom: 0, trailing: 20))
             }
         }
-    }
-}
-
-struct SegmentedControl_Previews: PreviewProvider {
-    static var previews: some View {
-        SegmentedControl()
     }
 }

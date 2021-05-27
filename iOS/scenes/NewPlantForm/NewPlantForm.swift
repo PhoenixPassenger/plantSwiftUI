@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import Combine
+
 
 class PlantViewModel: ObservableObject {
     // Plant Details
@@ -13,7 +15,7 @@ class PlantViewModel: ObservableObject {
     @Published var image = Image("")
     // Water
     @Published var waterDone = false
-    @Published var waterExist = false
+    @Published var waterExist = true
     @Published var waterNotification = false
     @Published var waterDays: [Date] = []
     // Compost
@@ -21,31 +23,71 @@ class PlantViewModel: ObservableObject {
     @Published var compostExist = false
     @Published var compostNotification = false
     @Published var compostDay: Date = Date()
-    @Published var compostInterval = 0
+    @Published var compostInterval = 1
     @Published var compostIsMonthly = false
     // Harvest
     @Published var harvestDone = false
     @Published var harvestExist = false
     @Published var harvestNotification = false
     @Published var harvestDay: Date = Date()
-    @Published var harvestInterval = 0
+    @Published var harvestInterval = 1
     @Published var harvestIsMonthly = false
+    
+    
+    let onSave = PassthroughSubject<Void, Never>()
+    let onCancel = PassthroughSubject<Void, Never>()
+    
+    
+    func saveInCoreData() {
+        let plantWorker = PlantWorker()
+        let plant = plantWorker.create(plant: PlantModel(name: name,
+                                                         disease: false,
+                                                         profilePhoto: name))
+        var waterWorker = WaterWorker(plant)
+        var harvestWorker = HarvestWorker(plant)
+        var fertilizeWorker = FertilizeWorker(plant)
+
+        waterWorker.create(water: WaterModel(exist: waterExist,
+                                             notification: waterNotification,
+                                             done: waterDone,
+                                             date: Date()))
+        harvestWorker.create(harvest: HarvestModel(exist: harvestExist,
+                                                   notification: harvestNotification,
+                                                   done: harvestDone,
+                                                   date: harvestDay,
+                                                   interval: harvestInterval,
+                                                   isMonthly: harvestIsMonthly))
+        fertilizeWorker.create(fertilize: FertilizeModel(exist: compostExist,
+                                                         notification: compostNotification,
+                                                         done: compostDone,
+                                                         date: compostDay,
+                                                         interval: compostInterval,
+                                                         isMonthly: compostIsMonthly))
+        
+        onSave.send()
+    }
+    
 }
 
 struct NewPlantForm: View {
     @Environment(\.presentationMode) var presentationMode
     @StateObject var viewModel = PlantViewModel()
+    
     @Binding var showModal: Bool
     var body: some View {
         NavigationView {
-            FirstPage(showModal: $showModal)
-        }.environmentObject(viewModel)
+            FirstPage()
+        }
+        .environmentObject(viewModel)
+        .onReceive(viewModel.onSave) {
+            showModal = false
+        }
     }
 }
 
 struct FirstPage: View {
     @EnvironmentObject private var viewModel: PlantViewModel
-    @Binding var showModal: Bool
+    
     var body: some View {
         VStack {
             HStack {
@@ -58,28 +100,28 @@ struct FirstPage: View {
             ImagePickerView(imageToShare: $viewModel.image)
             Spacer()
         }.foregroundColor(.black)
-        .toolbar {
-            ToolbarItem(placement: .navigationBarTrailing) {
-                NavigationLink(destination: SecondPage(showModal: $showModal)) {
-                    Text("Próximo")
-                }.environmentObject(viewModel)
-            }
-            ToolbarItem(placement: .navigationBarLeading) {
-                Button("Fechar") {
-                    self.showModal.toggle()
-                }
-            }
-        }
         .navigationBarTitle("Title View2", displayMode: .inline)
         .navigationBarBackButtonHidden(true)
+        .navigationBarItems(leading: leadingButton, trailing: trailingButton)
     }
+    var leadingButton: some View {
+        Button("Fechar") {
+            viewModel.onCancel.send()
+        }
+    }
+    
+    var trailingButton: some View {
+        NavigationLink(destination: SecondPage()) {
+            Text("Próximo")
+        }
+    }
+    
 }
 
 struct SecondPage: View {
     @EnvironmentObject private var viewModel: PlantViewModel
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @State var isOn = false
-    @Binding var showModal: Bool
     var backButton : some View { Button(action: {
         self.presentationMode.wrappedValue.dismiss()
     }) {
@@ -98,16 +140,18 @@ struct SecondPage: View {
                               isBadgeActive: false,
                               timeleft: 0,
                               diseaseIndicator: .compost,
-                              isOn: $isOn,
+                              isOn: $viewModel.waterExist,
                               label: "Rega")
-                DayPicker()
+                if viewModel.waterExist {
+                    DayPicker()
+                }
                 Spacer()
             }.foregroundColor(.black)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    NavigationLink(destination: ThirdPage(showModal: $showModal)) {
+                    NavigationLink(destination: ThirdPage()) {
                         Text("Próximo")
-                    }.environmentObject(viewModel)
+                    }
                 }
             }
         }
@@ -121,7 +165,6 @@ struct ThirdPage: View {
     @EnvironmentObject private var viewModel: PlantViewModel
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @State var isOn = false
-    @Binding var showModal: Bool
 
     var backButton : some View { Button(action: {
         self.presentationMode.wrappedValue.dismiss()
@@ -141,17 +184,19 @@ struct ThirdPage: View {
                               isBadgeActive: false,
                               timeleft: 0,
                               diseaseIndicator: .compost,
-                              isOn: $isOn,
+                              isOn: $viewModel.compostExist,
                               label: "Adubação")
-                SegmentedControl()
-                CustomDatePicker()
+                if viewModel.compostExist {
+                    SegmentedControl(isMonthly: $viewModel.compostIsMonthly, timeCount: $viewModel.compostInterval)
+                    CustomDatePicker(date: $viewModel.compostDay)
+                }
                 Spacer()
             }.foregroundColor(.black)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    NavigationLink(destination: FourthPage(showModal: $showModal)) {
+                    NavigationLink(destination: FourthPage()) {
                         Text("Próximo")
-                    }.environmentObject(viewModel)
+                    }
                 }
             }
         }
@@ -166,7 +211,6 @@ struct FourthPage: View {
     @Environment(\.managedObjectContext) private var viewContext
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @State var isOn = false
-    @Binding var showModal: Bool
 
     var backButton : some View { Button(action: {
         self.presentationMode.wrappedValue.dismiss()
@@ -186,49 +230,24 @@ struct FourthPage: View {
                               isBadgeActive: false,
                               timeleft: 0,
                               diseaseIndicator: .compost,
-                              isOn: $isOn,
+                              isOn: $viewModel.harvestExist,
                               label: "Colheita")
-                SegmentedControl()
-                CustomDatePicker()
+                if viewModel.harvestExist {
+                    SegmentedControl(isMonthly: $viewModel.harvestIsMonthly, timeCount: $viewModel.harvestInterval)
+                    CustomDatePicker(date: $viewModel.compostDay)
+                }
                 Spacer()
             }.foregroundColor(.black)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button("Salvar") {
-                        saveInCoreData()
-                        self.showModal.toggle()
-                    }.environmentObject(viewModel)
+                        viewModel.saveInCoreData()
+                    }
                 }
             }
         }
         .navigationBarTitle("Nova Planta", displayMode: .inline)
         .navigationBarBackButtonHidden(true)
         .navigationBarItems(leading: backButton)
-    }
-    func saveInCoreData() {
-        let plantWorker = PlantWorker()
-        let plant = plantWorker.create(plant: PlantModel(name: viewModel.name,
-                                                         disease: false,
-                                                         profilePhoto: viewModel.name))
-        var waterWorker = WaterWorker(plant)
-        var harvestWorker = HarvestWorker(plant)
-        var fertilizeWorker = FertilizeWorker(plant)
-
-        waterWorker.create(water: WaterModel(exist: viewModel.waterExist,
-                                             notification: viewModel.waterNotification,
-                                             done: viewModel.waterDone,
-                                             date: Date()))
-        harvestWorker.create(harvest: HarvestModel(exist: viewModel.harvestExist,
-                                                   notification: viewModel.harvestNotification,
-                                                   done: viewModel.harvestDone,
-                                                   date: viewModel.harvestDay,
-                                                   interval: viewModel.harvestInterval,
-                                                   isMonthly: viewModel.harvestIsMonthly))
-        fertilizeWorker.create(fertilize: FertilizeModel(exist: viewModel.compostExist,
-                                                         notification: viewModel.compostNotification,
-                                                         done: viewModel.compostDone,
-                                                         date: viewModel.compostDay,
-                                                         interval: viewModel.compostInterval,
-                                                         isMonthly: viewModel.compostIsMonthly))
     }
 }

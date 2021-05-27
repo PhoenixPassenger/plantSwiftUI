@@ -15,6 +15,7 @@ struct ModalActivity: View {
     @State private var showConnectionAlert = false
     @State var diseaseIndicator = Activity.disease
     @Binding var isOn: Bool
+
     var label = "Water"
     var body: some View {
         HStack {
