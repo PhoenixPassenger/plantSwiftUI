@@ -82,6 +82,9 @@ struct NewPlantForm: View {
         .onReceive(viewModel.onSave) {
             showModal = false
         }
+        .onReceive(viewModel.onCancel) {
+            showModal = false
+        }
     }
 }
 
@@ -100,20 +103,20 @@ struct FirstPage: View {
             ImagePickerView(imageToShare: $viewModel.image)
             Spacer()
         }.foregroundColor(.black)
-        .navigationBarTitle("Title View2", displayMode: .inline)
+        .navigationBarTitle("Nova Planta", displayMode: .inline)
         .navigationBarBackButtonHidden(true)
         .navigationBarItems(leading: leadingButton, trailing: trailingButton)
     }
     var leadingButton: some View {
         Button("Fechar") {
             viewModel.onCancel.send()
-        }
+        }.foregroundColor(.fontCreatePlant)
     }
     
     var trailingButton: some View {
         NavigationLink(destination: SecondPage()) {
             Text("Próximo")
-        }
+        }.foregroundColor(.fontCreatePlant)
     }
     
 }
@@ -129,9 +132,16 @@ struct SecondPage: View {
             Image(systemName: "chevron.backward")
                 .aspectRatio(contentMode: .fit)
             Text("Voltar").font(.callout)
-        }
+        }.foregroundColor(.fontCreatePlant)
     }
     }
+    
+    var trailingButton: some View {
+        NavigationLink(destination: ThirdPage()) {
+            Text("Próximo")
+        }.foregroundColor(.fontCreatePlant)
+    }
+    
     var body: some View {
         HStack {
             VStack {
@@ -147,17 +157,10 @@ struct SecondPage: View {
                 }
                 Spacer()
             }.foregroundColor(.black)
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    NavigationLink(destination: ThirdPage()) {
-                        Text("Próximo")
-                    }
-                }
-            }
         }
-        .navigationBarTitle("Title View2", displayMode: .inline)
+        .navigationBarTitle("Nova Planta", displayMode: .inline)
         .navigationBarBackButtonHidden(true)
-        .navigationBarItems(leading: backButton)
+        .navigationBarItems(leading: backButton, trailing: trailingButton)
     }
 }
 
@@ -173,9 +176,16 @@ struct ThirdPage: View {
             Image(systemName: "chevron.backward")
                 .aspectRatio(contentMode: .fit)
             Text("Voltar").font(.callout)
-        }
+        }.foregroundColor(.fontCreatePlant)
     }
     }
+    
+    var trailingButton: some View {
+        NavigationLink(destination: FourthPage()) {
+            Text("Próximo")
+        }.foregroundColor(.fontCreatePlant)
+    }
+    
     var body: some View {
         HStack {
             VStack {
@@ -192,17 +202,10 @@ struct ThirdPage: View {
                 }
                 Spacer()
             }.foregroundColor(.black)
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    NavigationLink(destination: FourthPage()) {
-                        Text("Próximo")
-                    }
-                }
-            }
         }
         .navigationBarTitle("Nova Planta", displayMode: .inline)
         .navigationBarBackButtonHidden(true)
-        .navigationBarItems(leading: backButton)
+        .navigationBarItems(leading: backButton, trailing: trailingButton)
     }
 }
 
@@ -219,9 +222,16 @@ struct FourthPage: View {
             Image(systemName: "chevron.backward")
                 .aspectRatio(contentMode: .fit)
             Text("Voltar").font(.callout)
-        }
+        }.foregroundColor(.fontCreatePlant)
     }
     }
+    
+    var trailingButton: some View {
+        Button("Salvar") {
+            viewModel.saveInCoreData()
+        }.foregroundColor(.fontCreatePlant)
+    }
+    
     var body: some View {
         HStack {
             VStack {
@@ -238,16 +248,9 @@ struct FourthPage: View {
                 }
                 Spacer()
             }.foregroundColor(.black)
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Button("Salvar") {
-                        viewModel.saveInCoreData()
-                    }
-                }
-            }
         }
         .navigationBarTitle("Nova Planta", displayMode: .inline)
         .navigationBarBackButtonHidden(true)
-        .navigationBarItems(leading: backButton)
+        .navigationBarItems(leading: backButton, trailing: trailingButton)
     }
 }
