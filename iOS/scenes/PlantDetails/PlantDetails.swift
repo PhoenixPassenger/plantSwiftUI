@@ -7,7 +7,7 @@
 
 import SwiftUI
 struct PlantDetails: View {
-//    @State var plant: PlantModel
+    @State var plant: Plant
     @State var diseaseIndicator = Activity.disease
     var body: some View {
         ZStack {
@@ -166,11 +166,11 @@ struct Details: View {
         }
     }
 }
-
-struct PlantDetails_Previews: PreviewProvider {
-    static var previews: some View {
-        ForEach(ColorScheme.allCases, id: \.self) {
-            PlantDetails().preferredColorScheme($0)
-        }
-    }
-}
+//
+//struct PlantDetails_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ForEach(ColorScheme.allCases, id: \.self) {
+//            PlantDetails().preferredColorScheme($0)
+//        }
+//    }
+//}

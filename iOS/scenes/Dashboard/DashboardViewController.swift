@@ -12,7 +12,7 @@ struct DashboardViewController: View {
     @State var isLinkActive = false
     @State var showModal = false
     @State var searchText: String = ""
-    @State var allPlants: [PlantModel] = []
+    @State var allPlants: [Plant] = []
     
     var body: some View {
         ZStack(alignment: .top) {
@@ -43,23 +43,36 @@ struct DashboardViewController: View {
                     HStack {
                         TodayCare()
                     }
-                    ZStack {
-                        ViewBase()
-                            .ignoresSafeArea()
-       
-                        MyPlantView(searchText: $searchText, allPlants: $allPlants)
-
-                    }.padding(.top, 10)
-
-
+                ZStack {
+                    ViewBase()
+                        .ignoresSafeArea()
+                    
+                    MyPlantView(searchText: $searchText, allPlants: $allPlants)
+                    
+                }.padding(.top, 10)
             }
+            
         }
+        .onAppear(){
+            allPlants = self.fechPlants()
+        }
+    }
+    
+    private func fechPlants() -> [Plant] {
+        let plantWorker = PlantWorker()
+        let plant = plantWorker.fetchPlants()
+        //        ForEach (plant){ plant in
+        //            let waterWorker = WaterWorker(plant)
+        //
+        //        }
+        // ForEach(plant)
+        return plant
     }
 }
 
 struct MyPlantView: View {
     @Binding var searchText: String
-    @Binding var allPlants: [PlantModel]
+    @Binding var allPlants: [Plant]
     var body: some View {
 
         VStack {
@@ -75,13 +88,14 @@ struct MyPlantView: View {
             SearchBar(text: $searchText)
                 if !allPlants.isEmpty {
                     ScrollView {
-                        ForEach(allPlants.filter({searchText.isEmpty ? true : $0.name.contains(searchText) })) { item in
-    //                        NavigationLink(destination: ) {
+//                        ForEach(allPlants.filter({searchText.isEmpty ? true : $0.name.contains(searchText) }))
+                        ForEach(allPlants) { item in
+                            NavigationLink(destination: PlantDetails(plant: item) ) {
                             
-    //                        MyPlantsCell()
+                            MyPlantsCell(plant: item)
                                 
-    //                        }
                             }
+                        }
                     }
                 } else {
 //                    Spacer()

@@ -10,12 +10,12 @@ import UIKit
 
 struct MyPlantsCell: View {
 
-    @State var plant: PlantModel
+    @State var plant: Plant
 
     var body: some View {
         ZStack {
             HStack {
-                Image(plant.name)
+                Image(plant.profilePhoto!)
                     .resizable()
                     .frame(width: 70, height: 70, alignment: .center)
                     .cornerRadius(35)
@@ -23,7 +23,7 @@ struct MyPlantsCell: View {
                     .padding(.leading, 16)
 
                 VStack(alignment: .leading) {
-                    Text(plant.name)
+                    Text(plant.name!)
                         .fontWeight(.medium)
                         .font(.system(size: 22))
                     if plant.disease {
