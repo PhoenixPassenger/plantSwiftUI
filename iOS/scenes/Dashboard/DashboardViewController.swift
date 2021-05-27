@@ -14,7 +14,6 @@ struct DashboardViewController: View {
     @State var searchText: String = ""
     @State var allPlants: [PlantModel] = []
     
-    
     var body: some View {
         ZStack(alignment: .top) {
             Color.topBackground
@@ -43,14 +42,15 @@ struct DashboardViewController: View {
                     }
                     HStack {
                         TodayCare()
-                        
                     }
                     ZStack {
                         ViewBase()
                             .ignoresSafeArea()
+       
                         MyPlantView(searchText: $searchText, allPlants: $allPlants)
 
                     }.padding(.top, 10)
+
 
             }
         }
@@ -64,13 +64,14 @@ struct MyPlantView: View {
 
         VStack {
             Text("Minhas Plantas")
-                //.bold()
+                // .bold()
                 .font(.title)
                 .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                 .padding(.leading, 20)
                 .padding(.top, 20)
                 .padding(.bottom, 10)
                 .frame(maxWidth: .greatestFiniteMagnitude, alignment: .leading)
+  
             SearchBar(text: $searchText)
                 if !allPlants.isEmpty {
                     ScrollView {
@@ -99,7 +100,6 @@ struct MyPlantView: View {
                         .clipped()
 //                    }
                 }
-            
         }
     }
 }

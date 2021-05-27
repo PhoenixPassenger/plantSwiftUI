@@ -22,7 +22,7 @@ struct ListActivities: View {
                     .font(.system(size: 18))
                     .fontWeight(.medium)
                 Spacer()
-                //Notification
+// Notification
 //                Button(action: { if notification == true {
 //                    notification = false
 //                } else {
@@ -81,8 +81,8 @@ struct ListActivities: View {
     }
 }
 
-//struct List_Previews: PreviewProvider {
+// struct List_Previews: PreviewProvider {
 //    static var previews: some View {
 //        ListActivities()
 //    }
-//}
+// }
