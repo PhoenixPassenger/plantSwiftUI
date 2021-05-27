@@ -56,7 +56,7 @@ struct Details: View {
     var body: some View {
         VStack {
             VStack {
-                Text("Atividades: ")
+                Text("Lembretes ")
                     .font(.title2)
                     .fontWeight(.medium)
                     .padding(22)

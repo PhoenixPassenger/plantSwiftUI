@@ -22,7 +22,7 @@ struct DashboardViewController: View {
             VStack {
                     HStack {
                         Text("Cuidados de Hoje")
-                            .foregroundColor(.fontCreatePlant)
+                            .foregroundColor(.health)
                             .font(.title)
                             .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                             .padding(.leading, 20)

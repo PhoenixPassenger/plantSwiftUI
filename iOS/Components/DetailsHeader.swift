@@ -16,10 +16,12 @@ struct DetailsHeader: View {
             VStack {
                 Image(systemName: "person.fill")
                     .frame(width: 100, height: 100)
-                    .background(Color.fontGreen)
+                    .background(Color.fontCreatePlant)
                     .cornerRadius(50)
                 Text("Nome")
-                    .font(.title2)
+                    .fontWeight(.semibold)
+                    .font(.system(size: 20))
+                    .foregroundColor(.health)
                     .padding(EdgeInsets(top: 5, leading: 0, bottom: 0, trailing: 0))
             }
             Image("\(image)")
