@@ -98,7 +98,7 @@ struct SecondPage: View {
                               isBadgeActive: false,
                               timeleft: 0,
                               diseaseIndicator: .compost,
-                              isOn: $isOn,
+                              notificationBool: $viewModel.waterExist,
                               label: "Rega")
                 DayPicker()
                 Spacer()
@@ -141,7 +141,7 @@ struct ThirdPage: View {
                               isBadgeActive: false,
                               timeleft: 0,
                               diseaseIndicator: .compost,
-                              isOn: $isOn,
+                              notificationBool: $viewModel.compostExist,
                               label: "Adubação")
                 SegmentedControl()
                 CustomDatePicker()
@@ -186,7 +186,7 @@ struct FourthPage: View {
                               isBadgeActive: false,
                               timeleft: 0,
                               diseaseIndicator: .compost,
-                              isOn: $isOn,
+                              notificationBool: $viewModel.harvestExist,
                               label: "Colheita")
                 SegmentedControl()
                 CustomDatePicker()
