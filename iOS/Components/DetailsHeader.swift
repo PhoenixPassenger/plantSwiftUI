@@ -16,16 +16,19 @@ struct DetailsHeader: View {
             VStack {
                 Image(systemName: "person.fill")
                     .frame(width: 100, height: 100)
-                    .background(Color.fontGreen)
+                    .background(Color.photoDetails)
                     .cornerRadius(50)
                 Text("Nome")
-                    .font(.title2)
+                    .fontWeight(.semibold)
+                    .font(.system(size: 20))
+                    .foregroundColor(.health)
                     .padding(EdgeInsets(top: 5, leading: 0, bottom: 0, trailing: 0))
             }
             Image("\(image)")
                 .resizable()
                 .frame(width: 74, height: 100)
-                .offset(x: 0, y: 25)
+                .offset(x: 0, y: 50)
+                .padding(.leading, 40)
         }
     }
 }

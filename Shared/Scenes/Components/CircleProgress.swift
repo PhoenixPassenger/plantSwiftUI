@@ -118,7 +118,9 @@ struct ProgressBar: View {
                     Spacer()
                     let title = activity.title
                     Text("\(title)")
-                        .font(.title3)
+                        .fontWeight(.regular)
+                        .font(.system(size: 17))
+                        .foregroundColor(.labelDetails)
                     Spacer()
                 }.padding(EdgeInsets(top: 8, leading: 0, bottom: 0, trailing: 0))
             }

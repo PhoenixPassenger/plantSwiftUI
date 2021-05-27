@@ -7,13 +7,33 @@
 
 import SwiftUI
 struct PlantDetails: View {
+//    @State var plant: PlantModel
     @State var diseaseIndicator = Activity.disease
     var body: some View {
         ZStack {
             Color.topBackground
                 .ignoresSafeArea()
             VStack {
+                HStack {
+                    Button(action: {
+                        
+                    }) {
+                       
+                        Image(systemName: "square.and.pencil")
+                            .imageScale(.large).font(.system(size: 24))
+                            .accentColor(.health)
+                            .padding(.trailing, 20)
+//                            .padding(.top)
+//                            .sheet(isPresented: $showModal, content: {
+//                                NewPlantForm(showModal: $showModal)
+//                            })
+                            .frame(maxWidth: .greatestFiniteMagnitude, alignment: .trailing)
+                    }
+                }
+                VStack(alignment: .trailing) {
                     DetailsHeader(image: self.$diseaseIndicator)
+                }.padding(.trailing, -25)
+                   
                     ZStack {
                         ViewBase()
                             .ignoresSafeArea()
@@ -25,6 +45,7 @@ struct PlantDetails: View {
     }
 }
 struct Details: View {
+//    @Binding var plant: PlantModel
     @Binding var diseaseIndicator: Activity
     @State var progressValue: Float = 0.6
     @State var typeOfActivity: [Activity] = [Activity.water, Activity.compost, Activity.harvest, Activity.health]
@@ -33,12 +54,13 @@ struct Details: View {
     @State private var showConnectionAlert = false
 
     var body: some View {
-        ZStack {
+        VStack {
             VStack {
-                HStack {
-                    Text("Atividades: ").font(.title2).padding(20)
-                    Spacer()
-                }
+                Text("Lembretes ")
+                    .font(.title2)
+                    .fontWeight(.medium)
+                    .padding(22)
+                    .frame(maxWidth: .greatestFiniteMagnitude, alignment: .leading)
                 HStack {
                     Button(action: {
                             self.showConnectionAlert = true
@@ -127,8 +149,9 @@ struct Details: View {
                             }))
                     }
                 }
-                Spacer().frame(width: 100, height: 180)
+                Spacer()
             }
+            Spacer()
         }
     }
     private func toggleBadge(identifier: Int) {
