@@ -14,7 +14,7 @@ struct ViewBase: View {
                 Rectangle()
                     .colorInvert()
                     .clipShape(RoundedCorner(radius: 20, corners: [.topLeft, .topRight]))
-                    .padding(.leading, 1)
+                    .padding(.leading, 0)
                     
             }
         }

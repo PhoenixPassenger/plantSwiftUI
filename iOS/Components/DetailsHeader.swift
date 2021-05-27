@@ -25,7 +25,8 @@ struct DetailsHeader: View {
             Image("\(image)")
                 .resizable()
                 .frame(width: 74, height: 100)
-                .offset(x: 0, y: 25)
+                .offset(x: 0, y: 50)
+                .padding(.leading, 40)
         }
     }
 }
