@@ -46,18 +46,14 @@ struct DashboardViewController: View {
                 ZStack {
                     ViewBase()
                         .ignoresSafeArea()
-                    
                     MyPlantView(searchText: $searchText, allPlants: $allPlants)
-                    
                 }.padding(.top, 10)
             }
-            
         }
-        .onAppear(){
+        .onAppear() {
             allPlants = self.fechPlants()
         }
     }
-    
     private func fechPlants() -> [Plant] {
         let plantWorker = PlantWorker()
         let plant = plantWorker.fetchPlants()
@@ -74,7 +70,6 @@ struct MyPlantView: View {
     @Binding var searchText: String
     @Binding var allPlants: [Plant]
     var body: some View {
-        
         VStack {
             Text("Minhas Plantas")
                 // .bold()
@@ -90,11 +85,10 @@ struct MyPlantView: View {
                     ForEach(allPlants.filter({searchText.isEmpty ? true : $0.name!.contains(searchText) })) { item in
                         NavigationLink(destination: PlantDetails(plant: item)) {
                             MyPlantsCell(plant: item)
-                            
                         }
-                        //                            .onDelete(perform: self.removeItems(at: item))
+                       
                     }
-                    
+                    .onDelete(perform: removeItems)
                 }
             } else {
                 //                    Spacer()
@@ -104,7 +98,6 @@ struct MyPlantView: View {
                     Text("Adicione uma planta clicando em ")
                         .fontWeight(.regular)
                         .font(.system(size: 15))
-                        
                         .foregroundColor(.health.opacity(1))
                     Image("addIconNoPlants")
                     //                            .padding(.bottom, UIScreen.main.bounds.height/3)
@@ -115,9 +108,14 @@ struct MyPlantView: View {
             }
         }
     }
-    //    func removeItems(at offsets: IndexSet) {
-    //        allPlants.remove(atOffsets: offsets)
-    //    }
+    func removeItems(at offsets: IndexSet) {
+//       func removeLanguages(at offsets: IndexSet) {
+        for index in offsets {
+            let plant = allPlants[index]
+            let plantWorker = PlantWorker()
+            plantWorker.delete(plant: plant)
+        }
+    }
     
 }
 struct DashboardViewController_Previews: PreviewProvider {
