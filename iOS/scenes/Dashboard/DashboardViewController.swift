@@ -30,6 +30,7 @@ struct DashboardViewController: View {
     init(){
         UITableView.appearance().backgroundColor = .clear
         UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
+        UINavigationBar.appearance().shadowImage = UIImage()
     }
     
     var body: some View {
