@@ -19,7 +19,7 @@ struct DetailsHeader: View {
                     .resizable()
                     .frame(width: 100, height: 100)
                     .background(Color.photoDetails)
-                    .cornerRadius(35)
+                    .cornerRadius(50)
                     .aspectRatio(contentMode: .fill)
                 Text(plant.name ?? "Planta")
                     .fontWeight(.semibold)
