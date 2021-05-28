@@ -14,49 +14,87 @@ struct DashboardViewController: View {
     @State var searchText: String = ""
     @State var allPlants: [Plant] = []
     
+    var trailingButtom: some View {
+        Button(action: {
+            showModal = true
+        }) {
+            Image("addIcon")
+                .padding(.trailing, 20)
+                .padding(.top, 30)
+                .sheet(isPresented: $showModal, content: {
+                    NewPlantForm(showModal: $showModal)
+                })
+        }
+    }
+    
     var body: some View {
-        ZStack(alignment: .top) {
-            Color.topBackground
-                .frame(height: 500)
-                .ignoresSafeArea()
-            VStack {
-                    HStack {
+        NavigationView {
+            ZStack(alignment: .top) {
+                Color.topBackground
+                    .frame(height: 500)
+                    .ignoresSafeArea()
+                VStack {
+                        HStack {
+                            TodayCare()
+                        }
+                    ZStack {
+                        ViewBase()
+                            .ignoresSafeArea()
+                        
+                        MyPlantView(searchText: $searchText, allPlants: $allPlants)
+                        
+                    }.padding(.top, 10)
+                }
+                
+            }
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+//                    HStack {
                         Text("Cuidados de Hoje")
                             .foregroundColor(.health)
                             .font(.title)
-                            .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
-                            .padding(.leading, 20)
-                            .padding(.top, 30)
+                            .fontWeight(.bold)
                             .frame(maxWidth: .greatestFiniteMagnitude, alignment: .leading)
-
-                        Button(action: {
-                            showModal = true
-                        }) {
-                            Image("addIcon")
-                                .padding(.trailing, 20)
-                                .padding(.top, 30)
-                                .sheet(isPresented: $showModal, content: {
-                                    NewPlantForm(showModal: $showModal)
-                                })
-                        }
-                    }
-                    HStack {
-                        TodayCare()
-                    }
-                ZStack {
-                    ViewBase()
-                        .ignoresSafeArea()
+//                    }
                     
-                    MyPlantView(searchText: $searchText, allPlants: $allPlants)
+                }
+            }
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+//                    HStack {
+                        Text("Cuidados de Hoje")
+                            .foregroundColor(.health)
+                            .font(.title)
+                            .fontWeight(.bold)
+                            .frame(maxWidth: .greatestFiniteMagnitude, alignment: .leading)
+//                    }
                     
-                }.padding(.top, 10)
+                }
             }
             
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+//                    HStack {
+                    Button(action: {
+                        showModal = true
+                    }) {
+                        Image("addIcon")
+                            .padding(.trailing, 20)
+                            .padding(.top, 30)
+                            .sheet(isPresented: $showModal, content: {
+                                NewPlantForm(showModal: $showModal)
+                            })
+                    }
+//                    }
+                    
+                }
+            }
+//            .navigationBarItems(trailing: trailingButtom)
         }
         .onAppear(){
             allPlants = self.fechPlants()
         }
-    }
+}
     
     private func fechPlants() -> [Plant] {
         let plantWorker = PlantWorker()
@@ -69,6 +107,8 @@ struct DashboardViewController: View {
         return plant
     }
 }
+
+
 
 struct MyPlantView: View {
     @Binding var searchText: String
@@ -88,15 +128,14 @@ struct MyPlantView: View {
             SearchBar(text: $searchText)
                 if !allPlants.isEmpty {
                     ScrollView {
-//                        ForEach(allPlants.filter({searchText.isEmpty ? true : $0.name.contains(searchText) }))
-                        ForEach(allPlants) { item in
+                        ForEach(allPlants.filter({searchText.isEmpty ? true : $0.name!.contains(searchText) })) { item in
                             NavigationLink(destination: PlantDetails(plant: item) ) {
                             
-                            MyPlantsCell(plant: item)
+                                MyPlantsCell(plant: item)
                                 
                             }
                         }
-                    }
+                    }.padding(.horizontal, 20)
                 } else {
 //                    Spacer()
 //                    ZStack(alignment: .top) {

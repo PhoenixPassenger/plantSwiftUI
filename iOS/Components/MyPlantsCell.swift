@@ -10,12 +10,17 @@ import UIKit
 
 struct MyPlantsCell: View {
 
-    @State var plant: Plant
-
+    @State var plant: Plant {
+        didSet {
+            self.image = Image("").pngDataToImage(plant.profilePhoto ?? Data())
+        }
+    }
+    @State private var image: Image = Image("")
+    
     var body: some View {
         ZStack {
             HStack {
-                Image(plant.profilePhoto!)
+                    image
                     .resizable()
                     .frame(width: 70, height: 70, alignment: .center)
                     .cornerRadius(35)

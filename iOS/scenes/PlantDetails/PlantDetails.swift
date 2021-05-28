@@ -14,22 +14,6 @@ struct PlantDetails: View {
             Color.topBackground
                 .ignoresSafeArea()
             VStack {
-                HStack {
-                    Button(action: {
-                        
-                    }) {
-                       
-                        Image(systemName: "square.and.pencil")
-                            .imageScale(.large).font(.system(size: 24))
-                            .accentColor(.health)
-                            .padding(.trailing, 20)
-//                            .padding(.top)
-//                            .sheet(isPresented: $showModal, content: {
-//                                NewPlantForm(showModal: $showModal)
-//                            })
-                            .frame(maxWidth: .greatestFiniteMagnitude, alignment: .trailing)
-                    }
-                }
                 VStack(alignment: .trailing) {
                     DetailsHeader(image: self.$diseaseIndicator)
                 }.padding(.trailing, -25)
@@ -41,9 +25,21 @@ struct PlantDetails: View {
 
                     }
             }
+            .navigationBarItems(trailing: trailingButtom)
         }
     }
 }
+
+var trailingButtom: some View {
+    NavigationLink(destination: DashboardViewController() ) {
+        Image(systemName: "square.and.pencil")
+            .imageScale(.large).font(.system(size: 24))
+            .accentColor(.health)
+            .padding(.trailing, 20)
+    }
+}
+
+
 struct Details: View {
 //    @Binding var plant: PlantModel
     @Binding var diseaseIndicator: Activity
