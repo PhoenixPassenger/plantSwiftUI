@@ -23,7 +23,7 @@
     <entity name="Plant" representedClassName="Plant" syncable="YES" codeGenerationType="class">
         <attribute name="disease" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="name" optional="YES" attributeType="String"/>
-        <attribute name="profilePhoto" optional="YES" attributeType="String"/>
+        <attribute name="profilePhoto" optional="YES" attributeType="Binary"/>
         <relationship name="fertilize" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Fertilize" inverseName="plant" inverseEntity="Fertilize"/>
         <relationship name="harvest" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Harvest" inverseName="plant" inverseEntity="Harvest"/>
         <relationship name="water" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Water" inverseName="plant" inverseEntity="Water"/>
