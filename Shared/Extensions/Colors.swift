@@ -16,10 +16,12 @@ extension Color {
     static let health = Color("health")
     static let topBackground = Color("topBackground")
     static let water = Color("water")
+    static let gray3 = Color("gray3")
     static let gray4 = Color("systemGray4")
     static let plantListCell = Color("plantListCell")
     static let borderPlantListCell = Color("borderPlantListCell")
     static let labelDetails = Color("labelDetails")
     static let photoDetails = Color("photoDetails")
-
+    static let colorFont2 = Color("colorFont2")
+    static let listBack = Color("listBack")
 }

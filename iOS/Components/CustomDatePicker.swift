@@ -35,7 +35,10 @@ struct CustomDatePicker: View {
     var body: some View {
         VStack {
             HStack {
-                Text("Última ").font(.title3).padding(10)
+                Text("Última ").fontWeight(.medium)
+                    .font(.system(size: 20))
+                    .foregroundColor(.colorFont2)
+                    .padding(20)
                 Spacer()
             }
             HStack {

@@ -94,12 +94,23 @@ struct FirstPage: View {
     var body: some View {
         VStack {
             HStack {
-                Text("Nome ").font(.title3).padding(20)
+                Text("Nome ")
+                    .fontWeight(.medium)
+                    .font(.system(size: 20))
+                    .foregroundColor(.colorFont2)
+                    .padding(20)
                 Spacer()
             }
-            TextField("Nome", text: $viewModel.name)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
-                .frame(width: 335, height: 40, alignment: .center)
+            HStack {
+                TextField("Nome", text: $viewModel.name)
+                    .foregroundColor(.fontCreatePlant)
+                    .accentColor(.fontCreatePlant)
+                    .padding(7)
+                    .padding(.horizontal, 5)
+                    .background(Color.gray3)
+                    .cornerRadius(20)
+    //                .frame(width: 335, height: 40, alignment: .center)
+            }.padding(.horizontal, 20)
             ImagePickerView(imageToShare: $viewModel.image)
             Spacer()
         }.foregroundColor(.black)

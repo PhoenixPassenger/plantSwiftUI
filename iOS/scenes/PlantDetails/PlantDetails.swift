@@ -9,6 +9,19 @@ import SwiftUI
 struct PlantDetails: View {
     @State var plant: Plant
     @State var diseaseIndicator = Activity.disease
+    @Environment(\.presentationMode) var presentationMode
+    
+    var backButton : some View { Button(action: {
+        self.presentationMode.wrappedValue.dismiss()
+    }) {
+        HStack {
+            Image(systemName: "chevron.backward")
+                .aspectRatio(contentMode: .fit)
+            Text("Voltar").font(.callout)
+        }.foregroundColor(.health)
+    }
+    }
+    
     var body: some View {
         ZStack {
             Color.topBackground
@@ -25,20 +38,20 @@ struct PlantDetails: View {
 
                     }
             }
-            .navigationBarItems(trailing: trailingButtom)
+        }
+        .navigationBarBackButtonHidden(true)
+        .navigationBarItems(leading: backButton,trailing: trailingButtom)
+    }
+    
+    var trailingButtom: some View {
+        NavigationLink(destination: DashboardViewController() ) {
+            Image(systemName: "square.and.pencil")
+                .imageScale(.large).font(.system(size: 24))
+                .accentColor(.health)
         }
     }
-}
 
-var trailingButtom: some View {
-    NavigationLink(destination: DashboardViewController() ) {
-        Image(systemName: "square.and.pencil")
-            .imageScale(.large).font(.system(size: 24))
-            .accentColor(.health)
-            .padding(.trailing, 20)
-    }
 }
-
 
 struct Details: View {
 //    @Binding var plant: PlantModel

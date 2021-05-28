@@ -20,7 +20,11 @@ struct ImagePickerView: View {
     var body: some View {
         VStack {
             HStack {
-                Text("Foto de perfil ").font(.title3).padding(20)
+                Text("Foto de perfil ")
+                    .fontWeight(.medium)
+                    .font(.system(size: 20))
+                    .foregroundColor(.colorFont2)
+                    .padding(20)
                 Spacer()
             }
             Button(action: {
