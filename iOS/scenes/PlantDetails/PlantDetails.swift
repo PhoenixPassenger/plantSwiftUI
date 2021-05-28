@@ -21,16 +21,14 @@ struct PlantDetails: View {
         }.foregroundColor(.health)
     }
     }
-    
     var body: some View {
         ZStack {
             Color.topBackground
                 .ignoresSafeArea()
             VStack {
                 VStack(alignment: .trailing) {
-                    DetailsHeader(image: self.$diseaseIndicator)
+                    DetailsHeader(plant: self.$plant, image: self.$diseaseIndicator)
                 }.padding(.trailing, -25)
-                   
                     ZStack {
                         ViewBase()
                             .ignoresSafeArea()
@@ -40,7 +38,7 @@ struct PlantDetails: View {
             }
         }
         .navigationBarBackButtonHidden(true)
-        .navigationBarItems(leading: backButton,trailing: trailingButtom)
+        .navigationBarItems(leading: backButton, trailing: trailingButtom)
     }
     
     var trailingButtom: some View {
