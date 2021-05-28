@@ -8,17 +8,20 @@
 import SwiftUI
 
 struct DetailsHeader: View {
+    @Binding var plant: Plant
     @Binding var image: Activity
     var body: some View {
         HStack {
             Spacer()
                 .frame(width: 100, height: 100)
             VStack {
-                Image(systemName: "person.fill")
+                Image(systemName: "person.fill").pngDataToImage(plant.profilePhoto ?? Data())
+                    .resizable()
                     .frame(width: 100, height: 100)
                     .background(Color.photoDetails)
-                    .cornerRadius(50)
-                Text("Nome")
+                    .cornerRadius(35)
+                    .aspectRatio(contentMode: .fill)
+                Text(plant.name ?? "Planta")
                     .fontWeight(.semibold)
                     .font(.system(size: 20))
                     .foregroundColor(.health)
