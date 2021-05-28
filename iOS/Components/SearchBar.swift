@@ -14,8 +14,9 @@ struct SearchBar: View {
     var body: some View {
         HStack {
             TextField("Search", text: $text)
-                .foregroundColor(.fontCreatePlant)
-                .accentColor(.fontCreatePlant)
+                .colorScheme(.light)
+                .foregroundColor(.health)
+                .accentColor(.health)
                 .padding(7)
                 .padding(.horizontal, 25)
                 .background(Color.topBackground)

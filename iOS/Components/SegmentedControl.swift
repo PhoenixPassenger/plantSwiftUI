@@ -21,7 +21,10 @@ struct SegmentedControl: View {
             Spacer()
             VStack {
                 HStack {
-                    Text("Frequência").font(.title3).padding(10)
+                    Text("Frequência")
+                        .fontWeight(.medium)
+                        .font(.system(size: 20))
+                        .foregroundColor(.colorFont2)
                     Spacer()
                 }
                 Picker(selection: $typeOfCount, label: Text("")) {
@@ -35,8 +38,10 @@ struct SegmentedControl: View {
                 }, onDecrement: {
                     timeCount -= 1
                 })
-                .padding(EdgeInsets(top: 20, leading: 0, bottom: 0, trailing: 20))
+                .foregroundColor(.colorFont2)
+                .padding(.top, 20)
             }
-        }
+        }.padding(.leading, 10)
+        .padding(.trailing, 20)
     }
 }

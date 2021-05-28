@@ -28,20 +28,22 @@ struct MyPlantsCell: View {
                     .padding(.leading, 16)
 
                 VStack(alignment: .leading) {
-                    Text(plant.name!)
+                    Text(plant.name ?? "")
+                        .foregroundColor(.colorFont2)
                         .fontWeight(.medium)
                         .font(.system(size: 22))
                     if plant.disease {
                         HStack(spacing: 3) {
                             Circle().overlay(
-                                                Image("disease-cell")
-                                                    .resizable()
-                                                    .frame(width: 12, height: 17, alignment: .center)
-                                                    .accentColor(.health)
+                                Image("disease-cell")
+                                    .resizable()
+                                    .frame(width: 12, height: 17, alignment: .center)
+                                    .accentColor(.health)
                             )
-                                .frame(width: 22, height: 22, alignment: .center)
+                            .frame(width: 22, height: 22, alignment: .center)
                             .foregroundColor(.topBackground)
                             Text("Doente")
+                                .foregroundColor(.colorFont2)
                                 .fontWeight(.regular)
                                 .font(.system(size: 15))
                         }
@@ -56,6 +58,9 @@ struct MyPlantsCell: View {
         .cornerRadius(10)
         .shadow(color: Color.black.opacity(0.05), radius: 4, x: 0, y: 2)
         .border(Color.borderPlantListCell)
+        .onAppear() {
+            self.image = Image("").pngDataToImage(plant.profilePhoto ?? Data())
+        }
     }
 }
 

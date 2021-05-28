@@ -19,7 +19,11 @@ struct DayPicker: View {
     var body: some View {
         VStack {
             HStack {
-                Text("Dias: ").font(.title2).padding(10)
+                Text("Dias: ")
+                    .fontWeight(.medium)
+                    .font(.system(size: 20))
+                    .foregroundColor(.colorFont2)
+                    .padding(20)
                 Spacer()
             }
             HStack {
@@ -62,9 +66,9 @@ struct TextDay: View {
     var body: some View {
         Text(text)
             .padding(EdgeInsets(top: 5, leading: 12, bottom: 5, trailing: 12))
-            .background(!selected ? Color.gray4 : Color.health)
+            .background(!selected ? Color.gray4 : Color.fontCreatePlant)
             .clipShape(RoundedRectangle(cornerRadius: 25))
-            .foregroundColor(!selected ? Color.black : Color.fontGreen)
+            .foregroundColor(!selected ? Color.colorFont2 : Color.photoDetails)
             .font(.body)
     }
 }

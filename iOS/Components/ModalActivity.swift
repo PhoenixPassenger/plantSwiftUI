@@ -18,20 +18,22 @@ struct ModalActivity: View {
 
     var label = "Water"
     var body: some View {
-        HStack {
+        HStack(alignment: .center, spacing: 10){
             ProgressBar(progress: self.$progressValue,
                         activity: self.$typeOfActivity,
                         badge: self.$isBadgeActive,
-                        timeLeft: self.$timeleft)
+                        timeLeft: self.$timeleft,
+                        lineWidth: 5)
                 .frame(width: 50, height: 50)
                 .foregroundColor(.black)
-                .padding()
+//                .padding(10)
             Text(label)
-                .font(.title3)
+                .fontWeight(.semibold)
+                .font(.system(size: 22))
+                .foregroundColor(.colorFont2)
             Spacer()
             Toggle("", isOn: $isOn)
                 .labelsHidden()
-                .padding()
-        }
+        }.padding(20)
     }
 }

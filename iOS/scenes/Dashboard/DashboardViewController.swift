@@ -27,6 +27,10 @@ struct DashboardViewController: View {
         }
     }
     
+    init(){
+          UITableView.appearance().backgroundColor = .clear
+    }
+    
     var body: some View {
         NavigationView {
             ZStack(alignment: .top) {
@@ -36,67 +40,47 @@ struct DashboardViewController: View {
                 VStack {
                         HStack {
                             TodayCare()
-                        }
+                        }.padding(.vertical, 20)
                     ZStack {
                         ViewBase()
                             .ignoresSafeArea()
                         
                         MyPlantView(searchText: $searchText, allPlants: $allPlants)
                         
-                    }.padding(.top, 10)
+                    }
                 }
-                
             }
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
-//                    HStack {
+
                         Text("Cuidados de Hoje")
                             .foregroundColor(.health)
                             .font(.title)
                             .fontWeight(.bold)
                             .frame(maxWidth: .greatestFiniteMagnitude, alignment: .leading)
-//                    }
-                    
                 }
             }
-            .toolbar {
-                ToolbarItem(placement: .navigationBarLeading) {
-//                    HStack {
-                        Text("Cuidados de Hoje")
-                            .foregroundColor(.health)
-                            .font(.title)
-                            .fontWeight(.bold)
-                            .frame(maxWidth: .greatestFiniteMagnitude, alignment: .leading)
-//                    }
-                    
-                }
-            }
-            
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
-//                    HStack {
                     Button(action: {
                         showModal = true
                     }) {
                         Image("addIcon")
                             .padding(.trailing, 20)
                             .padding(.top, 30)
-                            .sheet(isPresented: $showModal, content: {
+                            .sheet(isPresented: $showModal, onDismiss: { allPlants = self.fechPlants() },content: {
                                 NewPlantForm(showModal: $showModal)
                             })
                     }
-//                    }
-                    
                 }
             }
-//            .navigationBarItems(trailing: trailingButtom)
-        }
+            
+        }.accentColor(.health)
         .onAppear(){
             allPlants = self.fechPlants()
         }
-}
-    
-    private func fechPlants() -> [Plant] {
+    }
+    public func fechPlants() -> [Plant] {
         let plantWorker = PlantWorker()
         let plant = plantWorker.fetchPlants()
         //        ForEach (plant){ plant in
@@ -124,34 +108,36 @@ struct MyPlantView: View {
                 .padding(.top, 20)
                 .padding(.bottom, 10)
                 .frame(maxWidth: .greatestFiniteMagnitude, alignment: .leading)
-  
             SearchBar(text: $searchText)
+                .padding(.bottom, 10)
                 if !allPlants.isEmpty {
-                    ScrollView {
+                    List {
                         ForEach(allPlants.filter({searchText.isEmpty ? true : $0.name!.contains(searchText) })) { item in
                             NavigationLink(destination: PlantDetails(plant: item) ) {
-                            
                                 MyPlantsCell(plant: item)
-                                
                             }
-                        }
-                    }.padding(.horizontal, 20)
+//                            .listRowInsets(.init(top: 0, leading: 0, bottom: 0, trailing: 0))
+                        }.onDelete(perform: { indexSet in
+                            indexSet.forEach { index in
+                                let plant = allPlants[index]
+                                PlantWorker().delete(plant: plant)
+                                allPlants =  PlantWorker().fetchPlants()
+                            }
+                        })
+                    }
                 } else {
-//                    Spacer()
-//                    ZStack(alignment: .top) {
                         VStack(alignment: .center) {
                             Spacer()
                             Text("Adicione uma planta clicando em ")
                             .fontWeight(.regular)
                             .font(.system(size: 15))
-                        
-                            .foregroundColor(.health.opacity(1))
+                            .foregroundColor(.fontCreatePlant.opacity(1))
                             Image("addIconNoPlants")
-//                            .padding(.bottom, UIScreen.main.bounds.height/3)
+                                .accentColor(.fontCreatePlant)
                         }.padding(.bottom, UIScreen.main.bounds.height/4)
                         .padding(.top, UIScreen.main.bounds.height/4)
                         .clipped()
-//                    }
+
                 }
         }
     }
@@ -159,6 +145,6 @@ struct MyPlantView: View {
 struct DashboardViewController_Previews: PreviewProvider {
     static var previews: some View {
         DashboardViewController()
-            .previewDevice("iPhone 12")
+            .previewDevice("iPhone 8")
     }
 }
