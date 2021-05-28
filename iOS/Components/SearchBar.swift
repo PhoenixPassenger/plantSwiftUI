@@ -13,7 +13,7 @@ struct SearchBar: View {
     
     var body: some View {
         HStack {
-            TextField("Search", text: $text)
+            TextField("Pesquisar", text: $text)
                 .colorScheme(.light)
                 .foregroundColor(.health)
                 .accentColor(.health)
@@ -48,7 +48,7 @@ struct SearchBar: View {
                     self.isEditing = false
                     self.text = ""
                 }) {
-                    Text("Cancel")
+                    Text("Cancelar")
                         .foregroundColor(.fontCreatePlant)
                 }
                 .padding(.trailing, 20)

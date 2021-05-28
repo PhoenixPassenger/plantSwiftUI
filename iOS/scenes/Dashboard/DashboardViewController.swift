@@ -28,7 +28,8 @@ struct DashboardViewController: View {
     }
     
     init(){
-          UITableView.appearance().backgroundColor = .clear
+        UITableView.appearance().backgroundColor = .clear
+        UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
     }
     
     var body: some View {
@@ -79,6 +80,7 @@ struct DashboardViewController: View {
         .onAppear(){
             allPlants = self.fechPlants()
         }
+        
     }
     public func fechPlants() -> [Plant] {
         let plantWorker = PlantWorker()
@@ -91,8 +93,6 @@ struct DashboardViewController: View {
         return plant
     }
 }
-
-
 
 struct MyPlantView: View {
     @Binding var searchText: String
