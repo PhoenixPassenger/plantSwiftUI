@@ -12,7 +12,7 @@ import CoreData
 class PlantWorker {
     let viewContext = PersistenceController.shared.container.viewContext
     private var plant: Plant?
-    func create(plant: PlantModel) -> Plant{
+    func create(plant: PlantModel) -> Plant {
         let newPlant = Plant(context: viewContext)
         newPlant.name = plant.name
         newPlant.disease = plant.disease

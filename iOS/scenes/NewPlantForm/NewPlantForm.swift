@@ -12,7 +12,7 @@ import Combine
 class PlantViewModel: ObservableObject {
     // Plant Details
     @Published var name = ""
-    @Published var image = Image("")
+    @Published var image:Data? = Data()
     // Water
     @Published var waterDone = false
     @Published var waterExist = true
@@ -42,7 +42,7 @@ class PlantViewModel: ObservableObject {
         let plantWorker = PlantWorker()
         let plant = plantWorker.create(plant: PlantModel(name: name,
                                                          disease: false,
-                                                         profilePhoto: name))
+                                                         profilePhoto: image))
         var waterWorker = WaterWorker(plant)
         var harvestWorker = HarvestWorker(plant)
         var fertilizeWorker = FertilizeWorker(plant)
